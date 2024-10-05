@@ -1130,6 +1130,7 @@ footer .link .phone .one_text span {
     width: 100%;
     gap: 10px;
     padding: 0px 0px 0px 0px;
+    border: none;
   }
   footer .connect .az_logo {
     width: 300px;
