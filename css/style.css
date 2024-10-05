@@ -214,7 +214,7 @@ nav .login .user img {
 }
 .two .course_cards .card {
   margin: 10px auto;
-  max-width: 361px;
+  min-width: 361px;
   width: 100%;
   height: 276px;
   border-radius: 24px;
@@ -257,7 +257,7 @@ nav .login .user img {
   -moz-box-shadow: 0px 0px 25px 17px rgba(82, 60, 82, 0.59);
   box-shadow: 0px 0px 25px 17px rgba(112, 79, 112, 0.59);
   outline: 3px solid rgba(199, 126, 255, 0.3);
-  outline-offset: 20px;
+  outline-offset: 10px;
 }
 .two .course_cards .card_top {
   margin-top: 60px;
@@ -517,11 +517,13 @@ nav .login .user img {
   gap: 10px;
 }
 .six .cards .card_one {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .six .cards .card_two {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 120px;
@@ -531,12 +533,11 @@ nav .login .user img {
   text-decoration: none;
 }
 .six .cards a .card {
-  max-width: 368px;
+  min-width: 368px;
   width: 100%;
   height: 268px;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.16);
-  overflow: hidden;
   color: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -771,8 +772,9 @@ nav .login .user img {
     justify-content: center;
   }
   .one .header {
-    width: 76%;
+    width: 100%;
     gap: 10px;
+    padding: 40px;
   }
   .one .header h1 {
     font-size: 38px;
@@ -792,7 +794,7 @@ nav .login .user img {
     align-items: center;
   }
   .two .text {
-    width: 90%;
+    width: 100%;
   }
   .two .text .text_one h2 {
     font-size: 30px;
@@ -814,13 +816,12 @@ nav .login .user img {
     width: 20px;
   }
   .two .course_cards {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: auto;
-    gap: 1px;
+    gap: 4px;
   }
   .two .course_cards .card {
-    width: 95%;
     height: 230px;
   }
   .two .course_cards .card_top {
@@ -837,7 +838,7 @@ nav .login .user img {
     gap: 15px;
   }
   .three .text {
-    width: 90%;
+    width: 100%;
     gap: 10px;
   }
   .three .text h2 {
@@ -856,7 +857,7 @@ nav .login .user img {
     width: 50%;
   }
   .three img {
-    width: 90%;
+    width: 100%;
   }
   .three .ellipse4 {
     width: 100%;
@@ -865,7 +866,7 @@ nav .login .user img {
     opacity: 0.5;
   }
   .four .observed-section {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
@@ -881,11 +882,17 @@ nav .login .user img {
   .four .observed-section .count .counter {
     font-size: 50px;
   }
+  .five {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
   .five h4 {
     text-align: start;
   }
   .five .partners {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -893,13 +900,12 @@ nav .login .user img {
     justify-content: center;
   }
   .six {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
     gap: 20px;
   }
   .six .text {
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -933,16 +939,18 @@ nav .login .user img {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: center;
   }
-  .six .cards .card {
+  .six .cards a .card {
     width: 100%;
-    margin: 1px auto;
   }
   .six .cards .card_two {
+    width: 100%;
     margin-top: 10px;
     gap: 16px;
   }
   .six .cards .card_one {
+    width: 100%;
     gap: 16px;
   }
   .seven {
@@ -951,13 +959,13 @@ nav .login .user img {
     gap: 15px;
   }
   .seven .accordion {
-    width: 90%;
+    width: 100%;
   }
   .seven .accordion h4 {
     font-size: 30px;
   }
   .seven form {
-    width: 90%;
+    width: 100%;
   }
   .seven form h4 {
     font-size: 27px;
@@ -997,7 +1005,7 @@ nav .login .user img {
     align-items: center;
   }
   .two .text {
-    width: 90%;
+    width: 100%;
   }
   .two .text .text_one h2 {
     font-size: 30px;
@@ -1019,7 +1027,7 @@ nav .login .user img {
     width: 20px;
   }
   .two .course_cards {
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px;
