@@ -946,6 +946,188 @@ nav {
 }
 
 
+footer {
+    max-width: 100%;
+    min-height: 412px;
+    height: 100%;
+    padding: 0px 0px 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    border-top: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
+    position: relative;
+
+    .connect {
+        width: 35%;
+        min-height: 412px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        border-right: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
+
+        .az_logo {
+            max-width: 370px;
+            width: 100%;
+        }
+
+        .images {
+            display: flex;
+            gap: 10px;
+        }
+
+        .text_main {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 50px;
+
+
+            .text_href {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+
+                }
+
+                .term_text {
+                    border-right: 1px solid rgba(201, 209, 252, 1);
+                    padding: 0px 10px 0px 0px;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+
+            }
+
+
+        }
+
+
+
+    }
+
+    .link {
+        width: 65%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+
+
+        h3 {
+            font-weight: 500;
+            font-size: 48px;
+            color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+            padding: 0px 0px 0px 40px;
+
+
+        }
+
+        p {
+            width: 65%;
+            font-weight: 400;
+            font-size: 18px;
+            color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+            padding: 0px 0px 0px 40px;
+
+
+        }
+
+        form {
+            display: flex;
+            gap: 10px;
+            padding: 0px 0px 20px 40px;
+
+            input {
+                width: 38%;
+                outline: none;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 10px;
+                color: rgba(255, 255, 255, 0.7);
+
+
+                &::placeholder {
+                    letter-spacing: -0.5%;
+                    background: linear-gradient(91.53deg, #FFFFFF 0.73%, #A8B3F9 71.74%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    color: transparent;
+                }
+
+
+
+            }
+
+
+            .learn_btn {
+                width: 20%;
+                height: 46px;
+                border-radius: 8px;
+                background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+                border: 1px solid var(--Primitives-Primary-400, rgba(133, 138, 244, 1));
+
+                a {
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    font-size: 18px;
+                    text-decoration: none;
+
+                    img {
+                        width: 23px;
+                    }
+
+                }
+            }
+        }
+
+
+        .phone {
+            width: 100%;
+            min-height: 90px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--Primitives-Primary-400, rgba(133, 138, 244, 0.2));
+            padding: 0px 40px 0px 40px;
+
+            .one_text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+
+                span {
+                    font-size: 16px;
+                    color: White;
+                    font-weight: 400;
+                }
+
+            }
+        }
+    }
+}
+
+
 
 
 
@@ -1126,6 +1308,7 @@ nav {
         flex-direction: column;
         align-items: start;
         justify-content: start;
+
         h4 {
             text-align: start;
         }
@@ -1144,7 +1327,7 @@ nav {
     .six {
 
         display: grid;
-        grid-template-columns: auto ;
+        grid-template-columns: auto;
         gap: 20px;
 
         .text {
@@ -1191,7 +1374,7 @@ nav {
             gap: 10px;
             justify-content: center;
 
-            a{
+            a {
                 .card {
                     width: 100%;
                 }
@@ -1249,6 +1432,79 @@ nav {
         .ellipse7 {
             left: 0px;
             top: 0px;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .connect {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            padding: 0px 0px 0px 0px;
+
+            .az_logo {
+                width: 300px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+        }
+
+        .link {
+            width: 100%;
+            padding: 0px 0px 0px 0px;
+
+            h3 {
+                padding: 0px 0px 0px 0px;
+                font-size: 30px;
+
+            }
+
+            p {
+                padding: 0px 0px 0px 0px;
+                font-size: 16px;
+
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 0px 40px 0px 0px;
+
+                input {
+                    width: 100%;
+                }
+
+                .learn_btn {
+                    width: 100%;
+                }
+            }
+
+            .phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: start;
+                align-items: start;
+                padding: 0px 0px 40px 0px;
+                border: none;
+
+                .text_one {
+                    width: 100%;
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
         }
     }
 
@@ -1414,6 +1670,77 @@ nav {
         .ellipse7 {
             left: 0px;
             top: 0px;
+        }
+    }
+
+    footer {
+        display: flex;
+        gap: 10px;
+
+        .connect {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+
+            .az_logo {
+                width: 300px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+        }
+
+        .link {
+            width: 100%;
+            padding: none;
+
+            h3 {
+                padding: 0px 0px 0px 0px;
+                font-size: 30px;
+
+            }
+
+            p {
+                padding: 0px 0px 0px 0px;
+                font-size: 16px;
+
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 0px 40px 0px 0px;
+
+                input {
+                    width: 100%;
+                }
+
+                .learn_btn {
+                    width: 100%;
+                }
+            }
+
+            .phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: start;
+                align-items: start;
+                padding: 0px 0px 40px 0px;
+                border: none;
+
+                .text_one {
+                    width: 100%;
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
         }
     }
 

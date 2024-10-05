@@ -762,6 +762,146 @@ nav .login .user img {
   color: rgb(223, 200, 237);
 }
 
+footer {
+  max-width: 100%;
+  min-height: 412px;
+  height: 100%;
+  padding: 0px 0px 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  border-top: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
+  position: relative;
+}
+footer .connect {
+  width: 35%;
+  min-height: 412px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  border-right: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
+}
+footer .connect .az_logo {
+  max-width: 370px;
+  width: 100%;
+}
+footer .connect .images {
+  display: flex;
+  gap: 10px;
+}
+footer .connect .text_main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 50px;
+}
+footer .connect .text_main .text_href {
+  display: flex;
+  gap: 10px;
+}
+footer .connect .text_main .text_href a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--Primitives-Primary-200, rgb(201, 209, 252));
+}
+footer .connect .text_main .text_href .term_text {
+  border-right: 1px solid rgb(201, 209, 252);
+  padding: 0px 10px 0px 0px;
+}
+footer .connect .text_main p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--Primitives-Primary-200, rgb(201, 209, 252));
+}
+footer .link {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+footer .link h3 {
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--Primitives-Primary-200, rgb(201, 209, 252));
+  padding: 0px 0px 0px 40px;
+}
+footer .link p {
+  width: 65%;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--Primitives-Primary-200, rgb(201, 209, 252));
+  padding: 0px 0px 0px 40px;
+}
+footer .link form {
+  display: flex;
+  gap: 10px;
+  padding: 0px 0px 20px 40px;
+}
+footer .link form input {
+  width: 38%;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .link form input::placeholder {
+  letter-spacing: -0.5%;
+  background: linear-gradient(91.53deg, #FFFFFF 0.73%, #A8B3F9 71.74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+footer .link form .learn_btn {
+  width: 20%;
+  height: 46px;
+  border-radius: 8px;
+  background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+  border: 1px solid var(--Primitives-Primary-400, rgb(133, 138, 244));
+}
+footer .link form .learn_btn a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 18px;
+  text-decoration: none;
+}
+footer .link form .learn_btn a img {
+  width: 23px;
+}
+footer .link .phone {
+  width: 100%;
+  min-height: 90px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--Primitives-Primary-400, rgba(133, 138, 244, 0.2));
+  padding: 0px 40px 0px 40px;
+}
+footer .link .phone .one_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+footer .link .phone .one_text span {
+  font-size: 16px;
+  color: White;
+  font-weight: 400;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   nav {
     display: none;
@@ -980,6 +1120,63 @@ nav .login .user img {
     left: 0px;
     top: 0px;
   }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .connect {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 0px 0px 0px 0px;
+  }
+  footer .connect .az_logo {
+    width: 300px;
+  }
+  footer .connect p {
+    font-size: 16px;
+  }
+  footer .link {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+  footer .link h3 {
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
+  }
+  footer .link p {
+    padding: 0px 0px 0px 0px;
+    font-size: 16px;
+  }
+  footer .link form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 0px;
+  }
+  footer .link form input {
+    width: 100%;
+  }
+  footer .link form .learn_btn {
+    width: 100%;
+  }
+  footer .link .phone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    align-items: start;
+    padding: 0px 0px 40px 0px;
+    border: none;
+  }
+  footer .link .phone .text_one {
+    width: 100%;
+  }
+  footer .link .phone .text_one span {
+    font-size: 12px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   nav {
@@ -1101,6 +1298,61 @@ nav .login .user img {
   .seven .ellipse7 {
     left: 0px;
     top: 0px;
+  }
+  footer {
+    display: flex;
+    gap: 10px;
+  }
+  footer .connect {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+  }
+  footer .connect .az_logo {
+    width: 300px;
+  }
+  footer .connect p {
+    font-size: 16px;
+  }
+  footer .link {
+    width: 100%;
+    padding: none;
+  }
+  footer .link h3 {
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
+  }
+  footer .link p {
+    padding: 0px 0px 0px 0px;
+    font-size: 16px;
+  }
+  footer .link form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 0px;
+  }
+  footer .link form input {
+    width: 100%;
+  }
+  footer .link form .learn_btn {
+    width: 100%;
+  }
+  footer .link .phone {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    align-items: start;
+    padding: 0px 0px 40px 0px;
+    border: none;
+  }
+  footer .link .phone .text_one {
+    width: 100%;
+  }
+  footer .link .phone .text_one span {
+    font-size: 12px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1330px) {
