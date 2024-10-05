@@ -764,7 +764,6 @@ nav .login .user img {
 
 footer {
   max-width: 100%;
-  min-height: 412px;
   height: 100%;
   padding: 0px 0px 0px 40px;
   display: flex;
@@ -774,9 +773,16 @@ footer {
   border-top: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
   position: relative;
 }
+footer .ellipse8 {
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  left: 26%;
+  bottom: 0px;
+  z-index: 1;
+}
 footer .connect {
   width: 35%;
-  min-height: 412px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -787,6 +793,7 @@ footer .connect {
 footer .connect .az_logo {
   max-width: 370px;
   width: 100%;
+  padding: 40px 0px 0px 0px;
 }
 footer .connect .images {
   display: flex;
@@ -829,7 +836,7 @@ footer .link h3 {
   font-weight: 500;
   font-size: 48px;
   color: var(--Primitives-Primary-200, rgb(201, 209, 252));
-  padding: 0px 0px 0px 40px;
+  padding: 40px 0px 0px 40px;
 }
 footer .link p {
   width: 65%;
@@ -842,6 +849,7 @@ footer .link form {
   display: flex;
   gap: 10px;
   padding: 0px 0px 20px 40px;
+  z-index: 2;
 }
 footer .link form input {
   width: 38%;
@@ -1125,6 +1133,10 @@ footer .link .phone .one_text span {
     flex-direction: column;
     gap: 10px;
   }
+  footer .ellipse8 {
+    left: 0%;
+    bottom: 30px;
+  }
   footer .connect {
     display: flex;
     width: 100%;
@@ -1303,6 +1315,10 @@ footer .link .phone .one_text span {
   footer {
     display: flex;
     gap: 10px;
+  }
+  footer .ellipse8 {
+    left: 0%;
+    bottom: 30px;
   }
   footer .connect {
     display: flex;
