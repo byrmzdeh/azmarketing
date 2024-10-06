@@ -1,0 +1,184 @@
+[
+    {
+        "id": "0",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Marketing",
+        "price":70.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "1",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Web",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "2",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Marketing",
+        "price":80.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "3",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Developer",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "4",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Web",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "5",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Marketing",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "6",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Developer",
+        "price":80.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "7",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Business",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "8",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Developer",
+        "price":70.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "9",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Business",
+        "price":70.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "10",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Developer",
+        "price":60.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    },
+    {
+        "id": "11",
+        "src": "/image/home/category.png",
+        "name": "Tutor Name",
+        "title": "Introduction Web Design with HTML",
+        "category": "Business",
+        "price":90.00,
+        "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "video":"11 hours on-demand video",
+        "resources":"9 downloadable resources",
+        "access":"Full lifetime access",
+        "accessTwo":"Access on mobile and TV",
+        "certificate":"Certificate of Completion"
+
+    }
+
+   
+]

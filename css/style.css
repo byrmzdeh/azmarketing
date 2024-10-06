@@ -910,6 +910,65 @@ footer .link .phone .one_text span {
   font-weight: 400;
 }
 
+.category {
+  max-width: 100%;
+  background-color: rgb(194, 160, 160);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.category h3 {
+  font-size: 47px;
+  font-weight: 500;
+}
+.category .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.category .buttons button {
+  width: auto;
+  height: 36px;
+  padding: 10px;
+  border: 1px solid var(--Primitives-Primary-700, rgb(77, 60, 198));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--Primitives-Primary-900, rgb(54, 48, 127));
+}
+.category #cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+}
+.category #cards .card {
+  max-width: 325px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.category #cards .card img {
+  width: 99%;
+  margin: 2px auto;
+}
+.category #cards .card h5 {
+  font-size: 19px;
+  font-weight: 500;
+  padding: 4px;
+}
+.category #cards .card p {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 4px;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   nav {
     display: none;

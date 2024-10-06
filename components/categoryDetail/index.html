@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Page</title>
+</head>
+<body>
+    <div id="detail"></div>
+
+    <script>
+        // URL'den id değerini almak
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+
+        // JSON verisini almak
+        fetch('/json/category.json')
+            .then(res => res.json())
+            .then(data => {
+                const item = data.find(item => item.id === id); // Seçilen öğeyi bul
+                const detailContainer = document.getElementById('detail');
+
+                // Eğer öğe bulunduysa, detayları göster
+                if (item) {
+                    const title = document.createElement('h1');
+                    title.textContent = item.name;
+
+                    const image = document.createElement('img');
+                    image.src = item.src;
+                    image.alt = item.name;
+
+                    const category = document.createElement('p');
+                    category.textContent = `Category: ${item.category}`;
+
+                    detailContainer.appendChild(title);
+                    detailContainer.appendChild(image);
+                    detailContainer.appendChild(category);
+                } else {
+                    detailContainer.textContent = 'Item not found';
+                }
+            })
+            .catch(error => console.error('Veri alınırken hata oluştu:', error));
+    </script>
+</body>
+</html>

@@ -1137,6 +1137,70 @@ footer {
     }
 }
 
+.category{
+    max-width: 100%;
+    background-color: rgb(194, 160, 160);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    h3{
+        font-size: 47px;
+        font-weight: 500;
+    }
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        button{
+            width: auto;
+            height: 36px;
+            padding: 10px;
+            border: 1px solid var(--Primitives-Primary-700, rgba(77, 60, 198, 1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: var(--Primitives-Primary-900, rgba(54, 48, 127, 1));
+
+           
+        }
+    }
+    #cards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+        .card{
+            max-width: 325px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            img{
+                width: 99%;
+                margin: 2px auto;
+            }
+            h5{
+                font-size: 19px;
+                font-weight: 500;
+                padding: 4px;
+
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                padding: 4px;
+
+            }
+        }
+    }
+
+}
+
 
 
 
