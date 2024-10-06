@@ -1302,7 +1302,7 @@ footer .link .phone .one_text span {
   }
   .category .buttons {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
   .category #cards {
     width: 100%;
