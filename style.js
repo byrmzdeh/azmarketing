@@ -101,80 +101,81 @@ function updateInput(select) {
 
 //api
 
-let categoriesData = []; // To store all the data
-let currentIndex = 12; // Number of cards to show initially
+// JSON verilerini almak
+let categoriesData = [];
+let currentIndex = 8; // Başlangıçta göstereceğimiz kart sayısı
 
-// Fetch JSON data
 fetch('/json/category.json')
-  .then(res => {
-    if (!res.ok) {
-      throw new Error('Network response was not ok ' + res.statusText);
-    }
-    return res.json();
-  })
+  .then(res => res.json())
   .then(data => {
-    categoriesData = data; // Save the data
-    displayCards(categoriesData.slice(0, currentIndex)); // Display the first 12 cards
+    categoriesData = data; // Verileri kaydediyoruz
+    displayCards(categoriesData.slice(0, currentIndex)); // İlk 8 kartı göstəririk
   })
-  .catch(error => console.error('Error fetching data:', error));
+  .catch(error => console.error('Veri alınırken hata oluştu:', error));
 
-// Function to display cards
+// Kartları ekrana yazdıran fonksiyon
 function displayCards(filteredData) {
-  const cardsContainer = document.getElementById('cards'); // Select the container
-  cardsContainer.innerHTML = ''; // Clear the existing content
+  const cardsContainer = document.getElementById('cards'); 
+  cardsContainer.innerHTML = ''; // Mevcut kartları temizliyoruz
 
-  // Loop through the filtered data and create card HTML for each item
   filteredData.forEach(item => {
     const cardHTML = `
       <div class="card">
-        <button><img class="basket" src="/image/home/categoryBasket.png" alt="Basket"></button>
+        <button><img width="38" class="basket" src="/image/home/categoryBasket.png" alt="Basket"></button>
         <img class="card_img" src="${item.src}" alt="${item.name}">
         <p>${item.name}</p>
         <h5>${item.title}</h5>
         <div class="price">
-          <h6>${item.price}</h6>
+          <h6>${item.price}.00$</h6>
         </div>
       </div>
     `;
-
-    cardsContainer.innerHTML += cardHTML; // Append the card HTML
+    cardsContainer.innerHTML += cardHTML;
   });
 
-  // Add click event listeners to each card
+  // Kartlara tıklanma olayı ekliyoruz
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', (e) => {
       const itemName = e.target.closest('.card').querySelector('p').textContent;
       const itemId = categoriesData.find(item => item.name === itemName).id;
-      window.location.href = `/components/categoryDetail/index.html?id=${itemId}`; // Redirect to the detail page
+      window.location.href = `/components/categoryDetail/index.html?id=${itemId}`;
     });
   });
 }
 
-// Add click events to category buttons for filtering
+// "See All" butonuna tıklanma olayı
+const seeAllButton = document.getElementById('seeAllButton');
+seeAllButton.addEventListener('click', () => {
+  displayCards(categoriesData); // Bütün kartları gösteriyoruz
+  seeAllButton.style.display = 'none'; // "See All" butonunu gizləyirik
+});
+
+// Kategori butonlarına click event eklemek
 const buttons = document.querySelectorAll('.buttons button');
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
+    // Bütün butonların rəngini təmizləyirik
     buttons.forEach(btn => {
-      btn.style.backgroundColor = ''; // default rəngə qaytar
-      btn.style.color = '';
-      btn.style.border='' // default yazı rənginə qaytar
+      btn.style.backgroundColor = ''; 
+      btn.style.color = ''; 
     });
 
     // Kliklənən butonun rəngini qırmızı edirik
-    button.style.backgroundColor = 'rgba(91, 88, 235, 1)'; 
-    button.style.color='white';
-    button.style.border='none'
+    button.style.backgroundColor = 'rgba(91, 88, 235, 1)';
+    button.style.color = 'white'; 
 
-    const category = button.textContent; // Get the button text
+    const category = button.textContent; 
     
     if (category === 'All categories') {
-      // If 'All categories' is selected, display all items
+      // "All categories" seçildiyse tüm kartları gösteriyoruz
       displayCards(categoriesData.slice(0, currentIndex));
+      seeAllButton.style.display = 'block'; // "See All" butonunu geri getiririk
     } else {
-      // Filter the items based on the selected category
+      // Seçilen kategoriye göre filtreleme yapıyoruz
       const filteredData = categoriesData.filter(item => item.category === category);
-      displayCards(filteredData.slice(0, currentIndex)); // Display the filtered items
+      displayCards(filteredData.slice(0, currentIndex)); // Filtrelenmiş veriyi gösteririk
+      seeAllButton.style.display = 'none'; // Filtrede "See All" gizlənir
     }
   });
 });

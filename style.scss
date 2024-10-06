@@ -1242,6 +1242,28 @@ footer {
         }
     }
 
+    #seeAllButton{
+        min-width: 185px;
+        min-height: 46px;
+        height: 100%;
+        color: white;
+        background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 8px;
+        border: none;
+        span{
+            font-size: 18px;
+            font-weight: 400;
+        }
+        img{
+            width: 20px;
+        }
+
+        
+    }
+
 }
 
 
@@ -1649,6 +1671,7 @@ footer {
                 padding: 5px;
             }
         }
+
         #cards{
             width: 100%;
             display: grid;
@@ -1661,7 +1684,11 @@ footer {
                 width: 100%;
 
                 }
+
             }
+        }
+        #seeAllButton{
+            width: 100%;
         }
     }
 
