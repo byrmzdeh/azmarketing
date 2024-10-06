@@ -1644,7 +1644,10 @@ footer {
         }
         .buttons{
             display: grid;
-            grid-template-columns: auto  auto;
+            grid-template-columns: auto auto  auto;
+            button{
+                padding: 5px;
+            }
         }
         #cards{
             width: 100%;
