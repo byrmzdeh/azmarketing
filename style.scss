@@ -538,9 +538,11 @@ nav {
             cursor: pointer;
             transform: 1s;
             z-index: 1;
+            opacity: 0.7;
 
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.3);
+                opacity: 1;
             }
         }
     }
@@ -631,7 +633,7 @@ nav {
         width: 51%;
         display: grid;
         grid-template-columns: auto auto;
-        gap: 10px;
+        gap: 20px;
 
 
         .card_one {
@@ -655,7 +657,7 @@ nav {
             text-decoration: none;
 
             .card {
-                max-width: 398px;
+                max-width: 399px;
                 width: 100%;
                 height: 268px;
                 border-radius: 10px;
@@ -671,8 +673,14 @@ nav {
                 transition: 1s;
                 z-index: 1;
 
+             
                 &:hover {
                     background: var(--Primitives-Primary-600, rgba(89, 75, 224, 1));
+                    img{
+                        transform: rotate(360deg);
+                        transition: 1s;
+
+                    }
                 }
 
                 h5 {
@@ -744,7 +752,7 @@ nav {
         flex-direction: column;
         gap: 5px;
         z-index: 1;
-
+        position: static;
 
 
         h4 {
@@ -771,18 +779,21 @@ nav {
                 .accordion-button {
                     background-color: transparent;
                     color: white;
-
-                    i {
-                        color: white;
+                    .accordion-collapse {
+                        background-color: #f0f0f0; /* Collapse fon rəngi */
                     }
 
+                    
+
                 }
 
-                .accordion-button::after {
-                    color: white !important;
-                }
+           
+            
 
             }
+  
+            
+          
 
         }
     }
@@ -876,33 +887,80 @@ nav {
 
             }
 
-            .choose {
+            // .choose {
+            //     width: 100%;
+            //     border-radius: 8px;
+            //     border: 1px solid rgba(255, 255, 255, 0.16);
+            //     overflow: hidden;
+            //     background: rgba(255, 255, 255, 0.1);
+            //     display: flex;
+            //     color: rgba(255, 255, 255, 0.7);
+
+            //     .ch_input {
+            //         background-color: transparent;
+            //         border: none;
+            //     }
+
+            //     select {
+            //         background: rgba(255, 255, 255, 0.1);
+            //         color: rgba(255, 255, 255, 0.7);
+            //         border: none;
+            //         outline: none;
+
+            //         option {
+            //             color: rgb(49, 49, 84);
+            //         }
+
+            //     }
+
+                
+            // }
+
+
+            .choose select {
+                /* Select içindəki mətnin gizlədilməsi üçün rəngini şəffaf edirik */
+                color: transparent;
+                /* Dropdown oxunu göstərmək üçün background faydasız bir rəng veririk */
+                background-color: transparent;
                 width: 100%;
-                border-radius: 8px;
-                border: 1px solid rgba(255, 255, 255, 0.16);
-                overflow: hidden;
-                background: rgba(255, 255, 255, 0.1);
-                display: flex;
-                color: rgba(255, 255, 255, 0.7);
-
-                .ch_input {
-                    background-color: transparent;
-                    border: none;
-                }
-
-                select {
-                    background: rgba(255, 255, 255, 0.1);
-                    color: rgba(255, 255, 255, 0.7);
-                    border: none;
-                    outline: none;
-
-                    option {
-                        color: rgb(49, 49, 84);
-                    }
-
-                }
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                /* Yalnız dropdown oxunu göstərməyə imkan verir */
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                border: none;
+                outline: none;
             }
-
+        
+            .choose {
+                position: relative;
+            }
+        
+            .choose select::-ms-expand {
+                display: none; /* Internet Explorer üçün dəstək */
+            }
+        
+            .choose select:focus {
+                outline: none;
+            }
+            option{
+                color: black;
+            }
+        
+            /* Dropdown icon əlavə edirik */
+            .choose::after {
+                content: '▼';
+                color: white;
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                pointer-events: none; /* Dropdown-u klikləməyə təsir etməsin */
+            }
 
 
         }
@@ -1295,9 +1353,11 @@ footer {
         justify-content: space-around;
         border-radius: 8px;
         border: none;
-        span{
+        a{
             font-size: 18px;
             font-weight: 400;
+            color: white;
+            text-decoration: none;
         }
         img{
             width: 20px;
@@ -1306,6 +1366,29 @@ footer {
         
     }
 
+    #seeAllButtonn{
+        min-width: 185px;
+        min-height: 46px;
+        height: 100%;
+        color: white;
+        background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 8px;
+        border: none;
+        a{
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+            text-decoration: none;
+        }
+        img{
+            width: 20px;
+        }
+
+        
+    }
 }
 
 
@@ -1863,16 +1946,13 @@ footer {
 
 
             .learn_btn {
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
+                width: 50%;
+             
 
                 a {
-                    width: 25%;
                     display: flex;
                     align-items: center;
-                    justify-content: end;
-                    gap: 3px;
+                    justify-content: space-evenly;
                     font-size: 15px;
                     color: white;
                     font-family: 'Inter', sans-serif;

@@ -216,10 +216,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 5px;
 }
 .contact .contact_text form .phone .one_text span {
-  font-size: 16px;
+  font-size: 15px;
   color: White;
   font-weight: 400;
 }

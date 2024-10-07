@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -437,9 +438,11 @@ nav .login .user img {
   cursor: pointer;
   transform: 1s;
   z-index: 1;
+  opacity: 0.7;
 }
 .five .partners img:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  opacity: 1;
 }
 
 .six {
@@ -515,7 +518,7 @@ nav .login .user img {
   width: 51%;
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 20px;
 }
 .six .cards .card_one {
   width: 100%;
@@ -534,7 +537,7 @@ nav .login .user img {
   text-decoration: none;
 }
 .six .cards a .card {
-  max-width: 398px;
+  max-width: 399px;
   width: 100%;
   height: 268px;
   border-radius: 10px;
@@ -552,6 +555,10 @@ nav .login .user img {
 }
 .six .cards a .card:hover {
   background: var(--Primitives-Primary-600, rgb(89, 75, 224));
+}
+.six .cards a .card:hover img {
+  transform: rotate(360deg);
+  transition: 1s;
 }
 .six .cards a .card h5 {
   font-weight: 500;
@@ -606,6 +613,7 @@ nav .login .user img {
   flex-direction: column;
   gap: 5px;
   z-index: 1;
+  position: static;
 }
 .seven .accordion h4 {
   font-weight: 400;
@@ -629,11 +637,8 @@ nav .login .user img {
   background-color: transparent;
   color: white;
 }
-.seven .accordion .accordion-item .accordion-header .accordion-button i {
-  color: white;
-}
-.seven .accordion .accordion-item .accordion-header .accordion-button::after {
-  color: white !important;
+.seven .accordion .accordion-item .accordion-header .accordion-button .accordion-collapse {
+  background-color: #f0f0f0; /* Collapse fon rəngi */
 }
 .seven .error {
   color: red;
@@ -691,6 +696,7 @@ nav .login .user img {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
+  /* Dropdown icon əlavə edirik */
 }
 .seven form .form input {
   width: 100%;
@@ -711,27 +717,44 @@ nav .login .user img {
   background-clip: text;
   color: transparent;
 }
-.seven form .form .choose {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  color: rgba(255, 255, 255, 0.7);
-}
-.seven form .form .choose .ch_input {
-  background-color: transparent;
-  border: none;
-}
 .seven form .form .choose select {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.7);
+  /* Select içindəki mətnin gizlədilməsi üçün rəngini şəffaf edirik */
+  color: transparent;
+  /* Dropdown oxunu göstərmək üçün background faydasız bir rəng veririk */
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  /* Yalnız dropdown oxunu göstərməyə imkan verir */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
 }
-.seven form .form .choose select option {
-  color: rgb(49, 49, 84);
+.seven form .form .choose {
+  position: relative;
+}
+.seven form .form .choose select::-ms-expand {
+  display: none; /* Internet Explorer üçün dəstək */
+}
+.seven form .form .choose select:focus {
+  outline: none;
+}
+.seven form .form option {
+  color: black;
+}
+.seven form .form .choose::after {
+  content: "▼";
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Dropdown-u klikləməyə təsir etməsin */
 }
 .seven form textarea {
   width: 100%;
@@ -1051,11 +1074,34 @@ footer .link .phone .one_text span {
   border-radius: 8px;
   border: none;
 }
-.category #seeAllButton span {
+.category #seeAllButton a {
   font-size: 18px;
   font-weight: 400;
+  color: white;
+  text-decoration: none;
 }
 .category #seeAllButton img {
+  width: 20px;
+}
+.category #seeAllButtonn {
+  min-width: 185px;
+  min-height: 46px;
+  height: 100%;
+  color: white;
+  background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+  border: none;
+}
+.category #seeAllButtonn a {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.category #seeAllButtonn img {
   width: 20px;
 }
 
@@ -1472,16 +1518,12 @@ footer .link .phone .one_text span {
     font-size: 13px;
   }
   .six .text .learn_btn {
+    width: 50%;
+  }
+  .six .text .learn_btn a {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
-  .six .text .learn_btn a {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 3px;
     font-size: 15px;
     color: white;
     font-family: "Inter", sans-serif;

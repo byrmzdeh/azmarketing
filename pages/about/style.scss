@@ -91,17 +91,25 @@ body {
 
 
             .start_btn {
-                width: 155px;
+                width: 160px;
                 height: 40px;
                 border-radius: 100px;
                 background: rgba(255, 255, 255, 0.08);
                 // border-image-source: linear-gradient(96.31deg, rgba(133, 138, 244, 0.2) 2.42%, rgba(255, 255, 255, 0.2) 54.53%, rgba(77, 60, 198, 0.2) 100%);
-                color: rgba(255, 255, 255, 1);
                 font-family: 'Inter', sans-serif;
                 text-transform: uppercase;
-                font-size: 10px;
                 letter-spacing: 0.8px;
                 border: 1px solid var(--Primitives-Primary-400, rgb(80, 85, 164));
+                margin: 1px auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    font-size: 10px;
+                    color: rgba(255, 255, 255, 1);
+                    text-decoration: none;
+
+                }
             }
 
             h2 {
@@ -145,7 +153,7 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
-                    font-size: 18px;
+                    font-size: 19px;
                     text-decoration: none;
 
                     img {

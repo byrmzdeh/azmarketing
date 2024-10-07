@@ -206,8 +206,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua.</p>
-            <button class="learn_btn"><a href="/pages/courses/index.html">Our Courses<img width="23"
-                        src="/image/home/arrow.png" alt="err"></a></button>
+            <!-- <button class="learn_btn"><a href="/pages/courses/index.html">Our Courses<img width="23"
+                        src="/image/home/arrow.png" alt="err"></a></button> -->
         </div>
         <img class="ellipse5" src="/image/home/ellipse5.png" alt="">
     </section>
@@ -224,11 +224,12 @@
             <button>Marketing</button>
         </div>
         <div id="cards" class="cards-container">
- 
+
         </div>
-        <button id="seeAllButton">
-            <span>See all courses</span>
-            <img src="/image/home/arrow.png" alt=""></button>
+        <button id="seeAllButtonn">
+            <a href="/pages/courses/index.html">See all courses</a>
+            <img src="/image/home/arrow.png" alt="">
+        </button>
     </section>
 
     <section class="seven">
@@ -309,10 +310,10 @@
                     <input type="text" id="phone" name="phone" placeholder="Phone number">
                 </div>
 
-                <div class="choose">
-                    <input class="ch_input" type="text" id="lastName" name="lastName" placeholder="Choose a course"
-                        readonly>
+                <div class="choose" style="position: relative;">
+                    <input class="ch_input" type="text" id="lastName" name="lastName" placeholder="Choose a course" readonly>
                     <select id="cars" onchange="updateInput(this)">
+                        <option value="" disabled selected hidden>Select a course</option>
                         <option value="Marketing">Marketing</option>
                         <option value="Business">Business</option>
                         <option value="Web Design">Web Design</option>
@@ -321,7 +322,6 @@
                         <option value="3D Design">3D Design</option>
                     </select>
                 </div>
-
 
             </div>
             <div>
