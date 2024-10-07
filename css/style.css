@@ -457,7 +457,7 @@ nav .login .user img {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  z-index: 2;
+  z-index: 3;
 }
 .six .text .start_btn {
   width: 155px;
@@ -959,6 +959,7 @@ footer .link .phone .one_text span {
   cursor: pointer;
   position: relative;
   border-radius: 10px;
+  border: 1px solid rgb(226, 226, 227);
 }
 .category #cards .card .card_img {
   max-width: 380px;

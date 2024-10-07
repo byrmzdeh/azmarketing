@@ -40,56 +40,82 @@ counters.forEach(counter => {
 
 
 /////form
-document.getElementById('myForm').addEventListener('submit', function (e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('myForm');
 
-  const firstName = document.getElementById('firstName').value.trim();
-  const lastName = document.getElementById('lastName').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  const errorMessage = document.getElementById('errorMessage');
-  const thankYouModal = document.getElementById('thankYouModal');
-  const modalOverlay = document.getElementById('modalOverlay');
-
-  let errors = [];
-
-  if (!firstName || !lastName || !phone || !email || !message) {
-    errors.push('Xahiş edirik bütün xanalari doldurun.');
+  // Formanın olub olmadığını yoxlayın
+  if (!form) {
+      console.error("myForm ID-li forma tapılmadı!");
+      return; // Formanın olmadığı halda kodun icrasını dayandırır
   }
 
-  if (email && !email.includes('@')) {
-    errors.push('Email daxilində @ olmalıdır.');
-    document.getElementById('email').classList.add('input-error');
-  } else {
-    document.getElementById('email').classList.remove('input-error');
-  }
+  form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  if (phone && !/^\d+$/.test(phone)) {
-    errors.push('Telefon nömrəsi yalnız rəqəmlərdən ibarət olmalıdır.');
-    document.getElementById('phone').classList.add('input-error');
-  } else {
-    document.getElementById('phone').classList.remove('input-error');
-  }
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-  if (errors.length > 0) {
-    errorMessage.textContent = errors.join(' ');
-  } else {
-    errorMessage.textContent = '';
+      const errorMessage = document.getElementById('errorMessage');
+      const thankYouModal = document.getElementById('thankYouModal');
+      const modalOverlay = document.getElementById('modalOverlay');
 
-    console.log('Form uğurla göndərildi!');
+      let errors = [];
 
-    thankYouModal.style.display = 'block';
-    modalOverlay.style.display = 'block';
+      if (!firstName || !lastName || !phone || !email || !message) {
+          errors.push('Xahiş edirik bütün xanalari doldurun.');
+      }
 
-    sessionStorage.setItem('formSubmitted', 'true');
+      if (email && !email.includes('@')) {
+          errors.push('Email daxilində @ olmalıdır.');
+          document.getElementById('email').classList.add('input-error');
+      } else {
+          document.getElementById('email').classList.remove('input-error');
+      }
 
-    setTimeout(function () {
-      window.location.href = '/pages/contact/index.html';
-    }, 2000);
-  }
+      if (phone && !/^\d+$/.test(phone)) {
+          errors.push('Telefon nömrəsi yalnız rəqəmlərdən ibarət olmalıdır.');
+          document.getElementById('phone').classList.add('input-error');
+      } else {
+          document.getElementById('phone').classList.remove('input-error');
+      }
+
+      if (errors.length > 0) {
+          errorMessage.textContent = errors.join(' ');
+      } else {
+          errorMessage.textContent = '';
+
+          console.log('Form uğurla göndərildi!');
+
+          thankYouModal.style.display = 'block';
+          modalOverlay.style.display = 'block';
+
+          sessionStorage.setItem('formSubmitted', 'true');
+
+          // Burada cari səhifənin yolunu yoxlayırıq
+          if (window.location.pathname === '/index.html') {
+              // Əgər home səhifəsindədirsə, contact səhifəsinə yönləndir
+              setTimeout(function () {
+                  window.location.href = '/pages/contact/index.html';
+              }, 1000);
+          } else if (window.location.pathname === '/pages/contact/index.html') {
+              // Əgər contact səhifəsindədirsə, home səhifəsinə yönləndir
+              setTimeout(function () {
+                  window.location.href = '/index.html';
+              }, 1000);
+          }
+      }
+  });
 });
+
+
+
+
+
+
+
 
 
 
@@ -184,3 +210,5 @@ buttons.forEach(button => {
     }
   });
 });
+
+

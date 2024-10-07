@@ -1,13 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    button {
+        cursor: pointer;
+    }
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+
+}
+
+
+.pagination {
+    width: 100%;
+    min-height: 170px;
+    height: 100%;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+
+    .text {
+        width: 100%;
+        padding: 0px 0px 0px 40px;
+        a {
+            color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+            text-decoration: none;
+            z-index: 1;
+
+
+        }
+    }
+}
+
 .about {
     max-width: 100%;
-    min-height: 870px;
-    padding: 150px 40px 0px 40px;
+    min-height: 550px;
+    padding: 40px;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     position: relative;
 
 
@@ -124,27 +166,11 @@
             width: 100%;
             position: absolute;
             left: -50px;
-            top: -380px;
+            top: -210px;
         }
     }
 }
 
-.four{
-    
-    .count{
-           h5 {
-                font-size: 23px;
-                font-family: 'Inter', sans-serif;
-                font-weight: 300;
-            }
-
-            .counter {
-                text-align: center;
-                font-size: 80px;
-                font-weight: 300;
-            }
-    }
-}
 
 .six {
     position: relative;
@@ -153,19 +179,16 @@
         position: absolute;
 
     }
-    .cards{
+
+    .cards {
         z-index: 1;
 
     }
-    .text{
+
+    .text {
         z-index: 1;
     }
 }
-
-
-
-
-
 
 
 @media (min-width: 320px) and (max-width: 768px) {
