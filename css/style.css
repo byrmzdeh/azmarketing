@@ -511,7 +511,7 @@ nav .login .user img {
   text-decoration: none;
 }
 .six .cards {
-  width: 53%;
+  width: 51%;
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
@@ -533,7 +533,7 @@ nav .login .user img {
   text-decoration: none;
 }
 .six .cards a .card {
-  max-width: 368px;
+  max-width: 398px;
   width: 100%;
   height: 268px;
   border-radius: 10px;
@@ -981,31 +981,61 @@ footer .link .phone .one_text span {
   color: var(--Primitives-Neutral-900, rgb(86, 86, 89));
   padding-top: 10px;
 }
-.category #cards .card button {
+.category #cards .card .basket_btn {
   position: absolute;
   top: 10px;
   right: 10px;
   border-radius: 50%;
   border: none;
 }
-.category #cards .card button .basket {
+.category #cards .card .basket_btn .basket {
   width: 38px;
   height: 38px;
 }
 .category #cards .card .price {
   width: 100%;
-  min-height: 60px;
+  min-height: 40px;
   height: 100%;
-  padding-right: 25px;
+  padding: 15px;
   border-top: 1px solid var(--Primitives-Neutral-200, rgb(226, 226, 227));
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .category #cards .card .price h6 {
   color: var(--Primitives-Primary-500, rgb(91, 88, 235));
   font-weight: 500;
   font-size: 19px;
+  position: absolute;
+  right: 15px;
+}
+.category #cards .card .price .buy_btn {
+  max-width: 100px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  background: none;
+  position: absolute;
+  right: 15px;
+  transition: 0.3s;
+}
+.category #cards .card .price .buy_btn span {
+  font-weight: 400;
+  color: rgb(91, 88, 235);
+  font-size: 16px;
+}
+.category #cards .card:hover .price .buy_btn {
+  opacity: 1;
+  background-color: none;
+  position: absolute;
+}
+.category #cards .card:hover .price h6 {
+  left: 15px;
 }
 .category #seeAllButton {
   min-width: 185px;

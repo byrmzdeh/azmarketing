@@ -120,15 +120,20 @@ function displayCards(filteredData) {
 
   filteredData.forEach(item => {
     const cardHTML = `
-      <div class="card">
-        <button><img width="38" class="basket" src="/image/home/categoryBasket.png" alt="Basket"></button>
-        <img class="card_img" src="${item.src}" alt="${item.name}">
-        <p>${item.name}</p>
-        <h5>${item.title}</h5>
-        <div class="price">
-          <h6>${item.price}.00$</h6>
-        </div>
-      </div>
+                 <div class="card">
+                <button class="basket_btn"><img width="38" class="basket" src="/image/home/categoryBasket.png"
+                        alt="Basket"></button>
+                <img class="card_img" src="${item.src}" alt="${item.name}">
+                <p>${item.name}</p>
+                <h5>${item.title}</h5>
+                <div class="price">
+                    <h6>${item.price}.00$</h6>
+                    <button class="buy_btn">
+                        <span>Buy Now</span>
+                        <img width="10" src="/image/home/buyVector.png" alt="err">
+                    </button>
+                </div>
+            </div>
     `;
     cardsContainer.innerHTML += cardHTML;
   });
