@@ -457,6 +457,7 @@ nav .login .user img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  z-index: 2;
 }
 .six .text .start_btn {
   width: 155px;
