@@ -174,11 +174,16 @@ function displayCards(filteredData) {
   });
 }
 
-// "See All" butonuna tıklanma olayı
-const seeAllButton = document.getElementById('seeAllButton');
-seeAllButton.addEventListener('click', () => {
-  displayCards(categoriesData); // Bütün kartları gösteriyoruz
-  seeAllButton.style.display = 'none'; // "See All" butonunu gizləyirik
+
+//SeeAll
+document.addEventListener('DOMContentLoaded', () => {
+  const seeAllButton = document.getElementById('seeAllButton');
+  if (seeAllButton) {
+    seeAllButton.addEventListener('click', () => {
+      displayCards(categoriesData); // Bütün kartları göstəririk
+      seeAllButton.style.display = 'none'; // "See All" düyməsini gizlədirik
+    });
+  }
 });
 
 // Kategori butonlarına click event eklemek
@@ -210,5 +215,4 @@ buttons.forEach(button => {
     }
   });
 });
-
 

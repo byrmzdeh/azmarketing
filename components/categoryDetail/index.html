@@ -4,42 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Page</title>
+    <script src="./style.js"></script>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div id="detail"></div>
+    <div id="detail">
+        <div class="title">
+            <h4>Introduction Web Design with HTML</h4>
+            <div class="category">
+                <button>${item.category}</button>
+                <div class="view">
+                    <img width="17" src="/image/home/detailUser.png" alt="">
+                    <p>&{item.view} students enrolled</p>
 
-    <script>
-        // URL'den id değerini almak
-        const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
+                </div>
+            </div>
+            <img src="&{item.img}" alt="">
+            <div class="desc">
+                <h5>Course Description</h5>
+                <p>&{item.description}</p>
+                <div class="desc_time">
+                    <div class="time_one">
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.video}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.resources}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.access}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.accessTwo}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.certificate}</p>
+                        </div>
 
-        // JSON verisini almak
-        fetch('/json/category.json')
-            .then(res => res.json())
-            .then(data => {
-                const item = data.find(item => item.id === id); // Seçilen öğeyi bul
-                const detailContainer = document.getElementById('detail');
+                    </div>
 
-                // Eğer öğe bulunduysa, detayları göster
-                if (item) {
-                    const title = document.createElement('h1');
-                    title.textContent = item.name;
+                    <div class="time_one">
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.video}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.resources}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.access}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.accessTwo}</p>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <p>&{item.certificate}</p>
+                        </div>
 
-                    const image = document.createElement('img');
-                    image.src = item.src;
-                    image.alt = item.name;
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    const category = document.createElement('p');
-                    category.textContent = `Category: ${item.category}`;
+        <div class="card">
+            <div class="instructor">
+                <img width="600" src="/image/home/instructor.png" alt="err">
+                <div class="name">
+                    <h5>Name Surname</h5>
+                    <p>Instructor</p>
+                </div>
+            </div>
+            <div class="includes">
+                <h5>Includes</h5>
+                <div class="time_one">
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <p>&{item.video}</p>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <p>&{item.resources}</p>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <p>&{item.access}</p>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <p>&{item.accessTwo}</p>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <p>&{item.certificate}</p>
+                    </div>
 
-                    detailContainer.appendChild(title);
-                    detailContainer.appendChild(image);
-                    detailContainer.appendChild(category);
-                } else {
-                    detailContainer.textContent = 'Item not found';
-                }
-            })
-            .catch(error => console.error('Veri alınırken hata oluştu:', error));
-    </script>
+                </div>
+            </div>
+
+            <div class="buy">
+                <div class="price">
+                    <p>Price</p>
+                    <h5>${item.price}</h5>
+                </div>
+                <div class="details">
+                    <h6>Card details</h6>
+                    <form id="paymentForm">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Emailinizi daxil edin" required>
+                        
+                        <label for="cardNumber">Kart Nömrəsi:</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="16 rəqəmdən ibarət kart nömrəsi" required>
+                        
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="3 rəqəmdən ibarət CVV" required>
+                        
+                        <label for="discountCode">İndirim Kodu:</label>
+                        <input type="text" id="discountCode" name="discountCode" placeholder="9 rəqəmdən ibarət kod" required>
+                        
+                        <button type="submit">Ödənişi Təsdiqlə</button>
+                        <div class="message" id="message"></div>
+                    </form>
+                      
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+
+
 </body>
 </html>

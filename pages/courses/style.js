@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded', loadCategories);
+// document.addEventListener('DOMContentLoaded', loadCategories);
