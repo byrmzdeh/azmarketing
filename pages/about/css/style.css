@@ -21,6 +21,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: end;
+  z-index: 2;
 }
 .pagination .text {
   width: 100%;
@@ -139,12 +140,12 @@ body {
   width: 46%;
 }
 .about .about_one .ellipse4 {
-  max-width: 1800px;
+  max-width: 1000px;
   min-height: 378px;
   width: 100%;
   position: absolute;
   left: -50px;
-  top: -210px;
+  top: 1px;
 }
 
 .six {
@@ -200,7 +201,7 @@ body {
   .about .about_one .ellipse4 {
     width: 100%;
     left: 0px;
-    top: -100px;
+    top: 10px;
     opacity: 0.5;
   }
 }/*# sourceMappingURL=style.css.map */
