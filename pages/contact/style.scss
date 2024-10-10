@@ -52,6 +52,7 @@ body {
     flex-direction: column;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
     gap: 30px;
+    z-index: 2;
 
     h3 {
         font-size: 47px;
@@ -346,6 +347,8 @@ body {
     }
 }
 
+
+
 @media (min-width: 320px) and (max-width: 768px) {
 
 
@@ -442,6 +445,8 @@ body {
 
         }
     }
+
+
 }
 
 
@@ -542,4 +547,6 @@ body {
 
         }
     }
+
+ 
 }

@@ -336,7 +336,6 @@ body {
   }
   #detail .title {
     width: 100%;
-    padding: 0px 40px 0px 0px;
   }
   #detail .title h4 {
     font-size: 26px;
@@ -348,7 +347,6 @@ body {
   }
   #detail .card {
     width: 100%;
-    padding: 0px 40px 0px 0px;
   }
   #detail .card .includes {
     display: flex;

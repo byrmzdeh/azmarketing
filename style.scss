@@ -26,13 +26,22 @@ body {
 
 .ellipse2 {
     position: absolute;
-    max-width: 714px;
+    max-width: 800px;
     width: 100%;
-    top: 206px;
+    top: 2%;
     right: 0px;
     opacity: 80%;
 }
 
+.ellipse3 {
+    position: absolute;
+    max-width: 802px;
+    width: 100%;
+    left: 25%;
+    top: 150%;
+    z-index: 1;
+
+}
 
 nav {
     width: 100%;
@@ -43,12 +52,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    z-index: 3;
+    z-index: 8;
 
 
 
     .logo {
         width: 229px;
+        z-index: 2;
+        cursor: pointer;
     }
 
 
@@ -230,7 +241,6 @@ nav {
     flex-direction: column;
     padding: 40px;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
-    position: relative;
 
 
     .text {
@@ -238,6 +248,8 @@ nav {
         display: flex;
         align-items: end;
         justify-content: space-between;
+        z-index: 1;
+
 
         .text_one {
             width: 45%;
@@ -285,6 +297,8 @@ nav {
         grid-template-columns: auto auto auto;
         margin: 60px auto;
         gap: 5px;
+        z-index: 2;
+
 
 
 
@@ -351,15 +365,7 @@ nav {
     }
 
 
-    .ellipse3 {
-        position: absolute;
-        max-width: 802px;
-        width: 100%;
-        left: 20%;
-        top: 300px;
-        z-index: 1;
-
-    }
+   
 
 
 }
@@ -372,7 +378,6 @@ nav {
     justify-content: space-between;
     padding: 40px;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
-    position: relative;
 
 
     .text {
@@ -1092,7 +1097,7 @@ footer {
     position: relative;
 
     .ellipse8 {
-        max-width: 700px;
+        max-width: 600px;
         width: 100%;
         position: absolute;
         left: 26%;
@@ -1100,6 +1105,26 @@ footer {
         z-index: 1;
 
     }
+
+    .ellipse11 {
+        max-width: 300px;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+
+    }   
+     .ellipse12 {
+        max-width: 800px;
+        width: 100%;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        z-index: 1;
+
+    }
+    
 
     .connect {
         width: 35%;
@@ -1109,6 +1134,8 @@ footer {
         justify-content: center;
         gap: 40px;
         border-right: 1px solid var(--Primitives-Primary-300, rgba(168, 179, 249, 0.2));
+        z-index: 3;
+
 
         .az_logo {
             max-width: 370px;
@@ -1167,6 +1194,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         gap: 15px;
+        z-index: 3;
 
 
         h3 {
@@ -1281,6 +1309,8 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    z-index: 3;
+
 
     h3 {
         font-size: 47px;
@@ -1708,7 +1738,7 @@ footer {
 
 .registerPage {
     max-width: 100%;
-    min-height: 650px;
+    min-height: 690px;
     padding: 40px;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
     display: flex;
@@ -1883,6 +1913,22 @@ footer {
         }
     }
 
+}
+
+.ellipse9{
+    max-width: 800px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 35%;
+}
+
+.ellipse10{
+    max-width: 900px;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 60%;
 }
 
 
@@ -2340,6 +2386,42 @@ footer {
         }
     }
 
+
+    .registerPage {
+        display: flex;
+
+        .text_main {
+            width: 100%;
+            margin-top: -60px;
+            padding: 0px  40px 0px 0px;
+
+            
+
+
+            .registerForm {
+                width: 100%;
+
+                h3 {
+                    font-size: 33px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+                .input_grid{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: auto;
+                }
+            }
+        }
+    }
+    .ellipse9{
+        display: none;
+    }
+    .ellipse3{
+        display: none;
+    }
 }
 
 
@@ -2614,6 +2696,44 @@ footer {
         }
     }
 
+    .registerPage {
+        display: flex;
+
+        .text_main {
+            width: 100%;
+            margin-top: -60px;
+            padding: 0px 40px 0px 0px ;
+
+            
+
+
+            .registerForm {
+                width: 100%;
+
+                h3 {
+                    font-size: 33px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+                .input_grid{
+                    width: 100%;
+                    display: grid ;
+                    grid-template-columns: auto auto;
+                }
+            }
+        }
+    }
+
+    .ellipse9{
+        display: none;
+    }
+    .ellipse3{
+        display: none;
+    }
+
+
 
 }
 
@@ -2655,6 +2775,7 @@ footer {
             }
         }
     }
+
 
 
 }
