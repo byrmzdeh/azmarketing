@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="./style.js"></script>
+</head>
+
+<body>
+    <div class="login_register_pagination">
+        <a href="/components/login/index.html">
+            <img src="/image/login/login.png" alt="err">
+            <span>Go Back</span>
+        </a>
+    </div>
+
+
+    <section class="login_register">
+
+        <div class="text">
+            <form class="codeForm" id="codeForm">
+                <h3>Confirm Code</h3>
+                <p>Please submit the 4 digit confirmation code that was sent to your e-mail adress. </p>
+
+                <div class="inputs">
+                    <input type="text" id="digit1" name="number" placeholder="0" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="digit2" name="number" placeholder="0" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="digit3" name="number" placeholder="0" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    <input type="text" id="digit4" name="number" placeholder="0" maxlength="1" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+                
+                <button type="submit">Send Code</button>
+                <div class="register">
+                    <span>Didn’t get a code?</span>
+                    <a href="">Send again</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="bg-logo">
+            <img src="/image/login/logo.png" alt="err">
+        </div>
+
+    </section>
+
+</body>
+
+</html>

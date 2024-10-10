@@ -17,28 +17,7 @@ body {
 }
 
 
-.pagination {
-    width: 100%;
-    min-height: 170px;
-    height: 100%;
-    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
-    display: flex;
-    justify-content: start;
-    align-items: end;
-    z-index: 2;
 
-    .text {
-        width: 100%;
-        padding: 0px 0px 0px 40px;
-        a {
-            color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
-            text-decoration: none;
-            z-index: 1;
-
-
-        }
-    }
-}
 
 .about {
     max-width: 100%;

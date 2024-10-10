@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="./style.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="login_register_pagination">
+
+        <a href="/index.html">
+            <img src="/image/login/login.png" alt="err">
+            <span>Home page</span>
+        </a>
+    </div>
+
+
+    <section class="registerPage">
+
+        <div class="text_main">
+            <form class="registerForm" id="registerForm">
+                <h3>Register</h3>
+                <p>Personal Information</p>
+                <div class="input_grid">
+
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <input type="text" id="surname" name="surname" placeholder="Surname">
+
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+
+                <p>Set Password</p>
+
+                <div class="input_grid">
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <img width="20" class="toggle-password" onclick="togglePasswordd()" src="/image/login/eye.png"
+                            alt="">
+                    </div>
+
+                    <div class="password-wrapper">
+                        <input type="password" id="repeat" placeholder="Repeat Password" required>
+                        <img width="20" class="toggle-password" onclick="togglePasswordRepeatt()" src="/image/login/eye.png"
+                            alt="">
+                    </div>
+                </div>
+                <div id="error" class="error" style=" color: red;"></div>
+
+
+                <button type="submit">Create Account</button>
+            </form>
+
+            <div class="already">
+                <span>Already have an account?</span>
+                <a href="/components/login/index.html">Log In</a>
+            </div>
+        </div>
+
+        <div class="bg-logo">
+            <img src="/image/login/logo.png" alt="err">
+        </div>
+
+    </section>
+
+</body>
+
+</html>

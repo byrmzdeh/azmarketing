@@ -12,7 +12,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":64
+        "view":64,
+        "imgDetail":"/image/home/imgDetail.png"
 
     },
     {
@@ -28,7 +29,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":89
+        "view":89,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -45,7 +47,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":128,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -62,7 +65,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":59,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -79,7 +83,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":100
+        "view":100,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -96,7 +101,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":30
+        "view":30,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -113,7 +119,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":128,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -130,7 +137,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":128,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -147,7 +155,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":130
+        "view":130,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -164,7 +173,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":128,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -181,7 +191,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":128
+        "view":128,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     },
@@ -198,7 +209,8 @@
         "access":"Full lifetime access",
         "accessTwo":"Access on mobile and TV",
         "certificate":"Certificate of Completion",
-        "view":110
+        "view":110,
+        "imgDetail":"/image/home/imgDetail.png"
 
 
     }

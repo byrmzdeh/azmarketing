@@ -119,6 +119,35 @@ nav {
 
 }
 
+.pagination {
+    width: 100%;
+    min-height: 170px;
+    height: 100%;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    z-index: 2;
+
+    span {
+        color: rgba(255, 255, 255, 1);
+    }
+
+
+    .text {
+        width: 100%;
+        padding: 0px 0px 0px 40px;
+
+        a {
+            color: var(--Primitives-Primary-200, rgba(201, 209, 252, 1));
+            text-decoration: none;
+            z-index: 1;
+
+
+        }
+    }
+}
+
 .one {
     max-width: 100%;
     min-height: 780px;
@@ -673,10 +702,11 @@ nav {
                 transition: 1s;
                 z-index: 1;
 
-             
+
                 &:hover {
                     background: var(--Primitives-Primary-600, rgba(89, 75, 224, 1));
-                    img{
+
+                    img {
                         transform: rotate(360deg);
                         transition: 1s;
 
@@ -727,13 +757,14 @@ nav {
 
 .seven {
     max-width: 100%;
-    min-height: 770px;
+    min-height: 650px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
-    padding: 40px;
+    padding: 150px 40px;
     background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
     position: relative;
+
 
     .ellipse7 {
         position: absolute;
@@ -745,15 +776,12 @@ nav {
     }
 
 
-    .accordion {
+    .faq-container {
         width: 45%;
-        min-height: 90%;
         display: flex;
         flex-direction: column;
-        gap: 5px;
-        z-index: 1;
-        position: static;
-
+        gap: 14px;
+        z-index: 6;
 
         h4 {
             font-weight: 400;
@@ -767,35 +795,57 @@ nav {
             padding-bottom: 10px;
         }
 
-        .accordion-item {
-
+        .faq-item {
             border: 2px solid rgba(255, 255, 255, 0.16);
-            overflow: hidden;
-            color: rgba(255, 255, 255, 1);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 5px;
+            border-radius: 8px;
 
-            .accordion-header {
-                .accordion-button {
-                    background-color: transparent;
-                    color: white;
-                    .accordion-collapse {
-                        background-color: #f0f0f0; /* Collapse fon rəngi */
-                    }
 
-                    
+            .faq-question {
+                padding: 15px;
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.05);
+                color: rgba(255, 255, 255, 1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 57px;
+                border: none;
+                font-weight: 400;
+                font-style: 19px;
 
-                }
-
-           
-            
 
             }
-  
-            
-          
+
+            .faq-icon {
+                font-weight: bold;
+                margin-right: 10px;
+                font-size: 24px
+            }
+
+            .faq-answer {
+
+
+                padding: 5px 15px 15px 15px;
+                background-color: #fff;
+                display: none;
+                background: rgba(255, 255, 255, 0.05);
+                border: 2px solid rgba(255, 255, 255, 0.16);
+                border: none;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(207, 208, 210, 1);
+
+
+
+            }
 
         }
+
+
+
+
+
+
     }
 
     .error {
@@ -806,17 +856,42 @@ nav {
         border: 1px solid red;
     }
 
+
     #thankYouModal {
         display: none;
         position: fixed;
+        max-width: 380px;
+        height: 165px;
+        padding: 20px;
+        border-radius: 10px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-        padding: 20px;
-        border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 1000;
+
+
+
+        h5 {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        p {
+            text-align: center;
+            color: black;
+            padding-top: 5px;
+        }
+
+        #close {
+            position: absolute;
+            right: 30px;
+            top: px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
 
 
     }
@@ -913,7 +988,7 @@ nav {
 
             //     }
 
-                
+
             // }
 
 
@@ -935,22 +1010,24 @@ nav {
                 border: none;
                 outline: none;
             }
-        
+
             .choose {
                 position: relative;
             }
-        
+
             .choose select::-ms-expand {
-                display: none; /* Internet Explorer üçün dəstək */
+                display: none;
+                /* Internet Explorer üçün dəstək */
             }
-        
+
             .choose select:focus {
                 outline: none;
             }
-            option{
+
+            option {
                 color: black;
             }
-        
+
             /* Dropdown icon əlavə edirik */
             .choose::after {
                 content: '▼';
@@ -959,7 +1036,8 @@ nav {
                 top: 50%;
                 right: 10px;
                 transform: translateY(-50%);
-                pointer-events: none; /* Dropdown-u klikləməyə təsir etməsin */
+                pointer-events: none;
+                /* Dropdown-u klikləməyə təsir etməsin */
             }
 
 
@@ -1193,7 +1271,7 @@ footer {
     }
 }
 
-.category{
+.category {
     max-width: 100%;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 30px;
@@ -1203,16 +1281,19 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    h3{
+
+    h3 {
         font-size: 47px;
         font-weight: 500;
     }
-    .buttons{
+
+    .buttons {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 5px;
-        button{
+
+        button {
             width: auto;
             height: 36px;
             padding: 10px;
@@ -1223,15 +1304,17 @@ footer {
             border-radius: 8px;
             color: var(--Primitives-Primary-900, rgba(54, 48, 127, 1));
 
-           
+
         }
     }
-    #cards{
+
+    #cards {
         width: 100%;
         display: grid;
         grid-template-columns: auto auto auto auto;
         gap: 20px;
-        .card{
+
+        .card {
             max-width: 325px;
             min-height: 387px;
             height: 100%;
@@ -1242,7 +1325,8 @@ footer {
             position: relative;
             border-radius: 10px;
             border: 1px solid rgba(226, 226, 227, 1);
-            .card_img{
+
+            .card_img {
                 max-width: 380px;
                 min-height: 234px;
                 width: 100%;
@@ -1251,7 +1335,8 @@ footer {
                 border-top-right-radius: 10px;
 
             }
-            h5{
+
+            h5 {
                 font-size: 19px;
                 font-weight: 500;
                 padding-left: 15px;
@@ -1260,7 +1345,8 @@ footer {
 
 
             }
-            p{
+
+            p {
                 font-size: 14px;
                 font-weight: 400;
                 padding-left: 15px;
@@ -1269,20 +1355,23 @@ footer {
 
 
             }
-            .basket_btn{
+
+            .basket_btn {
                 position: absolute;
-                top: 10px ;
+                top: 10px;
                 right: 10px;
                 border-radius: 50%;
                 border: none;
-                .basket{
+
+                .basket {
                     width: 38px;
                     height: 38px;
                 }
-               
+
 
             }
-            .price{
+
+            .price {
                 width: 100%;
                 min-height: 40px;
                 height: 100%;
@@ -1292,17 +1381,18 @@ footer {
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
-                h6{
+
+                h6 {
                     color: var(--Primitives-Primary-500, rgba(91, 88, 235, 1));
                     font-weight: 500;
                     font-size: 19px;
                     position: absolute;
                     right: 15px;
-                   
+
 
                 }
 
-                .buy_btn{
+                .buy_btn {
                     max-width: 100px;
                     width: 100%;
                     height: 30px;
@@ -1311,30 +1401,32 @@ footer {
                     align-items: center;
                     justify-content: space-around;
                     opacity: 0;
-                    background: none ;
+                    background: none;
                     position: absolute;
                     right: 15px;
                     transition: 0.3s;
 
 
-                    span{
+                    span {
                         font-weight: 400;
-                        color:  rgba(91, 88, 235, 1);
+                        color: rgba(91, 88, 235, 1);
                         font-size: 16px;
 
-                        
+
                     }
                 }
             }
-            &:hover{
-                .price{
-                    .buy_btn{
+
+            &:hover {
+                .price {
+                    .buy_btn {
                         opacity: 1;
                         background-color: none;
                         position: absolute;
 
                     }
-                    h6{
+
+                    h6 {
                         left: 15px;
                     }
                 }
@@ -1342,7 +1434,7 @@ footer {
         }
     }
 
-    #seeAllButton{
+    #seeAllButton {
         min-width: 185px;
         min-height: 46px;
         height: 100%;
@@ -1353,20 +1445,22 @@ footer {
         justify-content: space-around;
         border-radius: 8px;
         border: none;
-        a{
+
+        a {
             font-size: 18px;
             font-weight: 400;
             color: white;
             text-decoration: none;
         }
-        img{
+
+        img {
             width: 20px;
         }
 
-        
+
     }
 
-    #seeAllButtonn{
+    #seeAllButtonn {
         min-width: 185px;
         min-height: 46px;
         height: 100%;
@@ -1377,18 +1471,418 @@ footer {
         justify-content: space-around;
         border-radius: 8px;
         border: none;
-        a{
+
+        a {
             font-size: 18px;
             font-weight: 400;
             color: white;
             text-decoration: none;
         }
-        img{
+
+        img {
             width: 20px;
         }
 
-        
+
     }
+}
+
+
+.login_register_pagination {
+    width: 100%;
+    height: 120px;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 40px;
+
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        span {
+            font-size: 18px;
+            color: white;
+            font-weight: 400;
+        }
+    }
+}
+
+.login_register {
+    max-width: 100%;
+    min-height: 650px;
+    padding: 40px;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    z-index: 2;
+
+    .text {
+        width: 37%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .inputs {
+            width: 40%;
+            display: flex;
+            gap: 12px;
+
+            input {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 23px;
+                color: rgba(201, 209, 252, 1);
+
+                &::placeholder {
+                    font-size: 23px;
+                    font-weight: 500;
+                    color: rgba(201, 209, 252, 1);
+                }
+            }
+        }
+
+
+
+
+        form {
+            margin: 10px auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: 30px;
+
+            h3 {
+                font-weight: 400;
+                font-size: 47px;
+                color: rgba(201, 209, 252, 1);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(201, 209, 252, 1);
+                line-height: 23px;
+                letter-spacing: 1px;
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                color: rgba(169, 168, 172, 1);
+            }
+
+            input {
+                width: 100%;
+                height: 46px;
+                padding: 12px;
+                background-color: #fff;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(207, 208, 210, 1);
+                border-radius: 8px;
+                outline: none;
+
+                &::placeholder {
+                    color: rgba(201, 209, 252, 1);
+                    font-size: 16px;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .password-wrapper {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 46px;
+                background-color: #fff;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                font-size: 14px;
+                font-weight: 400;
+                border-radius: 8px;
+                padding: 12px;
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: rgba(207, 208, 210, 1);
+                    padding: 0px;
+
+                }
+
+                .toggle-password {
+                    cursor: pointer;
+                }
+
+            }
+
+            a {
+                color: rgba(169, 168, 172, 1);
+                font-weight: 400;
+                font-size: 13px;
+            }
+
+            button {
+                width: 100%;
+                height: 46px;
+                padding: 13px;
+
+                background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                font-weight: 400;
+                font-size: 18px;
+
+            }
+
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                display: none;
+                /* Başlanğıcda görünməməlidir */
+            }
+
+            .input-error {
+                border: 1px solid red;
+                /* Xətalı girişlər üçün çərçivə */
+            }
+
+
+        }
+
+        .register {
+            position: absolute;
+            bottom: 40px;
+
+            span {
+
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            a {
+                color: rgba(187, 99, 255, 1);
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .bg-logo {
+        width: 61%;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+
+        img {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+}
+
+
+.registerPage {
+    max-width: 100%;
+    min-height: 650px;
+    padding: 40px;
+    background: var(--Colors-Surface-Dark, rgba(1, 2, 20, 1));
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: start;
+    z-index: 2;
+
+    .text_main {
+        width: 37%;
+        display: flex;
+        flex-direction: column;
+
+    
+
+
+
+
+        .registerForm {
+            margin: 10px auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: 30px;
+
+            h3 {
+                font-weight: 400;
+                font-size: 47px;
+                color: rgba(201, 209, 252, 1);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: rgba(201, 209, 252, 1);
+                line-height: 23px;
+                letter-spacing: 1px;
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                color: rgba(169, 168, 172, 1);
+            }
+
+            .input_grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 12px;
+
+                input {
+                    width: 100%;
+                    height: 46px;
+                    padding: 12px;
+                    background-color: #fff;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.16);
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgba(207, 208, 210, 1);
+                    border-radius: 8px;
+                    outline: none;
+                    text-align: start;
+
+                    &::placeholder {
+                        color: rgba(201, 209, 252, 1);
+                        font-size: 16px;
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .password-wrapper {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 46px;
+                background-color: #fff;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.16);
+                font-size: 14px;
+                font-weight: 400;
+                border-radius: 8px;
+                padding: 12px;
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    color: rgba(207, 208, 210, 1);
+                    padding: 0px;
+
+                }
+
+                .toggle-password {
+                    cursor: pointer;
+                }
+
+            }
+
+            a {
+                color: rgba(169, 168, 172, 1);
+                font-weight: 400;
+                font-size: 13px;
+            }
+
+            button {
+                width: 100%;
+                height: 46px;
+                padding: 13px;
+
+                background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                font-weight: 400;
+                font-size: 18px;
+
+            }
+
+            .error {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                display: none;
+                /* Başlanğıcda görünməməlidir */
+            }
+
+            .input-error {
+                border: 1px solid red;
+                /* Xətalı girişlər üçün çərçivə */
+            }
+
+
+        }
+
+        .already {
+            position: absolute;
+            bottom: 40px;
+
+            span {
+
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            a {
+                color: rgba(187, 99, 255, 1);
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .bg-logo {
+        width: 61%;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+
+        img {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
 }
 
 
@@ -1663,7 +2157,7 @@ footer {
         flex-direction: column;
         gap: 15px;
 
-        .accordion {
+        .faq-container {
             width: 100%;
 
             h4 {
@@ -1681,7 +2175,7 @@ footer {
 
             .form {
                 .choose {
-                   
+
 
                     select {
                         width: 100%;
@@ -1776,42 +2270,73 @@ footer {
         }
     }
 
-    .category{
+    .category {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        h3{
+
+        h3 {
             font-size: 30px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
-        .buttons{
+
+        .buttons {
             display: grid;
-            grid-template-columns: auto auto  auto;
-            button{
+            grid-template-columns: auto auto auto;
+
+            button {
                 padding: 5px;
             }
         }
 
-        #cards{
+        #cards {
             width: 100%;
             display: grid;
             grid-template-columns: auto;
-            .card{
+
+            .card {
                 max-width: 420px;
                 width: 100%;
-                .card_img{
+
+                .card_img {
                     max-width: 420px;
-                width: 100%;
+                    width: 100%;
 
                 }
 
             }
         }
-        #seeAllButton{
+
+        #seeAllButton {
             width: 100%;
+        }
+    }
+
+
+
+    .login_register {
+        display: flex;
+
+        .text {
+            width: 100%;
+            margin-top: 0px;
+
+
+            form {
+                width: 100%;
+
+                h3 {
+                    font-size: 33px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
         }
     }
 
@@ -1945,7 +2470,7 @@ footer {
 
             .learn_btn {
                 width: 50%;
-             
+
 
                 a {
                     display: flex;
@@ -1973,6 +2498,12 @@ footer {
         .ellipse7 {
             left: 0px;
             top: 0px;
+        }
+
+        .faq-container {
+            .faq-item {
+                font-size: 14px;
+            }
         }
     }
 
@@ -2052,25 +2583,32 @@ footer {
         }
     }
 
-    .category{
+    .category {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        h3{
+
+        h3 {
             font-size: 30px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
-        .buttons{
+
+        .buttons {
             display: flex;
         }
-        #cards{
+
+        #cards {
             width: 100%;
             display: grid;
             grid-template-columns: auto auto;
-            .card{
+            align-items: center;
+            justify-content: space-evenly;
+
+            .card {
                 width: 100%;
             }
         }
@@ -2087,25 +2625,32 @@ footer {
         }
     }
 
-    .category{
+    .category {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        h3{
+
+        h3 {
             font-size: 30px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
-        .buttons{
+
+        .buttons {
             display: flex;
         }
-        #cards{
+
+        #cards {
             width: 100%;
             display: grid;
             grid-template-columns: auto auto auto;
-            .card{
+            align-items: center;
+            justify-content: space-between;
+
+            .card {
                 width: 100%;
             }
         }
@@ -2119,25 +2664,32 @@ footer {
 @media (min-width: 1025px) and (max-width: 1200px) {
 
 
-    .category{
+    .category {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: start;
-        h3{
+
+        h3 {
             font-size: 30px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
-        .buttons{
+
+        .buttons {
             display: flex;
         }
-        #cards{
+
+        #cards {
             width: 100%;
             display: grid;
             grid-template-columns: auto auto auto;
-            .card{
+            align-items: center;
+            justify-content: space-evenly;
+
+            .card {
                 width: 100%;
             }
         }

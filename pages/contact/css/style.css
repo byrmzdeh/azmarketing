@@ -231,6 +231,46 @@ body {
   width: 50%;
   height: 580px;
 }
+.contact #thankYouModal {
+  display: none;
+  position: fixed;
+  max-width: 380px;
+  height: 165px;
+  padding: 20px;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.contact #thankYouModal h5 {
+  text-align: center;
+  padding-top: 10px;
+}
+.contact #thankYouModal p {
+  text-align: center;
+  color: black;
+  padding-top: 5px;
+}
+.contact #thankYouModal #close {
+  position: absolute;
+  right: 30px;
+  top: px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.contact #modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
 
 @media (min-width: 320px) and (max-width: 768px) {
   .contact {

@@ -98,6 +98,29 @@ nav .login .user img {
   height: 20px;
 }
 
+.pagination {
+  width: 100%;
+  min-height: 170px;
+  height: 100%;
+  background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  z-index: 2;
+}
+.pagination span {
+  color: rgb(255, 255, 255);
+}
+.pagination .text {
+  width: 100%;
+  padding: 0px 0px 0px 40px;
+}
+.pagination .text a {
+  color: var(--Primitives-Primary-200, rgb(201, 209, 252));
+  text-decoration: none;
+  z-index: 1;
+}
+
 .one {
   max-width: 100%;
   min-height: 780px;
@@ -591,11 +614,11 @@ nav .login .user img {
 
 .seven {
   max-width: 100%;
-  min-height: 770px;
+  min-height: 650px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
-  padding: 40px;
+  padding: 150px 40px;
   background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
   position: relative;
 }
@@ -606,16 +629,14 @@ nav .login .user img {
   left: 300px;
   top: 30px;
 }
-.seven .accordion {
+.seven .faq-container {
   width: 45%;
-  min-height: 90%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  z-index: 1;
-  position: static;
+  gap: 14px;
+  z-index: 6;
 }
-.seven .accordion h4 {
+.seven .faq-container h4 {
   font-weight: 400;
   font-size: 37px;
   background: linear-gradient(91.37deg, #FFFFFF 0%, #A8B3F9 124.14%);
@@ -626,19 +647,38 @@ nav .login .user img {
   letter-spacing: 1px;
   padding-bottom: 10px;
 }
-.seven .accordion .accordion-item {
+.seven .faq-container .faq-item {
   border: 2px solid rgba(255, 255, 255, 0.16);
-  overflow: hidden;
+  border-radius: 8px;
+}
+.seven .faq-container .faq-item .faq-question {
+  padding: 15px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
   color: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 57px;
+  border: none;
+  font-weight: 400;
+  font-style: 19px;
 }
-.seven .accordion .accordion-item .accordion-header .accordion-button {
-  background-color: transparent;
-  color: white;
+.seven .faq-container .faq-item .faq-icon {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 24px;
 }
-.seven .accordion .accordion-item .accordion-header .accordion-button .accordion-collapse {
-  background-color: #f0f0f0; /* Collapse fon rəngi */
+.seven .faq-container .faq-item .faq-answer {
+  padding: 5px 15px 15px 15px;
+  background-color: #fff;
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.16);
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(207, 208, 210);
 }
 .seven .error {
   color: red;
@@ -649,14 +689,32 @@ nav .login .user img {
 .seven #thankYouModal {
   display: none;
   position: fixed;
+  max-width: 380px;
+  height: 165px;
+  padding: 20px;
+  border-radius: 10px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+}
+.seven #thankYouModal h5 {
+  text-align: center;
+  padding-top: 10px;
+}
+.seven #thankYouModal p {
+  text-align: center;
+  color: black;
+  padding-top: 5px;
+}
+.seven #thankYouModal #close {
+  position: absolute;
+  right: 30px;
+  top: px;
+  font-size: 18px;
+  cursor: pointer;
 }
 .seven #modalOverlay {
   display: none;
@@ -739,7 +797,8 @@ nav .login .user img {
   position: relative;
 }
 .seven form .form .choose select::-ms-expand {
-  display: none; /* Internet Explorer üçün dəstək */
+  display: none;
+  /* Internet Explorer üçün dəstək */
 }
 .seven form .form .choose select:focus {
   outline: none;
@@ -754,7 +813,8 @@ nav .login .user img {
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  pointer-events: none; /* Dropdown-u klikləməyə təsir etməsin */
+  pointer-events: none;
+  /* Dropdown-u klikləməyə təsir etməsin */
 }
 .seven form textarea {
   width: 100%;
@@ -1105,6 +1165,333 @@ footer .link .phone .one_text span {
   width: 20px;
 }
 
+.login_register_pagination {
+  width: 100%;
+  height: 120px;
+  background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 40px;
+}
+.login_register_pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.login_register_pagination a span {
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+}
+
+.login_register {
+  max-width: 100%;
+  min-height: 650px;
+  padding: 40px;
+  background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: start;
+  z-index: 2;
+}
+.login_register .text {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.login_register .text .inputs {
+  width: 40%;
+  display: flex;
+  gap: 12px;
+}
+.login_register .text .inputs input {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 23px;
+  color: rgb(201, 209, 252);
+}
+.login_register .text .inputs input::placeholder {
+  font-size: 23px;
+  font-weight: 500;
+  color: rgb(201, 209, 252);
+}
+.login_register .text form {
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+}
+.login_register .text form h3 {
+  font-weight: 400;
+  font-size: 47px;
+  color: rgb(201, 209, 252);
+}
+.login_register .text form p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(201, 209, 252);
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+.login_register .text form span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(169, 168, 172);
+}
+.login_register .text form input {
+  width: 100%;
+  height: 46px;
+  padding: 12px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(207, 208, 210);
+  border-radius: 8px;
+  outline: none;
+}
+.login_register .text form input::placeholder {
+  color: rgb(201, 209, 252);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.login_register .text form .password-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 12px;
+}
+.login_register .text form .password-wrapper input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(207, 208, 210);
+  padding: 0px;
+}
+.login_register .text form .password-wrapper .toggle-password {
+  cursor: pointer;
+}
+.login_register .text form a {
+  color: rgb(169, 168, 172);
+  font-weight: 400;
+  font-size: 13px;
+}
+.login_register .text form button {
+  width: 100%;
+  height: 46px;
+  padding: 13px;
+  background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+.login_register .text form .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+  /* Başlanğıcda görünməməlidir */
+}
+.login_register .text form .input-error {
+  border: 1px solid red;
+  /* Xətalı girişlər üçün çərçivə */
+}
+.login_register .text .register {
+  position: absolute;
+  bottom: 40px;
+}
+.login_register .text .register span {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.login_register .text .register a {
+  color: rgb(187, 99, 255);
+  font-size: 16px;
+  font-weight: 400;
+}
+.login_register .bg-logo {
+  width: 61%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.login_register .bg-logo img {
+  width: 100%;
+  opacity: 1;
+}
+
+.registerPage {
+  max-width: 100%;
+  min-height: 650px;
+  padding: 40px;
+  background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: start;
+  z-index: 2;
+}
+.registerPage .text_main {
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+}
+.registerPage .text_main .registerForm {
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+}
+.registerPage .text_main .registerForm h3 {
+  font-weight: 400;
+  font-size: 47px;
+  color: rgb(201, 209, 252);
+}
+.registerPage .text_main .registerForm p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(201, 209, 252);
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+.registerPage .text_main .registerForm span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(169, 168, 172);
+}
+.registerPage .text_main .registerForm .input_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 12px;
+}
+.registerPage .text_main .registerForm .input_grid input {
+  width: 100%;
+  height: 46px;
+  padding: 12px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(207, 208, 210);
+  border-radius: 8px;
+  outline: none;
+  text-align: start;
+}
+.registerPage .text_main .registerForm .input_grid input::placeholder {
+  color: rgb(201, 209, 252);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.registerPage .text_main .registerForm .password-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 12px;
+}
+.registerPage .text_main .registerForm .password-wrapper input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(207, 208, 210);
+  padding: 0px;
+}
+.registerPage .text_main .registerForm .password-wrapper .toggle-password {
+  cursor: pointer;
+}
+.registerPage .text_main .registerForm a {
+  color: rgb(169, 168, 172);
+  font-weight: 400;
+  font-size: 13px;
+}
+.registerPage .text_main .registerForm button {
+  width: 100%;
+  height: 46px;
+  padding: 13px;
+  background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+}
+.registerPage .text_main .registerForm .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+  /* Başlanğıcda görünməməlidir */
+}
+.registerPage .text_main .registerForm .input-error {
+  border: 1px solid red;
+  /* Xətalı girişlər üçün çərçivə */
+}
+.registerPage .text_main .already {
+  position: absolute;
+  bottom: 40px;
+}
+.registerPage .text_main .already span {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+.registerPage .text_main .already a {
+  color: rgb(187, 99, 255);
+  font-size: 16px;
+  font-weight: 400;
+}
+.registerPage .bg-logo {
+  width: 61%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.registerPage .bg-logo img {
+  width: 100%;
+  opacity: 1;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
   nav {
     display: none;
@@ -1301,10 +1688,10 @@ footer .link .phone .one_text span {
     flex-direction: column;
     gap: 15px;
   }
-  .seven .accordion {
+  .seven .faq-container {
     width: 100%;
   }
-  .seven .accordion h4 {
+  .seven .faq-container h4 {
     font-size: 30px;
   }
   .seven form {
@@ -1416,6 +1803,22 @@ footer .link .phone .one_text span {
   }
   .category #seeAllButton {
     width: 100%;
+  }
+  .login_register {
+    display: flex;
+  }
+  .login_register .text {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .login_register .text form {
+    width: 100%;
+  }
+  .login_register .text form h3 {
+    font-size: 33px;
+  }
+  .login_register .text form p {
+    font-size: 15px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1535,6 +1938,9 @@ footer .link .phone .one_text span {
     left: 0px;
     top: 0px;
   }
+  .seven .faq-container .faq-item {
+    font-size: 14px;
+  }
   footer {
     display: flex;
     gap: 10px;
@@ -1613,6 +2019,8 @@ footer .link .phone .one_text span {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .category #cards .card {
     width: 100%;
@@ -1642,6 +2050,8 @@ footer .link .phone .one_text span {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between;
   }
   .category #cards .card {
     width: 100%;
@@ -1667,6 +2077,8 @@ footer .link .phone .one_text span {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .category #cards .card {
     width: 100%;

@@ -42,63 +42,66 @@
         <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> incididunt
             ut labore et dolore magna aliqua.</p>
 
-            <div class="contact_text">
-                
-        <form id="myForm">
-            <h4>Got a question? Leave us a <br> message.</h4>
-            <div class="form">
-                <div>
-                    <input type="text" id="name" name="name" placeholder="Name">
+        <div class="contact_text">
+
+
+
+            <form id="contactForm">
+                <h4>Got a question? Leave us a <br> message.</h4>
+                <div class="form">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div>
+                        <input type="text" id="surname" name="surname" placeholder="Surname">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </div>
+
+                    <div>
+                        <input type="text" id="phone" name="phone" placeholder="Phone number">
+                    </div>
+
+             
+
                 </div>
                 <div>
-                    <input type="text" id="firstName" name="firstName" placeholder="Surname">
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
                 </div>
-                <div>
-                    <input type="email" id="email" name="email" placeholder="Email">
+                <p id="errorMessage" class="error"></p> <!-- Hata mesajı burada gösterilecek -->
+                <button type="submit">Göndər</button>
+
+
+                <div class="phone">
+                    <div class="one_text">
+                        <img width="40" src="/image/home/phone1.png" alt="">
+                        <span>+994 (12) 310 11 33</span>
+                    </div>
+                    <div class="one_text">
+                        <img src="/image/home/phone2.png" alt="">
+                        <span>+994 (12) 310 11 33</span>
+                    </div>
+                    <div class="one_text">
+                        <img src="/image/home/message.png" alt="">
+                        <span>info@marketinq.az</span>
+                    </div>
                 </div>
-                <div>
-                    <input type="text" id="phone" name="phone" placeholder="Phone number">
-                </div>
+            </form>
+
+            <!-- Teşekkür Mesajı -->
+            <div id="modalOverlay"></div>
+            <div id="thankYouModal">
+                <p id="close">X</p>
+                <h5>Thank you!</h5>
+                <p>Thanks for reaching out to us! We will <br> contact you back as soon as possible.</p>
             </div>
 
-            <div>
-                <textarea id="message" name="message" placeholder="Your message"></textarea>
-            </div>
-            <p id="errorMessage" class="error"></p> <!-- Hata mesajı burada gösterilecek -->
-            <button type="submit">Göndər</button>
 
-            <div class="phone">
-                <div class="one_text">
-                    <img width="40" src="/image/home/phone1.png" alt="">
-                    <span>+994 (12) 310 11 33</span>
-                </div>
-                <div class="one_text">
-                    <img src="/image/home/phone2.png" alt="">
-                    <span>+994 (12) 310 11 33</span>
-                </div>
-                <div class="one_text">
-                    <img src="/image/home/message.png" alt="">
-                    <span>info@marketinq.az</span>
-                </div>
-            </div>
-
-        
-        </form>
-        
-        
-
-        <!-- Teşekkür Mesajı -->
-        <div id="modalOverlay"></div>
-        <div id="thankYouModal">
-            <h5>Thank you!</h5>
-            <p>Thanks for reaching out to us! We will contact you back as soon as possible.</p>
-        </div>
+            <img class="iframe" src="/image/home/map.png" alt="">
 
 
-        <img class="iframe" src="/image/home/map.png" alt="">
-
-
-        <img class="ellipse7" src="/image/home/ellipse7.png" alt="">
+            <img class="ellipse7" src="/image/home/ellipse7.png" alt="">
 
     </section>
 
@@ -147,7 +150,7 @@
         </div>
 
         <img class="ellipse8" src="/image/home/ellipse8.png" alt="">
-            </div>
+        </div>
     </footer>
 
 

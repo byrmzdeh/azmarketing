@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="./style.js"></script>
+</head>
+
+<body>
+    <div class="login_register_pagination">
+        <a href="/components/forgetPassword/index.html">
+            <img src="/image/login/login.png" alt="err">
+            <span>Go Back</span>
+        </a>
+    </div>
+
+
+    <section class="login_register">
+
+        <div class="text">
+            <form class="changeForm" id="changeForm">
+                <h3>Change Password</h3>
+                <p>Please enter your new password. </p>
+
+
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="New Password" required>
+                    <img width="20" class="toggle-password" onclick="togglePassword()" src="/image/login/eye.png"
+                        alt="">
+                </div>
+
+                <div class="password-wrapper">
+                    <input type="password" id="repeatPassword" placeholder="Repeat Password" required>
+                    <img width="20" class="toggle-password" onclick="togglePasswordRepeat()" src="/image/login/eye.png"
+                        alt="">
+                </div>
+                <div id="error" class="error" style="display: none; color: red;">Passwords do not match.</div>
+
+
+                <span>Password has to be at least 8 characters.</span>
+
+                <button type="submit">Send Code</button>
+
+            </form>
+        </div>
+
+        <div class="bg-logo">
+            <img src="/image/login/logo.png" alt="err">
+        </div>
+
+    </section>
+
+</body>
+
+</html>

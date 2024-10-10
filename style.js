@@ -89,26 +89,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
           console.log('Form uğurla göndərildi!');
 
-          thankYouModal.style.display = 'block';
-          modalOverlay.style.display = 'block';
+          thankYouModal.style.display = 'block'; // Modalı göstər
+          modalOverlay.style.display = 'block'; // Overlayi göstər
 
-          sessionStorage.setItem('formSubmitted', 'true');
+          // İki saniyə sonra contact səhifəsinə yönləndir
+         
+              // Contact səhifəsinə yönləndir
+              
 
-          // Burada cari səhifənin yolunu yoxlayırıq
-          if (window.location.pathname === '/index.html') {
-              // Əgər home səhifəsindədirsə, contact səhifəsinə yönləndir
-              setTimeout(function () {
-                  window.location.href = '/pages/contact/index.html';
-              }, 1000);
-          } else if (window.location.pathname === '/pages/contact/index.html') {
-              // Əgər contact səhifəsindədirsə, home səhifəsinə yönləndir
-              setTimeout(function () {
-                  window.location.href = '/index.html';
-              }, 1000);
-          }
+          // Formu sıfırla
+          form.reset(); // Bütün inputları boşaldır
       }
   });
+
+  // Modalı gizlətmək üçün "X" düyməsinə tıklama hadisəsi
+  document.getElementById('close').addEventListener('click', function () {
+      thankYouModal.style.display = 'none'; // Modalı gizlət
+      modalOverlay.style.display = 'none'; // Overlayi gizlət
+      window.location.href = '/pages/contact/index.html';
+
+      // Formu sıfırla
+      form.reset(); // Bütün inputları boşaldır
+  });
 });
+
 
 
 
@@ -126,12 +130,11 @@ function updateInput(select) {
 
 
 //api
-
 // JSON verilerini almak
 let categoriesData = [];
 let currentIndex = 8; // Başlangıçta göstereceğimiz kart sayısı
 
-fetch('/json/category.json')
+fetch('/json/category.json') // JSON faylınızı düzgün yolda yerləşdirin
   .then(res => res.json())
   .then(data => {
     categoriesData = data; // Verileri kaydediyoruz
@@ -141,25 +144,25 @@ fetch('/json/category.json')
 
 // Kartları ekrana yazdıran fonksiyon
 function displayCards(filteredData) {
-  const cardsContainer = document.getElementById('cards'); 
+  const cardsContainer = document.getElementById('cards');
   cardsContainer.innerHTML = ''; // Mevcut kartları temizliyoruz
 
   filteredData.forEach(item => {
     const cardHTML = `
-                 <div class="card">
-                <button class="basket_btn"><img width="38" class="basket" src="/image/home/categoryBasket.png"
-                        alt="Basket"></button>
-                <img class="card_img" src="${item.src}" alt="${item.name}">
-                <p>${item.name}</p>
-                <h5>${item.title}</h5>
-                <div class="price">
-                    <h6>${item.price}.00$</h6>
-                    <button class="buy_btn">
-                        <span>Buy Now</span>
-                        <img width="10" src="/image/home/buyVector.png" alt="err">
-                    </button>
-                </div>
-            </div>
+      <div class="card" data-id="${item.id}">
+        <button class="basket_btn"><img width="38" class="basket" src="/image/home/basket.png"
+            alt="Basket"></button>
+        <img class="card_img" src="${item.src}" alt="${item.name}">
+        <p>${item.name}</p>
+        <h5>${item.title}</h5>
+        <div class="price">
+            <h6>${item.price}.00$</h6>
+            <button class="buy_btn">
+                <span>Buy Now</span>
+                <img width="10" src="/image/home/buyVector.png" alt="err">
+            </button>
+        </div>
+      </div>
     `;
     cardsContainer.innerHTML += cardHTML;
   });
@@ -167,15 +170,13 @@ function displayCards(filteredData) {
   // Kartlara tıklanma olayı ekliyoruz
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', (e) => {
-      const itemName = e.target.closest('.card').querySelector('p').textContent;
-      const itemId = categoriesData.find(item => item.name === itemName).id;
+      const itemId = e.target.closest('.card').dataset.id;
       window.location.href = `/components/categoryDetail/index.html?id=${itemId}`;
     });
   });
 }
 
-
-//SeeAll
+// "See All" düyməsinə klik eventi
 document.addEventListener('DOMContentLoaded', () => {
   const seeAllButton = document.getElementById('seeAllButton');
   if (seeAllButton) {
@@ -186,33 +187,84 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Kategori butonlarına click event eklemek
+// Kategori düymələrinə klik eventini əlavə etmək
 const buttons = document.querySelectorAll('.buttons button');
-
 buttons.forEach(button => {
   button.addEventListener('click', () => {
-    // Bütün butonların rəngini təmizləyirik
     buttons.forEach(btn => {
-      btn.style.backgroundColor = ''; 
-      btn.style.color = ''; 
+      btn.style.backgroundColor = '';
+      btn.style.color = '';
     });
 
-    // Kliklənən butonun rəngini qırmızı edirik
     button.style.backgroundColor = 'rgba(91, 88, 235, 1)';
-    button.style.color = 'white'; 
+    button.style.color = 'white';
 
-    const category = button.textContent; 
-    
+    const category = button.textContent;
+
     if (category === 'All categories') {
-      // "All categories" seçildiyse tüm kartları gösteriyoruz
       displayCards(categoriesData.slice(0, currentIndex));
-      seeAllButton.style.display = 'block'; // "See All" butonunu geri getiririk
+      seeAllButton.style.display = 'block';
     } else {
-      // Seçilen kategoriye göre filtreleme yapıyoruz
       const filteredData = categoriesData.filter(item => item.category === category);
-      displayCards(filteredData.slice(0, currentIndex)); // Filtrelenmiş veriyi gösteririk
-      seeAllButton.style.display = 'none'; // Filtrede "See All" gizlənir
+      displayCards(filteredData.slice(0, currentIndex));
+      seeAllButton.style.display = 'none';
     }
   });
 });
+
+
+
+//faq
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector(".faq-icon");
+
+  if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.textContent = "+";
+  } else {
+      answer.style.display = "block";
+      icon.textContent = "-";
+  }
+}
+
+
+
+//contactForm
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault()
+
+  const name=document.getElementById('name').value.trim()
+  const surname=document.getElementById('surname').value.trim()
+  const email=document.getElementById('email').value.trim()
+  const phone=document.getElementById('phone').value.trim()
+  const message=document.getElementById('message').value.trim()
+
+  const modal = document.getElementById('thankYouModal')
+
+
+  if (name && surname && email && phone && message) {
+    modal.style.display='block'
+  
+
+  }
+  document.getElementById('close').addEventListener('click',function () {
+    modal.style.display='none'
+          // Input dəyərlərini boşaldır
+          document.getElementById('name').value = '';
+          document.getElementById('surname').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('phone').value = '';
+          document.getElementById('message').value=''
+          window.location.href='/index.html'
+  
+    
+  })
+
+  
+})
+
+
+
+
 
