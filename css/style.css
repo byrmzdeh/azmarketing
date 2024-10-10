@@ -957,7 +957,7 @@ footer .link form {
   z-index: 2;
 }
 footer .link form input {
-  width: 38%;
+  width: 100%;
   outline: none;
   padding: 10px;
   border-radius: 8px;
@@ -976,7 +976,7 @@ footer .link form input::placeholder {
   color: transparent;
 }
 footer .link form .learn_btn {
-  width: 20%;
+  width: 100%;
   height: 46px;
   border-radius: 8px;
   background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
@@ -1786,10 +1786,10 @@ footer .link .phone .one_text span {
     padding: 0px 40px 0px 0px;
   }
   footer .link form input {
-    width: 70%;
+    width: 100%;
   }
   footer .link form .learn_btn {
-    width: 70%;
+    width: 100%;
   }
   footer .link .phone {
     width: 100%;
