@@ -26,7 +26,7 @@ body {
 
 .ellipse2 {
     position: absolute;
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
     top: 2%;
     right: 0px;
@@ -35,7 +35,7 @@ body {
 
 .ellipse3 {
     position: absolute;
-    max-width: 802px;
+    max-width: 702px;
     width: 100%;
     left: 25%;
     top: 150%;
@@ -1116,7 +1116,7 @@ footer {
 
     }   
      .ellipse12 {
-        max-width: 800px;
+        max-width: 700px;
         width: 100%;
         position: absolute;
         right: 0px;
@@ -1223,7 +1223,7 @@ footer {
             z-index: 2;
 
             input {
-                width: 100%;
+                width: 38%;
                 outline: none;
                 padding: 10px;
                 border-radius: 8px;
@@ -1249,7 +1249,7 @@ footer {
 
 
             .learn_btn {
-                width: 100%;
+                width: 20%;
                 height: 46px;
                 border-radius: 8px;
                 background: linear-gradient(275.99deg, #5B58EB 22%, #858AF4 117.69%);
@@ -2313,6 +2313,8 @@ footer {
                     }
                 }
             }
+
+        
         }
     }
 
