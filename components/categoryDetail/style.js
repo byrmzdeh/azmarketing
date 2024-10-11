@@ -183,3 +183,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
         }
     })
     .catch(error => console.error('Veri alınırken hata oluştu:', error));
+
+
+
+    

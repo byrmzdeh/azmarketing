@@ -1,3 +1,19 @@
+//responsiveNavbar
+const menuButton = document.getElementById('menuButton');
+const menu = document.getElementById('menu');
+const close = document.getElementById('close');
+
+menuButton.addEventListener('click', () => {
+    menu.classList.toggle('open'); // Menü açık veya kapalı olacak şekilde sınıfı değiştir
+});
+
+close.addEventListener('click', () => {
+  menu.classList.remove('open'); // Menü açık veya kapalı olacak şekilde sınıfı değiştir
+});
+
+
+
+
 function animateCounter(counterElement, targetNumber, duration) {
   let startTime = null;
   let currentNumber = 0;
@@ -39,79 +55,42 @@ counters.forEach(counter => {
 
 
 
-/////form
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('myForm');
+/////homeForm
+document.getElementById('myForm').addEventListener('submit', function (e) {
+  e.preventDefault()
 
-  // Formanın olub olmadığını yoxlayın
-  if (!form) {
-      console.error("myForm ID-li forma tapılmadı!");
-      return; // Formanın olmadığı halda kodun icrasını dayandırır
+  const surname = document.getElementById('firstName').value.trim()
+  const email = document.getElementById('email').value.trim()
+  const phone = document.getElementById('phone').value.trim()
+  const message = document.getElementById('message').value.trim()
+  const selectedCourse = document.getElementById('selectedCourse').value.trim()
+
+
+  const modal = document.getElementById('thankYouModal')
+
+
+  if (surname && email && phone && message && selectedCourse) {
+    modal.style.display = 'block'
+
+
   }
-
-  form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const firstName = document.getElementById('firstName').value.trim();
-      const lastName = document.getElementById('lastName').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      const errorMessage = document.getElementById('errorMessage');
-      const thankYouModal = document.getElementById('thankYouModal');
-      const modalOverlay = document.getElementById('modalOverlay');
-
-      let errors = [];
-
-      if (!firstName || !lastName || !phone || !email || !message) {
-          errors.push('Xahiş edirik bütün xanalari doldurun.');
-      }
-
-      if (email && !email.includes('@')) {
-          errors.push('Email daxilində @ olmalıdır.');
-          document.getElementById('email').classList.add('input-error');
-      } else {
-          document.getElementById('email').classList.remove('input-error');
-      }
-
-      if (phone && !/^\d+$/.test(phone)) {
-          errors.push('Telefon nömrəsi yalnız rəqəmlərdən ibarət olmalıdır.');
-          document.getElementById('phone').classList.add('input-error');
-      } else {
-          document.getElementById('phone').classList.remove('input-error');
-      }
-
-      if (errors.length > 0) {
-          errorMessage.textContent = errors.join(' ');
-      } else {
-          errorMessage.textContent = '';
-
-          console.log('Form uğurla göndərildi!');
-
-          thankYouModal.style.display = 'block'; // Modalı göstər
-          modalOverlay.style.display = 'block'; // Overlayi göstər
-
-          // İki saniyə sonra contact səhifəsinə yönləndir
-         
-              // Contact səhifəsinə yönləndir
-              
-
-          // Formu sıfırla
-          form.reset(); // Bütün inputları boşaldır
-      }
-  });
-
-  // Modalı gizlətmək üçün "X" düyməsinə tıklama hadisəsi
   document.getElementById('close').addEventListener('click', function () {
-      thankYouModal.style.display = 'none'; // Modalı gizlət
-      modalOverlay.style.display = 'none'; // Overlayi gizlət
-      window.location.href = '/pages/contact/index.html';
+    modal.style.display = 'none'
+    // Input dəyərlərini boşaldır
+    modal.style.display = 'none'; // Modalı gizlədin
+    // Daxil edilən dəyərləri sıfırlayın
+    document.getElementById('firstName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('message').value = '';
+    document.getElementById('selectedCourse').value = '';
+    window.location.href = '/pages/contact/index.html'; // Səhifə yönləndirməsi
 
-      // Formu sıfırla
-      form.reset(); // Bütün inputları boşaldır
-  });
-});
+
+  })
+
+
+})
 
 
 
@@ -220,51 +199,158 @@ function toggleAnswer(element) {
   const icon = element.querySelector(".faq-icon");
 
   if (answer.style.display === "block") {
-      answer.style.display = "none";
-      icon.textContent = "+";
+    answer.style.display = "none";
+    icon.textContent = "+";
   } else {
-      answer.style.display = "block";
-      icon.textContent = "-";
+    answer.style.display = "block";
+    icon.textContent = "-";
   }
 }
 
 
-
-//contactForm
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+//footerForm
+document.getElementById('footerForm').addEventListener('submit', function (e) {
   e.preventDefault()
 
-  const name=document.getElementById('name').value.trim()
-  const surname=document.getElementById('surname').value.trim()
-  const email=document.getElementById('email').value.trim()
-  const phone=document.getElementById('phone').value.trim()
-  const message=document.getElementById('message').value.trim()
+  const mail = document.getElementById('emaill').value.trim()
 
-  const modal = document.getElementById('thankYouModal')
-
-
-  if (name && surname && email && phone && message) {
-    modal.style.display='block'
-  
-
-  }
-  document.getElementById('close').addEventListener('click',function () {
-    modal.style.display='none'
-          // Input dəyərlərini boşaldır
-          document.getElementById('name').value = '';
-          document.getElementById('surname').value = '';
-          document.getElementById('email').value = '';
-          document.getElementById('phone').value = '';
-          document.getElementById('message').value=''
-          window.location.href='/index.html'
-  
+  if (mail) {
+    window,location.href='/pages/contact/index.html'
     
-  })
-
-  
+  }
 })
 
 
+
+
+
+
+
+
+//Choose a course
+function toggleDropdown() {
+  const dropdown = document.querySelector('.custom-select');
+  const dropdownIcon = document.getElementById('dropdownIcon');
+
+  // Dropdown açılıbsa bağlanır, bağlıdırsa açılır
+  dropdown.classList.toggle('active');
+
+  // Oxun yönünü dəyiş
+  if (dropdown.classList.contains('active')) {
+    dropdownIcon.classList.remove('arrow-down');
+    dropdownIcon.classList.add('arrow-up');
+    document.querySelector('.select-options').style.display = 'block';
+  } else {
+    dropdownIcon.classList.remove('arrow-up');
+    dropdownIcon.classList.add('arrow-down');
+    document.querySelector('.select-options').style.display = 'none';
+  }
+}
+
+function selectCourse(checkbox) {
+  const selectedCourseInput = document.getElementById('selectedCourse');
+  const checkboxes = document.querySelectorAll('.select-options input[type="checkbox"]');
+
+  // Bütün checkboxları deaktiv et
+  checkboxes.forEach(cb => {
+    if (cb !== checkbox) {
+      cb.checked = false;
+    }
+  });
+
+  // Seçilmiş checkboxın dəyərini input-a yaz
+  if (checkbox.checked) {
+    selectedCourseInput.value = checkbox.value;
+  } else {
+    selectedCourseInput.value = '';
+  }
+
+  // Seçim etdikdən sonra dropdown bağlanır və ox geri aşağı yönə dəyişir
+  const dropdown = document.querySelector('.custom-select');
+  const dropdownIcon = document.getElementById('dropdownIcon');
+
+  dropdown.classList.remove('active');
+  dropdownIcon.classList.remove('arrow-up');
+  dropdownIcon.classList.add('arrow-down');
+  document.querySelector('.select-options').style.display = 'none';
+}
+
+// Dropdown qutusundan kənara klik ediləndə bağlanması
+document.addEventListener('click', function (event) {
+  const dropdown = document.querySelector('.custom-select');
+  const dropdownIcon = document.getElementById('dropdownIcon');
+
+  if (!dropdown.contains(event.target)) {
+    dropdown.classList.remove('active');
+    dropdownIcon.classList.remove('arrow-up');
+    dropdownIcon.classList.add('arrow-down');
+    document.querySelector('.select-options').style.display = 'none';
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////Slider/////////
+const slider = document.querySelector('.slider');
+const dots = document.querySelectorAll('.dot');
+let currentIndexx = 0; // Hal-hazırda görünən cardların indeksi
+
+// Slideri çəkmək funksiyası
+function updateSlider() {
+    const offset = -currentIndexx * (100 / 2); // 2 nöqtə üçün hər biri 5 card
+    slider.style.transform = `translateX(${offset}%)`;
+    updateDots();
+}
+
+// Nöqtələri güncəlləmək funksiyası
+function updateDots() {
+    dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === currentIndexx) {
+            dot.classList.add('active');
+        }
+    });
+}
+
+
+
+
+// Nöqtələrə klik edildikdə
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+      currentIndexx = parseInt(dot.getAttribute('data-index')); // Burada currentIndexi düzgün güncəlləyirik
+      updateSlider();
+  });
+});
+
+// Slider avtomatik olaraq hər 5 saniyədən bir dəyişir
+setInterval(() => {
+    currentIndexx = (currentIndexx + 1) % dots.length; // Dairəvi dövr
+    updateSlider();
+}, 5000);
+
+// İlk dəfə göstər
+updateSlider();
 
 
 

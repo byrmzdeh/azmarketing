@@ -7,25 +7,67 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/pages/contact/css/style.css">
+    <script defer src="/style.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script defer src="/style.js"></script>
+    <script defer src="./style.js"></script>
 </head>
 
 <body>
     <nav>
-        <img class="logo" src="/image/home/logo.png" alt="err">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/pages/about/index.html">About us</a></li>
-            <li><a href="/pages/courses/index.html">Courses</a></li>
-            <li><a href="/pages/instructors/index.html">Instructors</a></li>
-            <li><a href="/pages/contact/index.html">Contact</a></li>
-        </ul>
-        <div class="login">
-            <button class="basket"><img src="/image/home/basket.png" alt="err"></button>
-            <button class="user"><img src="/image/home/user.png" alt="err">Login</button>
+        <div class="show">
+            <img class="logo" src="/image/home/logo.png" alt="err">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about/index.html">About us</a></li>
+                <li><a href="/pages/courses/index.html">Courses</a></li>
+                <li><a href="/pages/instructors/index.html">Instructors</a></li>
+                <li><a href="/pages/contact/index.html">Contact</a></li>
+            </ul>
+            <div class="navLogin">
+                <button class="basket"><a href="/pages/shop/index.html"><img src="/image/home/shop.png"
+                            alt=""></a></button>
+                <button class="user"><a href="/components/login/index.html">
+                        <img src="/image/home/user.png" alt="err"><span>Login</span></a></button>
+            </div>
+        </div>
+
+        <div class="view">
+            <img width="150" class="logo" src="/image/home/logo.png" alt="err">
+
+          <div class="images">
+            <a href="/components/login/index.html"><img width="38" src="/image/home/resUser.png" alt=""></a>
+
+            <a href="/pages/shop/index.html"><img width="38" src="/image/home/shop.png"
+                alt=""></a>
+            <img width="38" id="menuButton" src="/image/home/menu.png" alt="">
+          </div>
+        </div>
+
+        <div id="menu">
+            <img class="ellipse1" src="/image/home/ellipse1.png" alt="">
+           <div class="close">
+            <img id="close" width="38" src="/image/home/close.png" alt="">
+           </div>
+            <ul class="click">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about/index.html">About us</a></li>
+                <li><a href="/pages/courses/index.html">Courses</a></li>
+                <li><a href="/pages/instructors/index.html">Instructors</a></li>
+                <li><a href="/pages/contact/index.html">Contact</a></li>
+            </ul>
+
+            <div class="connect">
+                <p>Follow us</p>
+                <div class="images">
+                    <a href=""><img width="42" src="/image/home/Instagram.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Facebook.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Linkedin.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Youtube.png" alt=""></a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -37,7 +79,7 @@
         <div class="text">
             <a href="/index.html">Home page</a>
             <img src="/image/home/nextVector.png" alt="">
-            <a href="/pages/courses/index.html">Courses</a>
+            <span>Contact</span>
         </div>
     </div>
 

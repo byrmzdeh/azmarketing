@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script defer src="/style.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 
@@ -21,19 +23,62 @@
 
 
     <nav>
-        <img class="logo" src="/image/home/logo.png" alt="err">
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="./pages/about/index.html">About us</a></li>
-            <li><a href="./pages/courses/index.html">Courses</a></li>
-            <li><a href="./pages/instructors/index.html">Instructors</a></li>
-            <li><a href="./pages/contact/index.html">Contact</a></li>
-        </ul>
-        <div class="login">
-            <button class="basket"><img src="/image/home/basket.png" alt="err"></button>
-            <button class="user"><a href="/components/login/index.html"><img src="/image/home/user.png" alt="err">Login</a></button>
+        <div class="show">
+            <img class="logo" src="/image/home/logo.png" alt="err">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="./pages/about/index.html">About us</a></li>
+                <li><a href="./pages/courses/index.html">Courses</a></li>
+                <li><a href="./pages/instructors/index.html">Instructors</a></li>
+                <li><a href="./pages/contact/index.html">Contact</a></li>
+            </ul>
+            <div class="navLogin">
+                <button class="basket"><a href="/pages/shop/index.html"><img src="/image/home/shop.png"
+                            alt=""></a></button>
+                <button class="user"><a href="/components/login/index.html">
+                        <img src="/image/home/user.png" alt="err"><span>Login</span></a></button>
+            </div>
+        </div>
+
+        <div class="view">
+            <img width="150" class="logo" src="/image/home/logo.png" alt="err">
+
+          <div class="images">
+            <a href="/components/login/index.html"><img width="38" src="/image/home/resUser.png" alt=""></a>
+
+            <a href="/pages/shop/index.html"><img width="38" src="/image/home/shop.png"
+                alt=""></a>
+            <img width="38" id="menuButton" src="/image/home/menu.png" alt="">
+          </div>
+        </div>
+
+        <div id="menu">
+            <img class="ellipse1" src="/image/home/ellipse1.png" alt="">
+           <div class="close">
+            <img id="close" width="38" src="/image/home/close.png" alt="">
+           </div>
+            <ul class="click">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="./pages/about/index.html">About us</a></li>
+                <li><a href="./pages/courses/index.html">Courses</a></li>
+                <li><a href="./pages/instructors/index.html">Instructors</a></li>
+                <li><a href="./pages/contact/index.html">Contact</a></li>
+            </ul>
+
+            <div class="connect">
+                <p>Follow us</p>
+                <div class="images">
+                    <a href=""><img width="42" src="/image/home/Instagram.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Facebook.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Linkedin.png" alt=""></a>
+                    <a href=""><img width="42" src="/image/home/Youtube.png" alt=""></a>
+                </div>
+            </div>
         </div>
     </nav>
+
+
+
 
     <section class="one">
         <div class="header">
@@ -153,13 +198,26 @@
 
     <section class="five">
         <h4>Our trusted partners</h4>
-        <div class="partners">
-            <img src="/image/home/partners/azmarketing.png" alt="err">
-            <img src="/image/home/partners/azfibernet.png" alt="err">
-            <img src="/image/home/partners/gccgreen.png" alt="err">
-            <img src="/image/home/partners/azmarketing.png" alt="err">
-            <img src="/image/home/partners/azfibernet.png" alt="err">
+        <div class="slider-container">
+            <div class="slider">
+                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+
+                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+            </div>
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+            </div>
         </div>
+
     </section>
 
     <section class="six">
@@ -242,78 +300,83 @@
                         class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleAnswer(this)">
                     Ödəniş zamanı güzəştlər tətbiq olunur? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleAnswer(this)">
                     Ödəniş zamanı güzəştlər tətbiq olunur? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
                 </div>
             </div>
-    
+
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleAnswer(this)">
                     Ödəniş zamanı güzəştlər tətbiq olunur? <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit.
                 </div>
             </div>
-    
-    
+
+
         </div>
-    
 
         <form id="myForm">
             <h4>Got a question? Leave us a <br> message.</h4>
             <div class="form">
                 <div>
-                    <input type="text" id="firstName" name="firstName" placeholder="Name">
+                    <input type="text" id="firstName" name="firstName" placeholder="Name" required>
                 </div>
                 <div>
-                    <input type="email" id="email" name="email" placeholder="Email">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div>
-                    <input type="text" id="phone" name="phone" placeholder="Phone number">
+                    <input type="text" id="phone" name="phone" placeholder="Phone number" required>
                 </div>
-
-                <div class="choose" style="position: relative;">
-                    <input class="ch_input" type="text" id="lastName" name="lastName" placeholder="Choose a course" readonly>
-                    <select id="cars" onchange="updateInput(this)">
-                        <option value="" disabled selected hidden>Select a course</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Business">Business</option>
-                        <option value="Web Design">Web Design</option>
-                        <option value="Analytics">Analytics</option>
-                        <option value="Motion Design">Motion Design</option>
-                        <option value="3D Design">3D Design</option>
-                    </select>
+                <div class="custom-select">
+                    <div class="select-box" onclick="toggleDropdown()">
+                        <input type="text" id="selectedCourse" placeholder="Choose a course" readonly>
+                        <span id="dropdownIcon" class="arrow-down"></span>
+                    </div>
+                    <div class="select-options">
+                        <label><span>Developer</span><input type="checkbox" name="course" value="Developer"
+                                onclick="selectCourse(this)"></label>
+                        <label><span>Web</span><input type="checkbox" name="course" value="Web"
+                                onclick="selectCourse(this)"></label>
+                        <label><span>Business</span><input type="checkbox" name="course" value="Business"
+                                onclick="selectCourse(this)"></label>
+                        <label><span>Marketing</span><input type="checkbox" name="course" value="Marketing"
+                                onclick="selectCourse(this)"></label>
+                    </div>
                 </div>
-
             </div>
             <div>
-                <textarea id="message" name="message" placeholder="Your message"></textarea>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
             </div>
             <p id="errorMessage" class="error"></p> <!-- Hata mesajı burada gösterilecek -->
             <button type="submit">Göndər</button>
         </form>
 
         <!-- Teşekkür Mesajı -->
-        <div id="modalOverlay"></div>
-        <div id="thankYouModal">
+        <div id="modalOverlay" style="display:none;"></div>
+        <div id="thankYouModal" style="display:none;">
             <p id="close">X</p>
             <h5>Thank you!</h5>
             <p>Thanks for reaching out to us! We will <br> contact you back as soon as possible.</p>
@@ -334,8 +397,8 @@
             </div>
             <div class="text_main">
                 <div class="text_href">
-                    <a class="term_text" href="">Terms of use</a>
-                    <a class="policy_text" href="">Privacy Policy</a>
+                    <a class="term_text" href="/pages/terms/index.html">Terms of use</a>
+                    <a class="policy_text" href="/pages/policy">Privacy Policy</a>
                 </div>
                 <p>Azmarketinq 2024. All rights reserved.</p>
 
@@ -345,10 +408,11 @@
         <div class="link">
             <h3>Get Newsletter</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-            <form action="">
-                <input type="email" id="email" name="email" placeholder="Email">
-                <button type="submit" class="learn_btn"><a href="">Submit <img src="/image/home/arrow.png"
-                            alt="err"></a></button>
+            <form action="" id="footerForm">
+                <input type="email" id="emaill" name="email" placeholder="Email" required>
+                <button type="submit" class="learn_btn">
+                    <span>Submit</span>
+                    <img src="/image/home/arrow.png" alt="err"></button>
             </form>
             <div class="phone">
                 <div class="one_text">
