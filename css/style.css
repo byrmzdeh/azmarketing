@@ -2407,7 +2407,7 @@ footer .link .phone .one_text span {
 
 @media (min-width: 320px) and (max-width: 768px) {
   .pagination {
-    min-height: 160px;
+    min-height: 170px;
   }
   .pagination_detail {
     min-height: 200px;
@@ -2481,7 +2481,7 @@ footer .link .phone .one_text span {
     color: white;
   }
   .one {
-    min-height: 380px;
+    min-height: 480px;
     display: flex;
     justify-content: center;
   }
