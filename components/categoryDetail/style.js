@@ -16,7 +16,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
                     <h4>Introduction Web Design with HTML</h4>
                     <div class="categoryy">
                         <button>${item.category}</button>
-                        <div class="view">
+                        <div class="students">
                             <img width="17" src="/image/home/detailUser.png" alt="">
                             <span>${item.view} students enrolled</span>
                         </div>
@@ -76,7 +76,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
 
                 <div class="card">
                     <div class="instructorr">
-                        <img  src="/image/home/instructor.png" alt="err">
+                        <img width="60" src="/image/home/instructor.png" alt="err">
                         <div class="name">
                             <h5>Name Surname</h5>
                             <span>Instructor</span>
@@ -177,7 +177,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
                 window.location.href = '/index.html'; // Home page URL
 
             });
-
+            
         } else {
             detailContainer.textContent = 'Item not found';
         }
@@ -186,30 +186,4 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
 
 
 
-//footerForm
-document.getElementById('footerForm').addEventListener('submit', function (e) {
-    e.preventDefault()
-
-    const mail = document.getElementById('emaill').value.trim()
-
-    if (mail) {
-        window.location.href = '/pages/contact/index.html'
-
-    }
-})
-
-
-
-
-
-//footerForm
-document.getElementById('footerForm').addEventListener('submit', function (e) {
-    e.preventDefault()
-
-    const mail = document.getElementById('emaill').value.trim()
-
-    if (mail) {
-        window.location.href = '/pages/contact/index.html'
-
-    }
-})
+    

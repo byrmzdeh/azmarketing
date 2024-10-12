@@ -35,20 +35,19 @@
         <div class="view">
             <img width="150" class="logo" src="/image/home/logo.png" alt="err">
 
-          <div class="images">
-            <a href="/components/login/index.html"><img width="38" src="/image/home/resUser.png" alt=""></a>
+            <div class="images">
+                <a href="/components/login/index.html"><img width="38" src="/image/home/resUser.png" alt=""></a>
 
-            <a href="/pages/shop/index.html"><img width="38" src="/image/home/shop.png"
-                alt=""></a>
-            <img width="38" id="menuButton" src="/image/home/menu.png" alt="">
-          </div>
+                <a href="/pages/shop/index.html"><img width="38" src="/image/home/shop.png" alt=""></a>
+                <img width="38" id="menuButton" src="/image/home/menu.png" alt="">
+            </div>
         </div>
 
         <div id="menu">
             <img class="ellipse1" src="/image/home/ellipse1.png" alt="">
-           <div class="close">
-            <img id="close" width="38" src="/image/home/close.png" alt="">
-           </div>
+            <div class="close">
+                <img id="close" width="38" src="/image/home/close.png" alt="">
+            </div>
             <ul class="click">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about/index.html">About us</a></li>
@@ -72,7 +71,7 @@
 
     <img class="ellipse9" src="/image/home/ellipse9.png" alt="">
 
-    <div class="pagination">
+    <div class="pagination course_pagination">
         <div class="text">
             <a href="/index.html">Home page</a>
             <img src="/image/home/nextVector.png" alt="">
@@ -85,12 +84,159 @@
 
 
     <div id="detaill">
+        <div class="title">
+            <h4>Introduction Web Design with HTML</h4>
+            <div class="categoryy">
+                <button>${item.category}</button>
+                <div class="view">
+                    <img width="17" src="/image/home/detailUser.png" alt="">
+                    <span>${item.view} students enrolled</span>
+                </div>
+            </div>
+            <img class='detail_img' src="${item.imgDetail}" alt="">
+            <div class="desc">
+                <h5>Course Description</h5>
+                <p>${item.description}</p>
+                <div class="desc_time">
+                    <div class="time_one">
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.video}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.resources}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.access}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.accessTwo}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.certificate}</span>
+                        </div>
+                    </div>
+                    <div class="time_one">
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.video}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.resources}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.access}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.accessTwo}</span>
+                        </div>
+                        <div class="time">
+                            <img width="17" src="/image/home/detailVector.png" alt="">
+                            <span>${item.certificate}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="instructorr">
+                <img src="/image/home/instructor.png" alt="err">
+                <div class="name">
+                    <h5>Name Surname</h5>
+                    <span>Instructor</span>
+                </div>
+            </div>
+            <div class="includes">
+                <h5>Includes</h5>
+                <div class="time_one">
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <span>${item.video}</span>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <span>${item.resources}</span>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <span>${item.access}</span>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <span>${item.accessTwo}</span>
+                    </div>
+                    <div class="time">
+                        <img width="17" src="/image/home/detailVector.png" alt="">
+                        <span>${item.certificate}</span>
+                    </div>
+                </div>
+                <div class="buy">
+                    <div class="price">
+                        <p>Price</p>
+                        <h5>${item.price}$</h5>
+                    </div>
+                    <div class="buy_btn">
+                        <button id="buyNowBtn">
+                            <span>Buy now</span>
+                            <img src="/image/home/arrow.png" alt="">
+                        </button>
+                        <img src="/image/home/categoryBasket.png" alt="">
+                    </div>
+                </div>
+
+                <div id="formContainer" class="form-container" style="display: none;">
+                    <form id="buyForm">
+                        <h6>Card Details</h6>
+
+                        <div class="mail">
+                            <label for="email">E-MAIL</label>
+                            <input type="email" id="email" name="email" placeholder='E-mail' required>
+                        </div>
+                        <div class="card_detail">
+                            <div class="card_name">
+                                <label for="cardName">CARD NAME</label>
+                                <input type="text" id="cardName" name="cardName" placeholder="Name Surname" required>
+                            </div>
+                            <div class="card_number">
+                                <label for="cardNumber">CARD NUMBER</label>
+                                <input type="number" id="cardNumber" name="cardNumber" placeholder="__ /__ /__"
+                                    required>
+                            </div>
+                            <div class="card_name">
+                                <label for="cardNumber2">CARD NUMBER</label>
+                                <input type="text" id="cardNumber2" name="cardNumber2" placeholder="0000 0000 0000 0000"
+                                    required>
+                            </div>
+                            <div class="card_number">
+                                <label for="cardCvv">CVV</label>
+                                <input type="text" id="cardCvv" name="cardCVV" placeholder="__ /__ /__" required>
+                            </div>
 
 
-   
+                        </div>
+
+                        <div class="code">
+                            <label for="code">DISCOUNT CODE</label>
+                            <input type="text" id="code" name="code" placeholder="000 000 000" required>
+                        </div>
+                        <button type="submit">Confirm Payment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
-    
+
     <footer>
         <div class="connect">
             <img class="az_logo" src="/image/home/azmarketing.png" alt="err">
