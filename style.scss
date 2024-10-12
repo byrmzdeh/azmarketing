@@ -347,7 +347,7 @@ nav {
 
 
         .card {
-            
+
             width: 100%;
             height: 276px;
             border-radius: 24px;
@@ -403,7 +403,7 @@ nav {
         }
 
         .card_top {
-           margin: 50px 0px 0px 0px;
+            margin: 50px 0px 0px 0px;
         }
 
     }
@@ -2624,7 +2624,7 @@ footer {
 //     }
 // }
 
-#detail {
+#detaill {
     max-width: 100%;
     min-height: 780px;
     display: flex;
@@ -2689,7 +2689,7 @@ footer {
 
         .detail_img {
             width: 100%;
-            max-height: 464px;
+            // max-height: 464px;
             border-radius: 16px;
         }
 
@@ -3099,7 +3099,7 @@ footer {
 
     }
 
-    #icards {
+    #icardss {
         width: 100%;
         display: grid;
         grid-template-columns: auto auto auto auto;
@@ -3107,7 +3107,7 @@ footer {
         justify-content: space-between;
         gap: 20px;
 
-        .card {
+        .icard {
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -3452,8 +3452,9 @@ footer {
             justify-content: space-between;
             gap: 20px;
 
-            .card {
-                width: 100%;;
+            .icard {
+                width: 100%;
+                ;
                 // min-height: 304px;
                 display: flex;
                 flex-direction: column;
@@ -3470,7 +3471,7 @@ footer {
 
                 .img {
                     width: 100%;
-                //    min-height: 250px;
+                    //    min-height: 250px;
                     object-fit: cover;
                     overflow: hidden;
 
@@ -3544,9 +3545,6 @@ footer {
 
     }
 
-    .pagination_detail {
-        min-height: 200px;
-    }
 
 
 
@@ -4131,11 +4129,12 @@ footer {
                     font-size: 27px;
                 }
 
-                input{
-                    &::placeholder{
+                input {
+                    &::placeholder {
                         font-size: 13px;
                     }
                 }
+
                 .phone {
                     width: 100%;
                     display: flex;
@@ -4213,11 +4212,13 @@ footer {
             width: 100%;
             display: flex;
             flex-direction: column;
-            .card{
-                h5{
+
+            .card {
+                h5 {
                     font-size: 16px;
                 }
-                p{
+
+                p {
                     font-size: 12px;
                 }
             }
@@ -4240,7 +4241,7 @@ footer {
         // }
     }
 
-    #detail {
+    #detaill {
         display: flex;
         flex-direction: column;
 
@@ -4288,7 +4289,7 @@ footer {
                             grid-template-columns: auto;
 
                             .card_name {
-                                max-width: 768px;
+                                // max-width: 768px;
                                 width: 100%;
 
                                 input {
@@ -4377,12 +4378,13 @@ footer {
                 width: 100%;
                 grid-template-columns: repeat(1, 1fr);
 
-            
-                
 
-                .card {
+
+
+                .icard {
                     width: 100%;
-                    .img_card{
+
+                    .img_card {
                         width: 100%;
                     }
 
@@ -4391,20 +4393,22 @@ footer {
         }
     }
 
-    .instructor{
+    .instructor {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        .lorem{
+
+        .lorem {
             text-align: justify;
         }
-        #icards{
-          
-                    grid-template-columns: repeat(1, 1fr);
-                    gap: 10px;
-             
+
+        #icardss {
+
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+
         }
     }
 
@@ -4760,20 +4764,22 @@ footer {
         }
     }
 
-    .instructor{
+    .instructor {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        .lorem{
+
+        .lorem {
             text-align: justify;
         }
-        #icards{
-          
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 10px;
-             
+
+        #icardss {
+
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+
         }
     }
 
@@ -4828,12 +4834,13 @@ footer {
                 width: 100%;
                 grid-template-columns: repeat(2, 1fr);
 
-            
-                
 
-                .card {
+
+
+                .icard {
                     width: 100%;
-                    .img_card{
+
+                    .img_card {
                         width: 100%;
                     }
 
@@ -5022,21 +5029,23 @@ footer {
         }
     }
 
-    
-    .instructor{
+
+    .instructor {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        .lorem{
+
+        .lorem {
             text-align: justify;
         }
-        #icards{
-          
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 10px;
-             
+
+        #icardss {
+
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
         }
     }
 

@@ -2061,7 +2061,7 @@ footer .link .phone .one_text span {
   z-index: 999;
 }
 
-#detail {
+#detaill {
   max-width: 100%;
   min-height: 780px;
   display: flex;
@@ -2071,7 +2071,7 @@ footer .link .phone .one_text span {
   background-color: white;
   gap: 20px;
 }
-#detail .title {
+#detaill .title {
   width: 62%;
   display: flex;
   flex-direction: column;
@@ -2079,18 +2079,18 @@ footer .link .phone .one_text span {
   justify-content: center;
   gap: 24px;
 }
-#detail .title h4 {
+#detaill .title h4 {
   font-size: 33px;
   font-weight: 400;
 }
-#detail .title .categoryy {
+#detaill .title .categoryy {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 24px;
 }
-#detail .title .categoryy button {
+#detaill .title .categoryy button {
   width: 119px;
   height: 40px;
   border-radius: 8px;
@@ -2101,27 +2101,26 @@ footer .link .phone .one_text span {
   font-weight: 400;
   border: none;
 }
-#detail .title .categoryy .view {
+#detaill .title .categoryy .view {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-#detail .title .categoryy .view img {
+#detaill .title .categoryy .view img {
   width: 24px;
   height: 24px;
 }
-#detail .title .categoryy .view span {
+#detaill .title .categoryy .view span {
   font-size: 14px;
   font-weight: 400;
   color: rgb(128, 127, 131);
 }
-#detail .title .detail_img {
+#detaill .title .detail_img {
   width: 100%;
-  max-height: 464px;
   border-radius: 16px;
 }
-#detail .title .desc {
+#detaill .title .desc {
   width: 100%;
   height: auto;
   border-radius: 16px;
@@ -2133,40 +2132,40 @@ footer .link .phone .one_text span {
   justify-content: center;
   gap: 25px;
 }
-#detail .title .desc h5 {
+#detaill .title .desc h5 {
   font-style: 23px;
   font-weight: 500;
 }
-#detail .title .desc p {
+#detaill .title .desc p {
   font-size: 16px;
   font-weight: 400;
   line-height: 23px;
   color: rgb(128, 127, 131);
 }
-#detail .title .desc .desc_time {
+#detaill .title .desc .desc_time {
   width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#detail .title .desc .desc_time .time_one {
+#detaill .title .desc .desc_time .time_one {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   gap: 16px;
 }
-#detail .title .desc .desc_time .time_one .time {
+#detaill .title .desc .desc_time .time_one .time {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-#detail .title .desc .desc_time .time_one .time span {
+#detaill .title .desc .desc_time .time_one .time span {
   font-size: 17px;
   color: rgb(128, 127, 131);
 }
-#detail .card {
+#detaill .card {
   width: 36%;
   height: auto;
   display: flex;
@@ -2174,7 +2173,7 @@ footer .link .phone .one_text span {
   border: none;
   gap: 20px;
 }
-#detail .card .instructorr {
+#detaill .card .instructorr {
   width: 100%;
   height: 108px;
   display: flex;
@@ -2185,35 +2184,35 @@ footer .link .phone .one_text span {
   border: 1px solid rgb(226, 226, 227);
   padding: 30px;
 }
-#detail .card .instructorr .name {
+#detaill .card .instructorr .name {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
-#detail .card .instructorr .name h5 {
+#detaill .card .instructorr .name h5 {
   font-weight: 500;
   font-style: 23px;
   color: rgb(33, 28, 74);
 }
-#detail .card .instructorr .name span {
+#detaill .card .instructorr .name span {
   font-style: 16px;
   font-weight: 400;
   color: rgb(128, 127, 131);
 }
-#detail .card .includes {
+#detaill .card .includes {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
   border: 1px solid rgb(226, 226, 227);
 }
-#detail .card .includes h5 {
+#detaill .card .includes h5 {
   font-style: 23px;
   font-weight: 500;
   color: rgb(33, 28, 74);
   padding: 30px 0px 0px 30px;
 }
-#detail .card .includes .time_one {
+#detaill .card .includes .time_one {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2221,44 +2220,44 @@ footer .link .phone .one_text span {
   gap: 16px;
   padding: 30px;
 }
-#detail .card .includes .time_one .time {
+#detaill .card .includes .time_one .time {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-#detail .card .includes .time_one .time span {
+#detaill .card .includes .time_one .time span {
   font-size: 17px;
   color: rgb(128, 127, 131);
 }
-#detail .card .includes .buy {
+#detaill .card .includes .buy {
   width: 100%;
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgb(226, 226, 227);
   padding: 10px 30px;
 }
-#detail .card .includes .buy .price {
+#detaill .card .includes .buy .price {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#detail .card .includes .buy .price p {
+#detaill .card .includes .buy .price p {
   font-size: 16px;
   font-weight: 400;
   color: rgb(33, 28, 74);
 }
-#detail .card .includes .buy .price h5 {
+#detaill .card .includes .buy .price h5 {
   font-style: 23px;
   font-weight: 500;
   color: rgb(91, 88, 235);
 }
-#detail .card .includes .buy .buy_btn {
+#detaill .card .includes .buy .buy_btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#detail .card .includes .buy .buy_btn button {
+#detaill .card .includes .buy .buy_btn button {
   max-width: 400px;
   width: 100%;
   height: 46px;
@@ -2270,19 +2269,19 @@ footer .link .phone .one_text span {
   border: 1px solid rgb(133, 138, 244);
   padding: 8px;
 }
-#detail .card .includes .buy .buy_btn button img {
+#detaill .card .includes .buy .buy_btn button img {
   width: 22px;
   height: 22px;
 }
-#detail .card .includes .buy .buy_btn button span {
+#detaill .card .includes .buy .buy_btn button span {
   font-size: 18px;
   font-weight: 400;
   color: rgb(255, 255, 255);
 }
-#detail .card .includes .buy .buy_btn img {
+#detaill .card .includes .buy .buy_btn img {
   width: 46px;
 }
-#detail .card .includes #formContainer {
+#detaill .card .includes #formContainer {
   width: 100%;
   display: none;
   /* Initially hidden */
@@ -2292,7 +2291,7 @@ footer .link .phone .one_text span {
   transition: height 0.3s ease;
   /* Height animation */
 }
-#detail .card .includes #formContainer form {
+#detaill .card .includes #formContainer form {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -2300,17 +2299,17 @@ footer .link .phone .one_text span {
   padding: 10px 40px 10px 40px;
   gap: 10px;
 }
-#detail .card .includes #formContainer form h6 {
+#detaill .card .includes #formContainer form h6 {
   font-size: 19px;
   font-weight: 500;
   color: rgb(50, 50, 52);
 }
-#detail .card .includes #formContainer form label {
+#detaill .card .includes #formContainer form label {
   font-size: 10px;
   font-weight: 400;
   color: rgb(33, 28, 74);
 }
-#detail .card .includes #formContainer form input {
+#detaill .card .includes #formContainer form input {
   width: 100%;
   height: 46px;
   padding: 10px;
@@ -2318,7 +2317,7 @@ footer .link .phone .one_text span {
   outline: none;
   border: 1px solid rgb(226, 226, 227);
 }
-#detail .card .includes #formContainer form .card_detail {
+#detaill .card .includes #formContainer form .card_detail {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto;
@@ -2326,37 +2325,37 @@ footer .link .phone .one_text span {
   align-items: center;
   gap: 10px;
 }
-#detail .card .includes #formContainer form .card_detail .card_name {
+#detaill .card .includes #formContainer form .card_detail .card_name {
   min-width: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-#detail .card .includes #formContainer form .card_detail .card_name label {
+#detaill .card .includes #formContainer form .card_detail .card_name label {
   font-size: 10px;
   font-weight: 400;
   color: rgb(33, 28, 74);
 }
-#detail .card .includes #formContainer form .card_detail .card_name input {
+#detaill .card .includes #formContainer form .card_detail .card_name input {
   width: 100%;
 }
-#detail .card .includes #formContainer form .card_detail .card_number {
+#detaill .card .includes #formContainer form .card_detail .card_number {
   min-width: 124px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-#detail .card .includes #formContainer form .card_detail .card_number label {
+#detaill .card .includes #formContainer form .card_detail .card_number label {
   font-size: 10px;
   font-weight: 400;
   color: rgb(33, 28, 74);
 }
-#detail .card .includes #formContainer form .card_detail .card_number input {
+#detaill .card .includes #formContainer form .card_detail .card_number input {
   width: 100%;
 }
-#detail .card .includes #formContainer form button {
+#detaill .card .includes #formContainer form button {
   width: 100%;
   height: 46px;
   border: 1px solid rgb(133, 138, 244);
@@ -2370,7 +2369,7 @@ footer .link .phone .one_text span {
   font-size: 18px;
   margin: 12px auto;
 }
-#detail .card .includes #formContainer:active {
+#detaill .card .includes #formContainer:active {
   display: block;
   /* Show form when active */
 }
@@ -2436,7 +2435,7 @@ footer .link .phone .one_text span {
   text-align: center;
   line-height: 23px;
 }
-.instructor #icards {
+.instructor #icardss {
   width: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -2444,7 +2443,7 @@ footer .link .phone .one_text span {
   justify-content: space-between;
   gap: 20px;
 }
-.instructor #icards .card {
+.instructor #icardss .icard {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2456,7 +2455,7 @@ footer .link .phone .one_text span {
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
-.instructor #icards .card .img {
+.instructor #icardss .icard .img {
   width: 100%;
   height: 345px;
   object-fit: cover;
@@ -2464,24 +2463,24 @@ footer .link .phone .one_text span {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.instructor #icards .card .img img {
+.instructor #icardss .icard .img img {
   width: 100%;
   height: 100%;
   transition: transform 0.3s ease;
 }
-.instructor #icards .card h6 {
+.instructor #icardss .icard h6 {
   font-size: 19px;
   font-weight: 500;
   color: #ffffff;
   padding: 0px 0px 5px 15px;
 }
-.instructor #icards .card span {
+.instructor #icardss .icard span {
   font-size: 12px;
   font-weight: 400;
   padding: 17px 0px 5px 15px;
   color: rgb(201, 209, 252);
 }
-.instructor #icards .card:hover .img img {
+.instructor #icardss .icard:hover .img img {
   transform: scale(1.2);
 }
 .instructor #load {
@@ -2704,7 +2703,7 @@ footer .link .phone .one_text span {
   justify-content: space-between;
   gap: 20px;
 }
-.meet .inscards #icardss .card {
+.meet .inscards #icardss .icard {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2717,31 +2716,31 @@ footer .link .phone .one_text span {
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
 }
-.meet .inscards #icardss .card .img {
+.meet .inscards #icardss .icard .img {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.meet .inscards #icardss .card .img img {
+.meet .inscards #icardss .icard .img img {
   width: 100%;
   height: 250px;
   transition: transform 0.3s ease;
 }
-.meet .inscards #icardss .card h6 {
+.meet .inscards #icardss .icard h6 {
   font-size: 19px;
   font-weight: 500;
   color: #ffffff;
   padding: 0px 0px 5px 15px;
 }
-.meet .inscards #icardss .card span {
+.meet .inscards #icardss .icard span {
   font-size: 12px;
   font-weight: 400;
   padding: 17px 0px 5px 15px;
   color: rgb(201, 209, 252);
 }
-.meet .inscards #icardss .card:hover .img img {
+.meet .inscards #icardss .icard:hover .img img {
   transform: scale(1.2);
 }
 .meet .ellipse5 {
@@ -2756,9 +2755,6 @@ footer .link .phone .one_text span {
 @media (min-width: 320px) and (max-width: 768px) {
   .pagination {
     min-height: 170px;
-  }
-  .pagination_detail {
-    min-height: 200px;
   }
   .show {
     display: none;
@@ -3254,46 +3250,45 @@ footer .link .phone .one_text span {
   .category #cards .card p {
     font-size: 12px;
   }
-  #detail {
+  #detaill {
     display: flex;
     flex-direction: column;
   }
-  #detail .title {
+  #detaill .title {
     width: 100%;
   }
-  #detail .title .view {
+  #detaill .title .view {
     opacity: 0;
   }
-  #detail .title h4 {
+  #detaill .title h4 {
     font-size: 26px;
   }
-  #detail .title .desc_time {
+  #detaill .title .desc_time {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-  #detail .card {
+  #detaill .card {
     width: 100%;
   }
-  #detail .card .includes {
+  #detaill .card .includes {
     display: flex;
   }
-  #detail .card .includes .buy .buy_btn button {
+  #detaill .card .includes .buy .buy_btn button {
     width: 80%;
   }
-  #detail .card .includes #formContainer form {
+  #detaill .card .includes #formContainer form {
     width: 100%;
   }
-  #detail .card .includes #formContainer form .card_detail {
+  #detaill .card .includes #formContainer form .card_detail {
     width: 100%;
     display: grid;
     grid-template-columns: auto;
   }
-  #detail .card .includes #formContainer form .card_detail .card_name {
-    max-width: 768px;
+  #detaill .card .includes #formContainer form .card_detail .card_name {
     width: 100%;
   }
-  #detail .card .includes #formContainer form .card_detail .card_name input {
+  #detaill .card .includes #formContainer form .card_detail .card_name input {
     width: 100%;
   }
   .instdetail {
@@ -3355,10 +3350,10 @@ footer .link .phone .one_text span {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
-  .meet .inscards #icardss .card {
+  .meet .inscards #icardss .icard {
     width: 100%;
   }
-  .meet .inscards #icardss .card .img_card {
+  .meet .inscards #icardss .icard .img_card {
     width: 100%;
   }
   .instructor {
@@ -3371,7 +3366,7 @@ footer .link .phone .one_text span {
   .instructor .lorem {
     text-align: justify;
   }
-  .instructor #icards {
+  .instructor #icardss {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
@@ -3640,7 +3635,7 @@ footer .link .phone .one_text span {
   .instructor .lorem {
     text-align: justify;
   }
-  .instructor #icards {
+  .instructor #icardss {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
@@ -3688,10 +3683,10 @@ footer .link .phone .one_text span {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
-  .meet .inscards #icardss .card {
+  .meet .inscards #icardss .icard {
     width: 100%;
   }
-  .meet .inscards #icardss .card .img_card {
+  .meet .inscards #icardss .icard .img_card {
     width: 100%;
   }
   .registerPage {
@@ -3833,7 +3828,7 @@ footer .link .phone .one_text span {
   .instructor .lorem {
     text-align: justify;
   }
-  .instructor #icards {
+  .instructor #icardss {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }

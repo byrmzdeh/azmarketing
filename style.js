@@ -92,16 +92,6 @@ document.getElementById('myForm').addEventListener('submit', function (e) {
 
 })
 
-
-
-
-
-
-
-
-
-
-
 function updateInput(select) {
   document.getElementById('lastName').value = select.value;
 }
@@ -109,20 +99,20 @@ function updateInput(select) {
 
 
 //api
-// JSON verilerini almak
+// categoriesData verilerini almak
 let categoriesData = [];
-let currentIndex = 8; // Başlangıçta göstereceğimiz kart sayısı
+let currentCategoryIndex = 8; // Başlangıçta göstereceğimiz kart sayısı
 
-fetch('/json/category.json') // JSON faylınızı düzgün yolda yerləşdirin
+fetch('/json/category.json') // JSON dosyasının doğru yolunu belirtin
   .then(res => res.json())
   .then(data => {
     categoriesData = data; // Verileri kaydediyoruz
-    displayCards(categoriesData.slice(0, currentIndex)); // İlk 8 kartı göstəririk
+    displayCategoryCards(categoriesData.slice(0, currentCategoryIndex)); // İlk 8 kartı gösteriyoruz
   })
   .catch(error => console.error('Veri alınırken hata oluştu:', error));
 
-// Kartları ekrana yazdıran fonksiyon
-function displayCards(filteredData) {
+// Kartları ekrana yazdıran fonksiyon (kategori kartları için)
+function displayCategoryCards(filteredData) {
   const cardsContainer = document.getElementById('cards');
   cardsContainer.innerHTML = ''; // Mevcut kartları temizliyoruz
 
@@ -155,22 +145,22 @@ function displayCards(filteredData) {
   });
 }
 
-// "See All" düyməsinə klik eventi
+// "See All" düğmesine tıklama olayı
 document.addEventListener('DOMContentLoaded', () => {
   const seeAllButton = document.getElementById('seeAllButton');
   if (seeAllButton) {
     seeAllButton.addEventListener('click', () => {
-      displayCards(categoriesData); // Bütün kartları göstəririk
-      seeAllButton.style.display = 'none'; // "See All" düyməsini gizlədirik
+      displayCategoryCards(categoriesData); // Tüm kartları gösteriyoruz
+      seeAllButton.style.display = 'none'; // "See All" düğmesini gizliyoruz
     });
   }
 });
 
-// Kategori düymələrinə klik eventini əlavə etmək
-const buttons = document.querySelectorAll('.buttons button');
-buttons.forEach(button => {
+// Kategori düğmelerine tıklama olayını eklemek
+const categoryButtons = document.querySelectorAll('.buttons button');
+categoryButtons.forEach(button => {
   button.addEventListener('click', () => {
-    buttons.forEach(btn => {
+    categoryButtons.forEach(btn => {
       btn.style.backgroundColor = '';
       btn.style.color = '';
     });
@@ -181,73 +171,58 @@ buttons.forEach(button => {
     const category = button.textContent;
 
     if (category === 'All categories') {
-      displayCards(categoriesData.slice(0, currentIndex));
+      displayCategoryCards(categoriesData.slice(0, currentCategoryIndex));
       seeAllButton.style.display = 'block';
     } else {
       const filteredData = categoriesData.filter(item => item.category === category);
-      displayCards(filteredData.slice(0, currentIndex));
+      displayCategoryCards(filteredData.slice(0, currentCategoryIndex));
       seeAllButton.style.display = 'none';
     }
   });
 });
 
+// Instructor verilerini almak
+let instructorData = [];
+let currentInstructorIndex = 3; // Başlangıçta göstereceğimiz kart sayısı
 
-
-//faq
-function toggleAnswer(element) {
-  const answer = element.nextElementSibling;
-  const icon = element.querySelector(".faq-icon");
-
-  if (answer.style.display === "block") {
-    answer.style.display = "none";
-    icon.textContent = "+";
-  } else {
-    answer.style.display = "block";
-    icon.textContent = "-";
-  }
-}
-
-//meet-de instructor api 3 card
-let allDataa = [];
-let icurrentIndex = 3;
-
-// JSON faylını yükləmək
 fetch('/json/instructor.json')
-    .then((res) => res.json())
-    .then(data => {
-        allDataa = data;
-        displayCardss(allDataa.slice(0, icurrentIndex)); // İlk 8 elementi göstəririk
-    })
-    .catch(error => console.error('api gelmedi', error));
+  .then(res => res.json())
+  .then(data => {
+    instructorData = data;
+    displayInstructorCards(instructorData.slice(0, currentInstructorIndex)); // İlk 3 kartı gösteriyoruz
+  })
+  .catch(error => console.error('Veri alınırken hata oluştu:', error));
 
-// Kartları göstərən funksiyanı yazırıq
-function displayCardss(idata) {
-    const cardsContainer = document.getElementById("icardss");
-    cardsContainer.innerHTML = ''; // Kartları təmizləyirik
+// Kartları ekrana yazdıran fonksiyon (eğitmen kartları için)
+function displayInstructorCards(filteredData) {
+  const cardsContainer = document.getElementById("icardss");
+  cardsContainer.innerHTML = ''; // Mevcut kartları temizliyoruz
 
-    idata.forEach(item => {
-        const card = `
-         <div class="card" data-id="${item.id}">
-             <div class="img">
-                 <img src='${item.src}' alt="err">
-             </div>
-             <span>${item.title}</span>
-             <h6>${item.name}</h6>
-         </div>
-        `;
-        cardsContainer.innerHTML += card;
+  filteredData.forEach(item => {
+    const cardHTML = `
+      <div class="icard" data-id="${item.id}">
+        <div class="img">
+          <img src="${item.src}" alt="err">
+        </div>
+        <span>${item.title}</span>
+        <h6>${item.name}</h6>
+      </div>
+    `;
+    cardsContainer.innerHTML += cardHTML;
+  });
+
+  // Kartlara tıklanma olayı ekliyoruz
+  document.querySelectorAll('.icard').forEach(card => {
+    card.addEventListener('click', function (e) {
+      const itemId = e.currentTarget.dataset.id; // Tıklanan kartın id'sini alıyoruz
+      window.location.href = `/components/instructorDetail/index.html?id=${itemId}`; // Detay sayfasına yönlendiriyoruz
     });
-
-    // Hər bir karta klik hadisəsi bağlayırıq
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function (e) {
-            const itemId = e.currentTarget.dataset.id; // Klik edilən kartın id-sini alırıq
-            // window.location.href = `/components/instructorDetail.index.html?id=${itemId}`; // Detail səhifəsinə yönləndirilir
-            window.location.href = `/components/instructorDetail/index.html?id=${itemId}`;
-
-        });
-    });
+  });
 }
+
+
+
+
 
 //footerForm
 document.getElementById('footerForm').addEventListener('submit', function (e) {
@@ -336,6 +311,19 @@ document.addEventListener('click', function (event) {
 
 
 
+//faq
+function toggleAnswer(element) {
+  const answer = element.nextElementSibling;
+  const icon = element.querySelector(".faq-icon");
+
+  if (answer.style.display === "block") {
+    answer.style.display = "none";
+    icon.textContent = "+";
+  } else {
+    answer.style.display = "block";
+    icon.textContent = "-";
+  }
+}
 
 
 

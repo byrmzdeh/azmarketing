@@ -7,7 +7,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
     .then(res => res.json())
     .then(data => {
         const item = data.find(item => item.id === id); // Seçilen kartı tapırıq
-        const detailContainer = document.getElementById('detail');
+        const detailContainer = document.getElementById('detaill');
 
         // Eğer kart varsa, detayları gösteririk
         if (item) {
@@ -76,7 +76,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
 
                 <div class="card">
                     <div class="instructorr">
-                        <img width="60" src="/image/home/instructor.png" alt="err">
+                        <img  src="/image/home/instructor.png" alt="err">
                         <div class="name">
                             <h5>Name Surname</h5>
                             <span>Instructor</span>

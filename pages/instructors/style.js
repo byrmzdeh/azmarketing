@@ -1,50 +1,49 @@
-let allData = [];
-let icurrentIndex = 8;
+// Instructor verilerini almak
+let instructorData = [];
+let currentInstructorIndex = 12; // Başlangıçta göstereceğimiz kart sayısı
 
-// JSON faylını yükləmək
 fetch('/json/instructor.json')
-    .then((res) => res.json())
-    .then(data => {
-        allData = data;
-        displayCards(allData.slice(0, icurrentIndex)); // İlk 8 elementi göstəririk
-    })
-    .catch(error => console.error('api gelmedi', error));
+  .then(res => res.json())
+  .then(data => {
+    instructorData = data;
+    displayInstructorCards(instructorData.slice(0, currentInstructorIndex)); // İlk 3 kartı gösteriyoruz
+  })
+  .catch(error => console.error('Veri alınırken hata oluştu:', error));
 
-// Kartları göstərən funksiyanı yazırıq
-function displayCards(idata) {
-    const cardsContainer = document.getElementById("icards");
-    cardsContainer.innerHTML = ''; // Kartları təmizləyirik
+// Kartları ekrana yazdıran fonksiyon (eğitmen kartları için)
+function displayInstructorCards(filteredData) {
+  const cardsContainer = document.getElementById("icardss");
+  cardsContainer.innerHTML = ''; // Mevcut kartları temizliyoruz
 
-    idata.forEach(item => {
-        const card = `
-         <div class="card" data-id="${item.id}">
-             <div class="img">
-                 <img src='${item.src}' alt="err">
-             </div>
-             <span>${item.title}</span>
-             <h6>${item.name}</h6>
-         </div>
-        `;
-        cardsContainer.innerHTML += card;
+  filteredData.forEach(item => {
+    const cardHTML = `
+      <div class="icard" data-id="${item.id}">
+        <div class="img">
+          <img src="${item.src}" alt="err">
+        </div>
+        <span>${item.title}</span>
+        <h6>${item.name}</h6>
+      </div>
+    `;
+    cardsContainer.innerHTML += cardHTML;
+  });
+
+  // Kartlara tıklanma olayı ekliyoruz
+  document.querySelectorAll('.icard').forEach(card => {
+    card.addEventListener('click', function (e) {
+      const itemId = e.currentTarget.dataset.id; // Tıklanan kartın id'sini alıyoruz
+      window.location.href = `/components/instructorDetail/index.html?id=${itemId}`; // Detay sayfasına yönlendiriyoruz
     });
-
-    // Hər bir karta klik hadisəsi bağlayırıq
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function (e) {
-            const itemId = e.currentTarget.dataset.id; // Klik edilən kartın id-sini alırıq
-            // window.location.href = `/components/instructorDetail.index.html?id=${itemId}`; // Detail səhifəsinə yönləndirilir
-            window.location.href = `/components/instructorDetail/index.html?id=${itemId}`;
-
-        });
-    });
+  });
 }
+
 
 // "Load More" düyməsinin funksiyası
 document.addEventListener('DOMContentLoaded', () => {
     const load = document.getElementById('load');
     if (load) {
         load.addEventListener('click', function () {
-            displayCards(allData); // Bütün kartları göstəririk
+            displayInstructorCards(instructorData); // Bütün kartları göstəririk
             load.style.display = 'none'; // Düyməni gizləyirik
         });
     }
