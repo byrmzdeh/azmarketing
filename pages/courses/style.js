@@ -36,6 +36,7 @@ function displayCards(filteredData) {
     cardsContainer.innerHTML += cardHTML;
   });
 
+  
   // Kartlara tıklanma olayı ekliyoruz
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', (e) => {
@@ -95,3 +96,16 @@ close.addEventListener('click', () => {
   menu.classList.remove('open'); // Menü açık veya kapalı olacak şekilde sınıfı değiştir
 });
 
+
+
+//footerForm
+document.getElementById('footerForm').addEventListener('submit', function (e) {
+  e.preventDefault()
+
+  const mail = document.getElementById('emaill').value.trim()
+
+  if (mail) {
+    window.location.href='/pages/contact/index.html'
+    
+  }
+})

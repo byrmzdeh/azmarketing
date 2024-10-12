@@ -75,7 +75,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
                 </div>
 
                 <div class="card">
-                    <div class="instructor">
+                    <div class="instructorr">
                         <img width="60" src="/image/home/instructor.png" alt="err">
                         <div class="name">
                             <h5>Name Surname</h5>
@@ -177,7 +177,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
                 window.location.href = '/index.html'; // Home page URL
 
             });
-            
+
         } else {
             detailContainer.textContent = 'Item not found';
         }
@@ -186,4 +186,30 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
 
 
 
-    
+//footerForm
+document.getElementById('footerForm').addEventListener('submit', function (e) {
+    e.preventDefault()
+
+    const mail = document.getElementById('emaill').value.trim()
+
+    if (mail) {
+        window.location.href = '/pages/contact/index.html'
+
+    }
+})
+
+
+
+
+
+//footerForm
+document.getElementById('footerForm').addEventListener('submit', function (e) {
+    e.preventDefault()
+
+    const mail = document.getElementById('emaill').value.trim()
+
+    if (mail) {
+        window.location.href = '/pages/contact/index.html'
+
+    }
+})

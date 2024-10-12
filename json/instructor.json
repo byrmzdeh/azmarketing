@@ -1,0 +1,148 @@
+[
+    {
+        "id": "0",
+        "src": "/image/instructor/instructor1.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "1",
+        "src": "/image/instructor/instructor2.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "2",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "3",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "4",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "5",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "6",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "7",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "8",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "9",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "10",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    },
+    {
+        "id": "11",
+        "src": "/image/instructor/instructor3.png",
+        "name": "Name Surname",
+        "title": "Graphic Design",
+        "category": "Adobe Certified Instructor",
+        "about":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "text":"Lorem Ipsum is simply dummy text",
+        "lorem":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "link":"https://www.linkedin.com/home"
+
+    }
+
+   
+]

@@ -207,6 +207,47 @@ function toggleAnswer(element) {
   }
 }
 
+//meet-de instructor api 3 card
+let allDataa = [];
+let icurrentIndex = 3;
+
+// JSON faylını yükləmək
+fetch('/json/instructor.json')
+    .then((res) => res.json())
+    .then(data => {
+        allDataa = data;
+        displayCardss(allDataa.slice(0, icurrentIndex)); // İlk 8 elementi göstəririk
+    })
+    .catch(error => console.error('api gelmedi', error));
+
+// Kartları göstərən funksiyanı yazırıq
+function displayCardss(idata) {
+    const cardsContainer = document.getElementById("icardss");
+    cardsContainer.innerHTML = ''; // Kartları təmizləyirik
+
+    idata.forEach(item => {
+        const card = `
+         <div class="card" data-id="${item.id}">
+             <div class="img">
+                 <img src='${item.src}' alt="err">
+             </div>
+             <span>${item.title}</span>
+             <h6>${item.name}</h6>
+         </div>
+        `;
+        cardsContainer.innerHTML += card;
+    });
+
+    // Hər bir karta klik hadisəsi bağlayırıq
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function (e) {
+            const itemId = e.currentTarget.dataset.id; // Klik edilən kartın id-sini alırıq
+            // window.location.href = `/components/instructorDetail.index.html?id=${itemId}`; // Detail səhifəsinə yönləndirilir
+            window.location.href = `/components/instructorDetail/index.html?id=${itemId}`;
+
+        });
+    });
+}
 
 //footerForm
 document.getElementById('footerForm').addEventListener('submit', function (e) {
