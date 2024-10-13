@@ -1233,7 +1233,7 @@ footer .link .phone .one_text span {
 .category #cards .card .price .buy_btn {
   max-width: 100px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   border: none;
   display: flex;
   align-items: center;
@@ -2372,6 +2372,133 @@ footer .link .phone .one_text span {
   /* Show form when active */
 }
 
+.fourCourses {
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 35px;
+}
+.fourCourses .text {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  z-index: 1;
+}
+.fourCourses .text h4 {
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 58px;
+  letter-spacing: -0.5%;
+  line-height: 25.2px;
+  color: rgb(33, 28, 74);
+}
+.fourCourses .text a {
+  font-size: 19px;
+  font-weight: 500;
+  color: rgb(91, 88, 235);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.fourCourses #categoryCourse {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.fourCourses #categoryCourse .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 227);
+}
+.fourCourses #categoryCourse .card .card_img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+.fourCourses #categoryCourse .card h5 {
+  font-size: 19px;
+  font-weight: 500;
+  padding-left: 15px;
+  color: var(--Primitives-Primary-950, rgb(33, 28, 74));
+  padding-top: 0px;
+}
+.fourCourses #categoryCourse .card p {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 15px;
+  color: var(--Primitives-Neutral-900, rgb(86, 86, 89));
+  padding-top: 10px;
+}
+.fourCourses #categoryCourse .card .basket_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: none;
+}
+.fourCourses #categoryCourse .card .basket_btn .basket {
+  width: 38px;
+  height: 38px;
+}
+.fourCourses #categoryCourse .card .price {
+  width: 100%;
+  min-height: 40px;
+  height: 100%;
+  padding: 15px;
+  border-top: 1px solid var(--Primitives-Neutral-200, rgb(226, 226, 227));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.fourCourses #categoryCourse .card .price h6 {
+  color: var(--Primitives-Primary-500, rgb(91, 88, 235));
+  font-weight: 500;
+  font-size: 19px;
+  position: absolute;
+  right: 15px;
+}
+.fourCourses #categoryCourse .card .price .buy_btn {
+  max-width: 100px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  background: none;
+  position: absolute;
+  right: 15px;
+  transition: 0.3s;
+}
+.fourCourses #categoryCourse .card .price .buy_btn span {
+  font-weight: 400;
+  color: rgb(91, 88, 235);
+  font-size: 16px;
+}
+.fourCourses #categoryCourse .card:hover .price .buy_btn {
+  opacity: 1;
+  background-color: none;
+  position: absolute;
+}
+.fourCourses #categoryCourse .card:hover .price h6 {
+  left: 15px;
+}
+
 .terms {
   max-width: 100%;
   min-height: 1050px;
@@ -2748,6 +2875,151 @@ footer .link .phone .one_text span {
   position: absolute;
   left: 0px;
   top: -400px;
+}
+
+.shop {
+  max-width: 100%;
+  width: 100%;
+  min-height: 500px;
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 3;
+}
+.shop #shop-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.shop #shop-items .card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgb(226, 226, 227);
+}
+.shop #shop-items .card .card_img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+.shop #shop-items .card h5 {
+  font-size: 19px;
+  font-weight: 500;
+  padding-left: 15px;
+  color: var(--Primitives-Primary-950, rgb(33, 28, 74));
+  padding-top: 0px;
+}
+.shop #shop-items .card p {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 15px;
+  color: var(--Primitives-Neutral-900, rgb(86, 86, 89));
+  padding-top: 10px;
+}
+.shop #shop-items .card .basket_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: none;
+}
+.shop #shop-items .card .basket_btn .basket {
+  width: 38px;
+  height: 38px;
+}
+.shop #shop-items .card .price {
+  width: 100%;
+  min-height: 50px;
+  height: 100%;
+  padding: 15px;
+  border-top: 1px solid var(--Primitives-Neutral-200, rgb(226, 226, 227));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.shop #shop-items .card .price h6 {
+  color: var(--Primitives-Primary-500, rgb(91, 88, 235));
+  font-weight: 500;
+  font-size: 19px;
+  position: absolute;
+  right: 15px;
+}
+.shop #shop-items .card .price .remove_btn {
+  max-width: 100px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  background: none;
+  position: absolute;
+  right: 15px;
+  transition: 0.3s;
+}
+.shop #shop-items .card .price .remove_btn span {
+  font-weight: 400;
+  color: rgb(91, 88, 235);
+  font-size: 16px;
+}
+.shop #shop-items .card:hover .price .remove_btn {
+  opacity: 1;
+  background-color: none;
+  position: absolute;
+}
+.shop #shop-items .card:hover .price h6 {
+  left: 15px;
+}
+.shop #shop-items .empty {
+  width: 100%;
+  max-height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 80px;
+  overflow: hidden;
+}
+.shop #shop-items .empty .shopping_card {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.shop #shop-items .empty .shopping_card h4 {
+  font-size: 33px;
+  font-weight: 400;
+  color: rgb(33, 28, 74);
+}
+.shop #shop-items .empty .empty_png {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 300px 20px 600px;
+  gap: 10px;
+}
+.shop #shop-items .empty .empty_png h4 {
+  font-style: 33px;
+  font-weight: 400;
+  color: rgb(201, 209, 252);
+}
+.shop #shop-items .empty .empty_png img {
+  width: 100px;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
@@ -3251,6 +3523,41 @@ footer .link .phone .one_text span {
   .category #cards .card p {
     font-size: 12px;
   }
+  .shop {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+  .shop h3 {
+    font-size: 30px;
+  }
+  .shop p {
+    font-size: 16px;
+  }
+  .shop .buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .shop .buttons button {
+    padding: 7px;
+    font-size: 12px;
+  }
+  .shop #shop-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .shop #shop-items .card h5 {
+    font-size: 16px;
+  }
+  .shop #shop-items .card p {
+    font-size: 12px;
+  }
+  .shop #shop-items .empty .empty_png {
+    padding: 0px;
+  }
   #detaill {
     display: flex;
     flex-direction: column;
@@ -3259,7 +3566,10 @@ footer .link .phone .one_text span {
   #detaill .title {
     width: 100%;
   }
-  #detaill .title .students {
+  #detaill .title .categoryy {
+    width: 100%;
+  }
+  #detaill .title .categoryy .students {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -3373,6 +3683,20 @@ footer .link .phone .one_text span {
   .instructor #icardss {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+  }
+  .fourCourses {
+    width: 100%;
+  }
+  .fourCourses #categoryCourse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .fourCourses #categoryCourse .card h5 {
+    font-size: 16px;
+  }
+  .fourCourses #categoryCourse .card p {
+    font-size: 12px;
   }
   .login_register {
     display: flex;
@@ -3629,6 +3953,34 @@ footer .link .phone .one_text span {
   .category #cards .card {
     width: 100%;
   }
+  .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shop h3 {
+    font-size: 30px;
+  }
+  .shop p {
+    font-size: 16px;
+  }
+  .shop .buttons {
+    display: flex;
+  }
+  .shop #shop-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .shop #shop-items .card {
+    width: 100%;
+  }
+  .shop #shop-items .empty .empty_png {
+    padding: 0px 100px 0px 300px;
+  }
   .instructor {
     width: 100%;
     display: flex;
@@ -3691,6 +4043,19 @@ footer .link .phone .one_text span {
     width: 100%;
   }
   .meet .inscards #icardss .icard .img_card {
+    width: 100%;
+  }
+  .fourCourses {
+    width: 100%;
+  }
+  .fourCourses #categoryCourse {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .fourCourses #categoryCourse .card {
     width: 100%;
   }
   .registerPage {
@@ -3822,6 +4187,34 @@ footer .link .phone .one_text span {
   .category #cards .card {
     width: 100%;
   }
+  .shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  .shop h3 {
+    font-size: 30px;
+  }
+  .shop p {
+    font-size: 16px;
+  }
+  .shop .buttons {
+    display: flex;
+  }
+  .shop #shop-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shop #shop-items .card {
+    width: 100%;
+  }
+  .shop #shop-items .empty .empty_png {
+    padding: 0px 100px 0px 400px;
+  }
   .instructor {
     width: 100%;
     display: flex;
@@ -3835,6 +4228,19 @@ footer .link .phone .one_text span {
   .instructor #icardss {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+  }
+  .fourCourses {
+    width: 100%;
+  }
+  .fourCourses #categoryCourse {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .fourCourses #categoryCourse .card {
+    width: 100%;
   }
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
