@@ -2326,11 +2326,11 @@ footer .link .phone .one_text span {
   gap: 10px;
 }
 #detaill .cards_detail .includes #formContainer form .card_detail .card_name {
-  min-width: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
+  margin-right: 140px;
 }
 #detaill .cards_detail .includes #formContainer form .card_detail .card_name label {
   font-size: 10px;
@@ -2341,8 +2341,7 @@ footer .link .phone .one_text span {
   width: 100%;
 }
 #detaill .cards_detail .includes #formContainer form .card_detail .card_number {
-  min-width: 124px;
-  width: 100%;
+  width: 99%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -3677,27 +3676,33 @@ footer .link .phone .one_text span {
   }
   #detaill .cards_detail {
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
   #detaill .cards_detail .includes {
-    display: flex;
+    width: 100%;
   }
-  #detaill .cards_detail .includes .buy .buy_btn button {
-    width: 80%;
+  #detaill .cards_detail .includes #formContainer {
+    width: 100%;
   }
   #detaill .cards_detail .includes #formContainer form {
     width: 100%;
   }
   #detaill .cards_detail .includes #formContainer form .card_detail {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
   }
   #detaill .cards_detail .includes #formContainer form .card_detail .card_name {
     width: 100%;
   }
   #detaill .cards_detail .includes #formContainer form .card_detail .card_name input {
+    width: 100%;
+  }
+  #detaill .cards_detail .includes #formContainer form .card_detail .card_number {
+    width: 100%;
+  }
+  #detaill .cards_detail .includes #formContainer form .card_detail .card_number input {
     width: 100%;
   }
   .instdetail {
@@ -4256,6 +4261,15 @@ footer .link .phone .one_text span {
     left: 0px;
     top: -100px;
     opacity: 0.5;
+  }
+  #detaill .cards_detail .includes #formContainer form input::placeholder {
+    font-size: 12px;
+  }
+  #detaill .cards_detail .includes #formContainer form .card_detail .card_name {
+    margin-right: 0px;
+  }
+  #detaill .cards_detail .includes #formContainer form .card_detail .card_name p {
+    font-size: 14px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1330px) {

@@ -111,7 +111,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
       </div>
       <div class="card_number">
         <label for="cardNumber">CARD NUMBER</label>
-        <input type="text" id="cardNumber" name="cardNumber" placeholder="000" maxlength="3" required>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="__ /__ /__" maxlength="3" required>
       </div>
       <div class="card_name">
         <label for="cardNumber2">CARD NUMBER</label>
@@ -119,7 +119,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
       </div>
       <div class="card_number">
         <label for="cardCvv">CVV</label>
-        <input type="text" id="cardCvv" name="cardCVV" placeholder="000"  maxlength="3" required>
+        <input type="text" id="cardCvv" name="cardCVV" placeholder="__ /__ /__"  maxlength="3" required>
       </div>
     </div>
     <div class="code">

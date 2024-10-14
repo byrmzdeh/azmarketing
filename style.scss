@@ -2925,11 +2925,11 @@ footer {
 
                         .card_name {
 
-                            min-width: 300px;
                             width: 100%;
                             display: flex;
                             flex-direction: column;
                             justify-content: start;
+                            margin-right: 140px;
 
                             label {
                                 font-size: 10px;
@@ -2939,6 +2939,8 @@ footer {
 
                             input {
                                 width: 100%;
+                                // min-width: 300px;
+
 
                             }
 
@@ -2946,8 +2948,7 @@ footer {
                         }
 
                         .card_number {
-                            min-width: 124px;
-                            width: 100%;
+                            width: 99%;
                             display: flex;
                             flex-direction: column;
                             justify-content: start;
@@ -4780,51 +4781,43 @@ footer {
             }
         }
 
-        .cards_detail {
+     .cards_detail{
+        width: 100%;
+        .includes{
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            #formContainer {
+                width: 100%;
+                form {
+                    width: 100%;
 
-            .includes {
-                display: flex;
-
-                .buy {
-
-                    .buy_btn {
-
-                        button {
-                            width: 80%;
-                        }
-                    }
-                }
-
-                #formContainer {
-                    form {
+                    .card_detail {
                         width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        align-items: start;
 
-                        .card_detail {
+                        .card_name {
                             width: 100%;
-                            display: grid;
-                            grid-template-columns: auto;
 
-                            .card_name {
-                                // max-width: 768px;
+                            input {
+
                                 width: 100%;
-
-                                input {
-                                    width: 100%;
-                                }
                             }
                         }
-
+                        .card_number{
+                            width: 100%;
+                            input{
+                                width: 100%;
+                            }
+                        }
                     }
 
                 }
 
             }
-
-
         }
+     }
     }
 
     .instdetail {
@@ -5592,6 +5585,31 @@ footer {
                 opacity: 0.5;
             }
 
+        }
+    }
+
+
+    #detaill{
+        .cards_detail{
+            .includes{
+                #formContainer{
+                   form{
+                    input{
+                        &::placeholder{
+                            font-size: 12px;
+                        }
+                    }
+                    .card_detail{
+                        .card_name{
+                            margin-right: 0px;
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                   }
+                    }
+                }
+            }
         }
     }
 
