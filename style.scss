@@ -106,7 +106,7 @@ nav {
 }
 
 .show .navLogin {
-    width: 11%;
+    width: 12%;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -116,17 +116,17 @@ nav {
     max-width: 46px;
     width: 100%;
     height: 46px;
-    border-radius: 8px;
-    border: 1px solid rgba(128, 128, 128, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgb(21, 20, 22);
 }
 
 .show .navLogin .basket img {
-    width: 100%;
-    height: 100%;
+
+    object-fit: cover;
 }
 
 .show .navLogin .user {
@@ -978,7 +978,7 @@ nav {
 
 
 
-        #close {
+        #closee {
             position: absolute;
             right: 30px;
             top: 0px;
@@ -1151,6 +1151,7 @@ nav {
                     z-index: 10;
                     display: flex;
                     font-size: 16px;
+                    display: none;
 
 
                     label {
@@ -2540,7 +2541,7 @@ footer {
 
         .iframe {
             width: 50%;
-            min-height: 580px;
+            height: 580px;
             object-fit: cover;
         }
 
@@ -2726,9 +2727,10 @@ footer {
 
     }
 
-    .card {
+    .cards_detail {
         width: 36%;
         display: flex;
+        flex-direction: column;
         border: none;
         gap: 20px;
 
@@ -2859,8 +2861,9 @@ footer {
 
                     }
 
-                    img {
+                    .shopBasket {
                         width: 46px;
+                        cursor: pointer;
                     }
 
                 }
@@ -2997,6 +3000,110 @@ footer {
 
 
 
+    }
+
+    #thankModalDetail {
+        display: none;
+        position: fixed;
+        max-width: 426px;
+        min-height: 273px;
+        padding: 20px;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        .modalButtons {
+            display: flex;
+            gap: 15px;
+
+
+            .detailHome {
+                max-width: 178px;
+                width: 100%;
+                height: 44px;
+                border-radius: 8px;
+                background-color: rgba(133, 138, 244, 1);
+                border: none;
+
+
+                a {
+                    color: rgba(255, 255, 255, 1);
+                    font-size: 18px;
+                    text-decoration: none;
+                    font-weight: 400;
+
+                }
+            }
+
+            .detailDash {
+                max-width: 178px;
+                width: 100%;
+                height: 44px;
+                border-radius: 8px;
+                background-color: white;
+                border: 1px solid rgba(133, 138, 244, 1);
+
+                a {
+                    color: rgba(133, 138, 244, 1);
+                    font-size: 18px;
+                    text-decoration: none;
+                    font-weight: 400;
+
+                }
+            }
+        }
+
+
+
+        h5 {
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        p {
+            text-align: center;
+            color: rgba(128, 127, 131, 1);
+            padding-top: 10px;
+        }
+
+
+
+
+        #closeDetail {
+            position: absolute;
+            right: 30px;
+            top: 0px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .modalButtons {
+            display: flex;
+        }
+
+
+
+
+    }
+
+    #modalDetail {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
     }
 }
 
@@ -3261,7 +3368,6 @@ footer {
             .img {
                 width: 100%;
                 height: 345px;
-                object-fit: cover;
                 overflow: hidden;
 
                 border-top-left-radius: 10px;
@@ -3271,6 +3377,7 @@ footer {
                     width: 100%;
                     height: 100%;
                     transition: transform 0.3s ease; // Transformasiya zamanı keçid effekti əlavə edilir
+                    object-fit: cover;
 
                 }
 
@@ -3371,8 +3478,10 @@ footer {
 
             .person {
                 height: 485px;
+                height: 100%;
                 width: 100%;
                 border-radius: 10px;
+                object-fit: cover;
             }
 
             .linkedin {
@@ -4316,6 +4425,10 @@ footer {
             width: 100%;
             padding: 0px 0px 0px 0px;
 
+            .person {
+                height: 300px;
+            }
+
             h3 {
                 padding: 0px 0px 0px 0px;
                 font-size: 30px;
@@ -4327,6 +4440,8 @@ footer {
                 font-size: 16px;
 
             }
+
+
 
             form {
                 width: 100%;
@@ -4624,17 +4739,34 @@ footer {
         flex-direction: column;
         overflow: hidden;
 
+        #thankModalDetail {
+            .modalButtons {
+                .detailDash {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+
+                .detailHome {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
         .title {
             width: 100%;
 
-          .categoryy{
-            width: 100%;
-            .students {
+            .categoryy {
                 width: 100%;
-                display: flex;
-                flex-direction: column;
+
+                .students {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
             }
-          }
 
             h4 {
                 font-size: 26px;
@@ -4648,8 +4780,10 @@ footer {
             }
         }
 
-        .card {
+        .cards_detail {
             width: 100%;
+            display: flex;
+            flex-direction: column;
 
             .includes {
                 display: flex;
@@ -4798,8 +4932,9 @@ footer {
     }
 
 
-    .fourCourses{
+    .fourCourses {
         width: 100%;
+
         #categoryCourse {
             width: 100%;
             display: flex;
@@ -4890,10 +5025,21 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
 
     nav {
+
         .show {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            ul {
+                width: 49%;
+
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
 
         }
     }
@@ -5295,8 +5441,9 @@ footer {
         }
     }
 
-    .fourCourses{
+    .fourCourses {
         width: 100%;
+
         #categoryCourse {
             width: 100%;
             display: grid;
@@ -5451,6 +5598,8 @@ footer {
 
 }
 
+
+
 @media (min-width: 1025px) and (max-width: 1330px) {
     .four {
         .observed-section {
@@ -5548,8 +5697,9 @@ footer {
         }
     }
 
-    .fourCourses{
+    .fourCourses {
         width: 100%;
+
         #categoryCourse {
             width: 100%;
             display: grid;

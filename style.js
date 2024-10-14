@@ -57,41 +57,37 @@ counters.forEach(counter => {
 
 /////homeForm
 document.getElementById('myForm').addEventListener('submit', function (e) {
-  e.preventDefault()
+  e.preventDefault();
 
-  const surname = document.getElementById('firstName').value.trim()
-  const email = document.getElementById('email').value.trim()
-  const phone = document.getElementById('phone').value.trim()
-  const message = document.getElementById('message').value.trim()
-  const selectedCourse = document.getElementById('selectedCourse').value.trim()
+  const surname = document.getElementById('firstName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const selectedCourse = document.getElementById('selectedCourse').value.trim();
 
+  const modal = document.getElementById('thankYouModal');
 
-  const modal = document.getElementById('thankYouModal')
-
-
+  // Check if all required fields have values
   if (surname && email && phone && message && selectedCourse) {
-    modal.style.display = 'block'
-
-
+      modal.style.display = 'block'; // Show the modal
   }
-  document.getElementById('close').addEventListener('click', function () {
-    modal.style.display = 'none'
-    // Input dəyərlərini boşaldır
-    modal.style.display = 'none'; // Modalı gizlədin
-    // Daxil edilən dəyərləri sıfırlayın
-    document.getElementById('firstName').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('message').value = '';
-    document.getElementById('selectedCourse').value = '';
-    window.location.href = '/pages/contact/index.html'; // Səhifə yönləndirməsi
 
+  // Close button logic
+  document.getElementById('closee').addEventListener('click', function () {
+      modal.style.display = 'none'; // Hide the modal
 
-  })
+      // Reset input values after closing the modal
+      document.getElementById('firstName').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('message').value = '';
+      document.getElementById('selectedCourse').value = '';
+      // No redirection to the contact page
+      window.location.href='/pages/contact/index.html'
+  });
+});
 
-
-})
-
+// Function to update input field with selected value
 function updateInput(select) {
   document.getElementById('lastName').value = select.value;
 }
@@ -320,36 +316,54 @@ function toggleDropdown() {
     document.querySelector('.select-options').style.display = 'none';
   }
 }
-
+// Function to select a course when a checkbox is clicked
 function selectCourse(checkbox) {
   const selectedCourseInput = document.getElementById('selectedCourse');
   const checkboxes = document.querySelectorAll('.select-options input[type="checkbox"]');
 
-  // Bütün checkboxları deaktiv et
+  // Uncheck all other checkboxes
   checkboxes.forEach(cb => {
     if (cb !== checkbox) {
       cb.checked = false;
     }
   });
 
-  // Seçilmiş checkboxın dəyərini input-a yaz
+  // Set the selected course value based on the clicked checkbox
   if (checkbox.checked) {
     selectedCourseInput.value = checkbox.value;
   } else {
     selectedCourseInput.value = '';
   }
 
-  // Seçim etdikdən sonra dropdown bağlanır və ox geri aşağı yönə dəyişir
+  // Close the dropdown and change the icon after selection
   const dropdown = document.querySelector('.custom-select');
   const dropdownIcon = document.getElementById('dropdownIcon');
 
   dropdown.classList.remove('active');
   dropdownIcon.classList.remove('arrow-up');
   dropdownIcon.classList.add('arrow-down');
-  document.querySelector('.select-options').style.display = 'none';
+  document.querySelector('.select-options').style.display = 'none'; // Hide options after selecting
 }
 
-// Dropdown qutusundan kənara klik ediləndə bağlanması
+// Dropdown click to toggle the visibility of checkboxes
+document.querySelector('.custom-select').addEventListener('click', function () {
+  const dropdown = this;
+  const dropdownIcon = document.getElementById('dropdownIcon');
+  const selectOptions = document.querySelector('.select-options');
+
+  // Toggle visibility of the dropdown
+  if (selectOptions.style.display === 'none') {
+    selectOptions.style.display = 'block'; // Show options
+    dropdownIcon.classList.remove('arrow-down');
+    dropdownIcon.classList.add('arrow-up');
+  } else {
+    selectOptions.style.display = 'none'; // Hide options
+    dropdownIcon.classList.remove('arrow-up');
+    dropdownIcon.classList.add('arrow-down');
+  }
+});
+
+// Close the dropdown if clicking outside
 document.addEventListener('click', function (event) {
   const dropdown = document.querySelector('.custom-select');
   const dropdownIcon = document.getElementById('dropdownIcon');
@@ -358,7 +372,7 @@ document.addEventListener('click', function (event) {
     dropdown.classList.remove('active');
     dropdownIcon.classList.remove('arrow-up');
     dropdownIcon.classList.add('arrow-down');
-    document.querySelector('.select-options').style.display = 'none';
+    document.querySelector('.select-options').style.display = 'none'; // Hide options if clicking outside
   }
 });
 
