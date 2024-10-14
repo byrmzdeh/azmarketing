@@ -135,7 +135,7 @@ fetch('/json/category.json') // JSON fayl yolunu düzgün təyin edin
     <p>Thank you for your purchase. All the <br> information about your purchase has been sent <br> to your e-mail address.</p>
     <div class="modalButtons">
       <button class='detailHome'><a href="/index.html">Home Page</a></button>
-      <button class='detailDash'><a href="/components/dashboard/index.html">Go Profile</a></button>
+      <button class='detailDash'><a href="/pages/dashboard/index.html">Go Profile</a></button>
     </div>
   </div>
 </div>

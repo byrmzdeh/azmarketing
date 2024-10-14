@@ -338,7 +338,7 @@ nav {
     .course_cards {
         width: 90%;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
         margin: 60px auto;
         gap: 40px;
         z-index: 2;
@@ -349,7 +349,8 @@ nav {
         .card {
 
             width: 100%;
-            height: 276px;
+            min-height: 310px;
+            height: 80%;
             border-radius: 24px;
             padding: 20px;
             font-family: 'Inter', sans-serif;
@@ -523,58 +524,70 @@ nav {
 
 
     .observed-section {
-
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
+        gap: 20px; /* Kartlar arasında boşluq */
         justify-content: space-between;
-
-        .spacer {
-            width: 100%;
-            height: 5vh;
-        }
-
-
-
-
-        .count {
-            min-width: 314px;
-            width: 100%;
-            height: 177px;
-            border-radius: 10px;
-            border: 2px solid rgba(255, 255, 255, 0.16);
-            color: rgba(255, 255, 255, 1);
-            padding: 10px 20px;
-            display: flex;
-            flex-direction: column;
-            background: rgba(255, 255, 255, 0.1);
-
-
-
-            h5 {
-                font-size: 23px;
-                font-family: 'Inter', sans-serif;
-                font-weight: 500;
-            }
-
-            .counter {
-                font-size: 3rem;
-                text-align: center;
-                font-size: 80px;
-                font-weight: 300;
-            }
-
-        }
-
-        .count::before {
-            content: "";
-            border-radius: 10px;
-            z-index: -1;
-            background: linear-gradient(78.5deg, rgba(1, 2, 20, 0.16) -7.94%, rgba(255, 255, 255, 0.16) 46.62%, rgba(1, 2, 20, 0.16) 101.17%);
-        }
-
-
     }
+    
+    .spacer {
+        width: 100%;
+        height: 5vh;
+    }
+    
+    .count {
+        min-width: 314px;
+        width: 100%;
+        height: 177px;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.16);
+        color: rgba(255, 255, 255, 1);
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .count h5 {
+        font-size: 23px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+    }
+    
+    .count .counter {
+        font-size: 80px;
+        text-align: center;
+        font-weight: 300;
+    }
+    
+    .count::before {
+        content: "";
+        border-radius: 10px;
+        z-index: -1;
+        background: linear-gradient(78.5deg, rgba(1, 2, 20, 0.16) -7.94%, rgba(255, 255, 255, 0.16) 46.62%, rgba(1, 2, 20, 0.16) 101.17%);
+    }
+
+/* 75% genişlik üçün (1200px - 1440px arası) */
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .observed-section {
+        grid-template-columns: repeat(4, auto); /* 75% genişliyində 4 sütun saxla */
+    }
+}
+
+/* Daha kiçik ekranlar üçün (tablet və s.) */
+@media (max-width: 900px) {
+    .observed-section {
+        grid-template-columns: repeat(2, auto); /* Kiçik ekranlar üçün 2 sütun */
+    }
+}
+
+/* Mobil üçün (600px və aşağı) */
+@media (max-width: 600px) {
+    .observed-section {
+        grid-template-columns: 1fr; /* Mobil üçün tam genişlik */
+    }
+}
 
 }
 
@@ -1487,124 +1500,107 @@ footer {
     #cards {
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
-
-        .card {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            position: relative;
-            border-radius: 10px;
-            border: 1px solid rgba(226, 226, 227, 1);
-
-            .card_img {
-                width: 100%;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                object-fit: cover;
-
-            }
-
-            h5 {
-                font-size: 19px;
-                font-weight: 500;
-                padding-left: 15px;
-                color: var(--Primitives-Primary-950, rgba(33, 28, 74, 1));
-                padding-top: 0px;
-
-
-            }
-
-            p {
-                font-size: 14px;
-                font-weight: 400;
-                padding-left: 15px;
-                color: var(--Primitives-Neutral-900, rgba(86, 86, 89, 1));
-                padding-top: 10px;
-
-
-            }
-
-            .basket_btn {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                border-radius: 50%;
-                border: none;
-
-                .basket {
-                    width: 38px;
-                    height: 38px;
-                }
-
-
-            }
-
-            .price {
-                width: 100%;
-                min-height: 40px;
-                height: 100%;
-                padding: 15px;
-                border-top: 1px solid var(--Primitives-Neutral-200, rgba(226, 226, 227, 1));
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                position: relative;
-
-                h6 {
-                    color: var(--Primitives-Primary-500, rgba(91, 88, 235, 1));
-                    font-weight: 500;
-                    font-size: 19px;
-                    position: absolute;
-                    right: 15px;
-
-
-                }
-
-                .buy_btn {
-                    max-width: 100px;
-                    width: 100%;
-                    height: 40px;
-                    border: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    opacity: 0;
-                    background: none;
-                    position: absolute;
-                    right: 15px;
-                    transition: 0.3s;
-
-
-                    span {
-                        font-weight: 400;
-                        color: rgba(91, 88, 235, 1);
-                        font-size: 16px;
-
-
-                    }
-                }
-            }
-
-            &:hover {
-                .price {
-                    .buy_btn {
-                        opacity: 1;
-                        background-color: none;
-                        position: absolute;
-
-                    }
-
-                    h6 {
-                        left: 15px;
-                    }
-                }
-            }
-        }
+        gap: 20px; /* Kartlar arasında boşluq */
+    }
+    
+    .card {
+        width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 226, 227, 1);
+    }
+    
+    .card_img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: cover;
+    }
+    
+    h5 {
+        font-size: 19px;
+        font-weight: 500;
+        padding-left: 15px;
+        color: rgba(33, 28, 74, 1);
+        padding-top: 0px;
+    }
+    
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 15px;
+        color: rgba(86, 86, 89, 1);
+        padding-top: 10px;
+    }
+    
+    .basket_btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 50%;
+        border: none;
+    }
+    
+    .basket {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .price {
+        width: 100%;
+        min-height: 40px;
+        height: 100%;
+        padding: 15px;
+        border-top: 1px solid rgba(226, 226, 227, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .price h6 {
+        color: rgba(91, 88, 235, 1);
+        font-weight: 500;
+        font-size: 19px;
+        position: absolute;
+        right: 15px;
+    }
+    
+    .buy_btn {
+        max-width: 100px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        opacity: 0;
+        background: none;
+        position: absolute;
+        right: 15px;
+        transition: 0.3s;
+    }
+    
+    .buy_btn span {
+        font-weight: 400;
+        color: rgba(91, 88, 235, 1);
+        font-size: 16px;
+    }
+    
+    .card:hover .price .buy_btn {
+        opacity: 1;
+        background-color: none;
+        position: absolute;
+    }
+    
+    .card:hover .price h6 {
+        left: 15px;
     }
 
     #seeAllButton {
@@ -3148,13 +3144,13 @@ footer {
     #categoryCourse {
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
+        gap: 20px; /* Kartlar arasında boşluq */
 
         .card {
-            width: 100%;
+            width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
             display: flex;
             flex-direction: column;
             cursor: pointer;
@@ -3347,73 +3343,54 @@ footer {
     #icardss {
         width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-
-        .icard {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            justify-content: start;
-            cursor: pointer;
-            position: relative;
-            border-radius: 10px;
-            border: none;
-            background: rgba(255, 255, 255, 0.1);
-            overflow: hidden; // Şəkilin kənara çıxmaması üçün əlavə olunur
-
-
-
-            .img {
-                width: 100%;
-                height: 345px;
-                overflow: hidden;
-
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    transition: transform 0.3s ease; // Transformasiya zamanı keçid effekti əlavə edilir
-                    object-fit: cover;
-
-                }
-
-
-
-            }
-
-            h6 {
-                font-size: 19px;
-                font-weight: 500;
-                color: #ffffff;
-                padding: 0px 0px 5px 15px;
-            }
-
-            span {
-                font-size: 12px;
-                font-weight: 400;
-                padding: 17px 0px 5px 15px;
-                color: rgba(201, 209, 252, 1);
-            }
-
-            &:hover {
-                .img {
-                    img {
-                        transform: scale(1.2);
-                    }
-
-                }
-            }
-
-
-
-
-
-        }
+        grid-template-columns: repeat(4, 1fr); /* 4 sütun düzəni */
+        gap: 20px; /* Kartlar arasında boşluq */
+    }
+    
+    .icard {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        cursor: pointer;
+        position: relative;
+        border-radius: 10px;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
+    }
+    
+    .icard .img {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .icard .img img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease; /* Hover zamanı transformasiya */
+        object-fit: cover;
+    }
+    
+    .icard h6 {
+        font-size: 19px;
+        font-weight: 500;
+        color: #ffffff;
+        padding: 0px 0px 5px 15px;
+    }
+    
+    .icard span {
+        font-size: 12px;
+        font-weight: 400;
+        padding: 17px 0px 5px 15px;
+        color: rgba(201, 209, 252, 1);
+    }
+    
+    .icard:hover .img img {
+        transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
     }
 
     #load {
@@ -3689,81 +3666,55 @@ footer {
         width: 52%;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
 
         #icardss {
             width: 100%;
             display: grid;
-            grid-template-columns: auto auto auto auto;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-
-            .icard {
-                width: 100%;
-                ;
-                // min-height: 304px;
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: start;
-                cursor: pointer;
-                position: relative;
-                border-radius: 10px;
-                border: none;
-                background: rgba(255, 255, 255, 0.1);
-                overflow: hidden; // Şəkilin kənara çıxmaması üçün əlavə olunur
-
-
-
-                .img {
-                    width: 100%;
-                    //    min-height: 250px;
-                    object-fit: cover;
-                    overflow: hidden;
-
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-
-                    img {
-                        width: 100%;
-                        height: 250px;
-                        transition: transform 0.3s ease; // Transformasiya zamanı keçid effekti əlavə edilir
-
-                    }
-
-
-
-                }
-
-                h6 {
-                    font-size: 19px;
-                    font-weight: 500;
-                    color: #ffffff;
-                    padding: 0px 0px 5px 15px;
-                }
-
-                span {
-                    font-size: 12px;
-                    font-weight: 400;
-                    padding: 17px 0px 5px 15px;
-                    color: rgba(201, 209, 252, 1);
-                }
-
-                &:hover {
-                    .img {
-                        img {
-                            transform: scale(1.2);
-                        }
-
-                    }
-                }
-
-
-
-
-
-            }
+            grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
+            gap: 20px; /* Kartlar arasında boşluq */
+        }
+        
+        .icard {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            position: relative;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
+        }
+        
+        .icard .img {
+            width: 100%;
+            height: 250px; /* Şəkilin standart hündürlüyü */
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+        .icard .img img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease; /* Hover zamanı keçid effekti */
+        }
+        
+        .icard h6 {
+            font-size: 19px;
+            font-weight: 500;
+            color: #ffffff;
+            padding: 0px 0px 5px 15px;
+        }
+        
+        .icard span {
+            font-size: 12px;
+            font-weight: 400;
+            padding: 17px 0px 5px 15px;
+            color: rgba(201, 209, 252, 1);
+        }
+        
+        .icard:hover .img img {
+            transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
         }
 
     }

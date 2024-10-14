@@ -23,7 +23,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     // Əgər hər iki xana doludursa, dashboard səhifəsinə keçid edək
     if (valid) {
-        window.location.href = "/components/dashboard/index.html"; // Burada dashboard səhifəsinə yönləndiririk
+        window.location.href = "/pages/dashboard/index.html"; // Burada dashboard səhifəsinə yönləndiririk
     }
 });
 

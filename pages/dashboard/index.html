@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./style.js"></script>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="navDashboard">
+            <div class="one">
+                <div class="logo">
+                    <img src="/image/dashboard/dashlogo.png" alt="">
+                </div>
+                <ul>
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/dashboard.png" alt="">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/course.png" alt="">
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/shop.png" alt="">
+                            <span>Shopping Cart</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/recource.png" alt="">
+                            <span>Resources</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/message.png" alt="">
+                            <span>Messages</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul>
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/setting.png" alt="">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/pages/dashboard/index.html">
+                            <img src="/image/dashboard/logOut.png" alt="">
+                            <span>Log Out</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="userName">
+                <img src="/image/dashboard/user.png" alt="">
+                <div class="name_text">
+                    <p>Name Surname</p>
+                    <span>youremailhere@gmail.com</span>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="textDashboard">
+            <div class="settings">
+                <div class="dash">
+                    <img src="/image/dashboard/dashBlack.png" alt="">
+                    <a href="/pages/dashboard/index.html">Dashboard</a>
+                </div>
+                <img src="/image/dashboard/alarm.png" alt="">
+
+            </div>
+
+            <div class="fourCards">
+                <div class="cardDash">
+                    <img src="/image/dashboard/messageCard.png" alt="">
+                    <div class="card_text">
+                        <p>Messages</p>
+                        <h4>20</h4>
+                    </div>
+                </div>
+
+                <div class="cardDash">
+                    <img src="/image/dashboard/courseCard.png" alt="">
+                    <div class="card_text">
+                        <p>Courses</p>
+                        <h4>12</h4>
+                    </div>
+                </div>
+
+                <div class="cardDash">
+                    <img src="/image/dashboard/shopCard.png" alt="">
+                    <div class="card_text">
+                        <p>Shopping Cart</p>
+                        <h4>8</h4>
+                    </div>
+                </div>
+
+                <div class="cardDash">
+                    <img src="/image/dashboard/recourseCard.png" alt="">
+                    <div class="card_text">
+                        <p>Resources</p>
+                        <h4>31</h4>
+                    </div>
+                </div>
+
+            
+
+
+
+            </div>
+
+
+            <div class="learn_coming">
+                <div class="learn">
+                    <h6>Learning Activity</h6>
+
+                    <div class="custom-select">
+                        <div class="select-box" onclick="toggleDropdown()">
+                            <input type="text" id="selectedCourse" placeholder="Choose a course" readonly>
+                            <span id="dropdownIcon" class="arrow-down"></span>
+                        </div>
+                        <div class="select-options">
+                            <label><span>Developer</span><input type="checkbox" name="course" value="Developer"
+                                    onclick="selectCourse(this)"></label>
+                            <label><span>Web</span><input type="checkbox" name="course" value="Web"
+                                    onclick="selectCourse(this)"></label>
+                            <label><span>Business</span><input type="checkbox" name="course" value="Business"
+                                    onclick="selectCourse(this)"></label>
+                            <label><span>Marketing</span><input type="checkbox" name="course" value="Marketing"
+                                    onclick="selectCourse(this)"></label>
+                        </div>
+                    </div>
+
+                    <img src="/image/dashboard/diagram.png" alt="">
+
+                </div>
+
+                <div class="coming">
+                    <h6>Upcoming Events</h6>
+                    <img src="/image/dashboard/sidebar.png" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

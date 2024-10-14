@@ -297,14 +297,15 @@ nav {
 .two .course_cards {
   width: 90%;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
   margin: 60px auto;
   gap: 40px;
   z-index: 2;
 }
 .two .course_cards .card {
   width: 100%;
-  height: 276px;
+  min-height: 310px;
+  height: 80%;
   border-radius: 24px;
   padding: 20px;
   font-family: "Inter", sans-serif;
@@ -443,18 +444,22 @@ nav {
   align-items: center;
   justify-content: center;
   background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
+  /* 75% genişlik üçün (1200px - 1440px arası) */
+  /* Daha kiçik ekranlar üçün (tablet və s.) */
+  /* Mobil üçün (600px və aşağı) */
 }
 .four .observed-section {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
+  gap: 20px; /* Kartlar arasında boşluq */
   justify-content: space-between;
 }
-.four .observed-section .spacer {
+.four .spacer {
   width: 100%;
   height: 5vh;
 }
-.four .observed-section .count {
+.four .count {
   min-width: 314px;
   width: 100%;
   height: 177px;
@@ -466,22 +471,36 @@ nav {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.1);
 }
-.four .observed-section .count h5 {
+.four .count h5 {
   font-size: 23px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
 }
-.four .observed-section .count .counter {
-  font-size: 3rem;
-  text-align: center;
+.four .count .counter {
   font-size: 80px;
+  text-align: center;
   font-weight: 300;
 }
-.four .observed-section .count::before {
+.four .count::before {
   content: "";
   border-radius: 10px;
   z-index: -1;
   background: linear-gradient(78.5deg, rgba(1, 2, 20, 0.16) -7.94%, rgba(255, 255, 255, 0.16) 46.62%, rgba(1, 2, 20, 0.16) 101.17%);
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .four .observed-section {
+    grid-template-columns: repeat(4, auto); /* 75% genişliyində 4 sütun saxla */
+  }
+}
+@media (max-width: 900px) {
+  .four .observed-section {
+    grid-template-columns: repeat(2, auto); /* Kiçik ekranlar üçün 2 sütun */
+  }
+}
+@media (max-width: 600px) {
+  .four .observed-section {
+    grid-template-columns: 1fr; /* Mobil üçün tam genişlik */
+  }
 }
 
 .five {
@@ -1167,13 +1186,13 @@ footer .link .phone .one_text span {
 .category #cards {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 20px; /* Kartlar arasında boşluq */
 }
-.category #cards .card {
-  width: 100%;
+.category .card {
+  width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -1181,56 +1200,56 @@ footer .link .phone .one_text span {
   border-radius: 10px;
   border: 1px solid rgb(226, 226, 227);
 }
-.category #cards .card .card_img {
+.category .card_img {
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   object-fit: cover;
 }
-.category #cards .card h5 {
+.category h5 {
   font-size: 19px;
   font-weight: 500;
   padding-left: 15px;
-  color: var(--Primitives-Primary-950, rgb(33, 28, 74));
+  color: rgb(33, 28, 74);
   padding-top: 0px;
 }
-.category #cards .card p {
+.category p {
   font-size: 14px;
   font-weight: 400;
   padding-left: 15px;
-  color: var(--Primitives-Neutral-900, rgb(86, 86, 89));
+  color: rgb(86, 86, 89);
   padding-top: 10px;
 }
-.category #cards .card .basket_btn {
+.category .basket_btn {
   position: absolute;
   top: 10px;
   right: 10px;
   border-radius: 50%;
   border: none;
 }
-.category #cards .card .basket_btn .basket {
+.category .basket {
   width: 38px;
   height: 38px;
 }
-.category #cards .card .price {
+.category .price {
   width: 100%;
   min-height: 40px;
   height: 100%;
   padding: 15px;
-  border-top: 1px solid var(--Primitives-Neutral-200, rgb(226, 226, 227));
+  border-top: 1px solid rgb(226, 226, 227);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
-.category #cards .card .price h6 {
-  color: var(--Primitives-Primary-500, rgb(91, 88, 235));
+.category .price h6 {
+  color: rgb(91, 88, 235);
   font-weight: 500;
   font-size: 19px;
   position: absolute;
   right: 15px;
 }
-.category #cards .card .price .buy_btn {
+.category .buy_btn {
   max-width: 100px;
   width: 100%;
   height: 40px;
@@ -1244,17 +1263,17 @@ footer .link .phone .one_text span {
   right: 15px;
   transition: 0.3s;
 }
-.category #cards .card .price .buy_btn span {
+.category .buy_btn span {
   font-weight: 400;
   color: rgb(91, 88, 235);
   font-size: 16px;
 }
-.category #cards .card:hover .price .buy_btn {
+.category .card:hover .price .buy_btn {
   opacity: 1;
   background-color: none;
   position: absolute;
 }
-.category #cards .card:hover .price h6 {
+.category .card:hover .price h6 {
   left: 15px;
 }
 .category #seeAllButton {
@@ -2489,13 +2508,13 @@ footer .link .phone .one_text span {
 .fourCourses #categoryCourse {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 20px; /* Kartlar arasında boşluq */
 }
 .fourCourses #categoryCourse .card {
-  width: 100%;
+  width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -2644,12 +2663,10 @@ footer .link .phone .one_text span {
 .instructor #icardss {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr); /* 4 sütun düzəni */
+  gap: 20px; /* Kartlar arasında boşluq */
 }
-.instructor #icardss .icard {
+.instructor .icard {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2659,35 +2676,35 @@ footer .link .phone .one_text span {
   border-radius: 10px;
   border: none;
   background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+  overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
 }
-.instructor #icardss .icard .img {
+.instructor .icard .img {
   width: 100%;
   height: 345px;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.instructor #icardss .icard .img img {
+.instructor .icard .img img {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Hover zamanı transformasiya */
   object-fit: cover;
 }
-.instructor #icardss .icard h6 {
+.instructor .icard h6 {
   font-size: 19px;
   font-weight: 500;
   color: #ffffff;
   padding: 0px 0px 5px 15px;
 }
-.instructor #icardss .icard span {
+.instructor .icard span {
   font-size: 12px;
   font-weight: 400;
   padding: 17px 0px 5px 15px;
   color: rgb(201, 209, 252);
 }
-.instructor #icardss .icard:hover .img img {
-  transform: scale(1.2);
+.instructor .icard:hover .img img {
+  transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
 }
 .instructor #load {
   min-width: 150px;
@@ -2901,55 +2918,49 @@ footer .link .phone .one_text span {
   width: 52%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 .meet .inscards #icardss {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
+  gap: 20px; /* Kartlar arasında boşluq */
 }
-.meet .inscards #icardss .icard {
-  width: 100%;
+.meet .inscards .icard {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
   cursor: pointer;
   position: relative;
   border-radius: 10px;
-  border: none;
   background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+  overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
 }
-.meet .inscards #icardss .icard .img {
+.meet .inscards .icard .img {
   width: 100%;
+  height: 250px; /* Şəkilin standart hündürlüyü */
   object-fit: cover;
-  overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.meet .inscards #icardss .icard .img img {
+.meet .inscards .icard .img img {
   width: 100%;
-  height: 250px;
-  transition: transform 0.3s ease;
+  height: 100%;
+  transition: transform 0.3s ease; /* Hover zamanı keçid effekti */
 }
-.meet .inscards #icardss .icard h6 {
+.meet .inscards .icard h6 {
   font-size: 19px;
   font-weight: 500;
   color: #ffffff;
   padding: 0px 0px 5px 15px;
 }
-.meet .inscards #icardss .icard span {
+.meet .inscards .icard span {
   font-size: 12px;
   font-weight: 400;
   padding: 17px 0px 5px 15px;
   color: rgb(201, 209, 252);
 }
-.meet .inscards #icardss .icard:hover .img img {
-  transform: scale(1.2);
+.meet .inscards .icard:hover .img img {
+  transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
 }
 .meet .ellipse5 {
   max-width: 1182px;
