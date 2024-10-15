@@ -403,10 +403,3 @@ function toggleAnswer(element) {
 
 
 
-
-
-
-
-
-
-

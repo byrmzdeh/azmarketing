@@ -528,7 +528,6 @@ nav {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        /* 4 sütunlu düzən */
         gap: 20px;
         /* Kartlar arasında boşluq */
         justify-content: space-between;
@@ -540,7 +539,7 @@ nav {
     }
 
     .count {
-        min-width: 314px;
+        // min-width: 314px;
         width: 100%;
         height: 177px;
         border-radius: 10px;
@@ -571,13 +570,7 @@ nav {
         background: linear-gradient(78.5deg, rgba(1, 2, 20, 0.16) -7.94%, rgba(255, 255, 255, 0.16) 46.62%, rgba(1, 2, 20, 0.16) 101.17%);
     }
 
-    /* 75% genişlik üçün (1200px - 1440px arası) */
-    @media (min-width: 1200px) and (max-width: 1440px) {
-        .observed-section {
-            grid-template-columns: repeat(4, auto);
-            /* 75% genişliyində 4 sütun saxla */
-        }
-    }
+
 
     /* Daha kiçik ekranlar üçün (tablet və s.) */
     @media (max-width: 900px) {
@@ -671,37 +664,55 @@ nav {
 
     swiper-container {
         width: 100%;
-        height: 150px;
+        height: 100px; // Set a default height for the Swiper
+        gap: 25px; // Space between slides
+    
+        // @media (max-width: 1700px) {
+        //     // For medium screens
+        //     --swiper-slides-per-view: 4; // Set slides per view for medium screens
+        // }
+    
+        // @media (max-width: 992px) {
+        //     // For smaller screens
+        //     --swiper-slides-per-view: 3; // Set slides per view for small screens
+        // }
+    
+        // @media (max-width: 768px) {
+        //     // For mobile screens
+        //     --swiper-slides-per-view: 2; // Set slides per view for mobile screens
+        // }
 
         swiper-slide {
-            width: 100%;
-            height: 100%;
+            width: calc(100% / var(--swiper-slides-per-view)); // Use CSS variable for responsive width
+            height: 100%; // Make the slide take full height of the container
             display: flex;
             align-items: center;
             justify-content: center;
-
-            swiper-slide img {
+            padding: 0px;
+    
+            img {
                 display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .card_img {
-                transition: 0.7s;
-                opacity: 0.6;
-
-                &:hover {
-                    opacity: 1;
-                    transform: scale(1.2);
-                }
-            }
-
-            .gcc {
-                height: 38px;
+                max-width: 100%; // Prevent images from exceeding the slide width
+                max-height: 80%; // Prevent images from exceeding the slide height
+                object-fit: contain; // Maintain the aspect ratio without cropping
             }
         }
+    
+        .card_img {
+            transition: opacity 0.7s, transform 0.7s; // Smooth transition for opacity and scale
+            opacity: 0.6; // Default opacity
+    
+            &:hover {
+                opacity: 1; // Fully opaque on hover
+                transform: scale(1.2); // Scale slightly on hover
+            }
+        }
+    
+        .gcc {
+            height: auto; // Set height to auto for flexible sizing
+        }
     }
+    
 
 
 

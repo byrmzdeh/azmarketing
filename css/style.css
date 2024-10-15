@@ -445,7 +445,6 @@ nav {
   align-items: center;
   justify-content: center;
   background: var(--Colors-Surface-Dark, rgb(1, 2, 20));
-  /* 75% genişlik üçün (1200px - 1440px arası) */
   /* Daha kiçik ekranlar üçün (tablet və s.) */
   /* Mobil üçün (600px və aşağı) */
 }
@@ -453,7 +452,6 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* 4 sütunlu düzən */
   gap: 20px;
   /* Kartlar arasında boşluq */
   justify-content: space-between;
@@ -463,7 +461,6 @@ nav {
   height: 5vh;
 }
 .four .count {
-  min-width: 314px;
   width: 100%;
   height: 177px;
   border-radius: 10px;
@@ -489,12 +486,6 @@ nav {
   border-radius: 10px;
   z-index: -1;
   background: linear-gradient(78.5deg, rgba(1, 2, 20, 0.16) -7.94%, rgba(255, 255, 255, 0.16) 46.62%, rgba(1, 2, 20, 0.16) 101.17%);
-}
-@media (min-width: 1200px) and (max-width: 1440px) {
-  .four .observed-section {
-    grid-template-columns: repeat(4, auto);
-    /* 75% genişliyində 4 sütun saxla */
-  }
 }
 @media (max-width: 900px) {
   .four .observed-section {
@@ -532,31 +523,33 @@ nav {
 }
 .five swiper-container {
   width: 100%;
-  height: 150px;
+  height: 100px;
+  gap: 25px;
 }
 .five swiper-container swiper-slide {
-  width: 100%;
+  width: calc(100% / var(--swiper-slides-per-view));
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0px;
 }
-.five swiper-container swiper-slide swiper-slide img {
+.five swiper-container swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
 }
-.five swiper-container swiper-slide .card_img {
-  transition: 0.7s;
+.five swiper-container .card_img {
+  transition: opacity 0.7s, transform 0.7s;
   opacity: 0.6;
 }
-.five swiper-container swiper-slide .card_img:hover {
+.five swiper-container .card_img:hover {
   opacity: 1;
   transform: scale(1.2);
 }
-.five swiper-container swiper-slide .gcc {
-  height: 38px;
+.five swiper-container .gcc {
+  height: auto;
 }
 
 .six {
