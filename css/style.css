@@ -297,14 +297,15 @@ nav {
 .two .course_cards {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
+  grid-template-columns: repeat(3, 1fr);
+  /* 4 sütun düzəni */
   margin: 60px auto;
   gap: 40px;
   z-index: 2;
 }
 .two .course_cards .card {
   width: 100%;
-  min-height: 310px;
+  min-height: 300px;
   height: 80%;
   border-radius: 24px;
   padding: 20px;
@@ -451,8 +452,10 @@ nav {
 .four .observed-section {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
-  gap: 20px; /* Kartlar arasında boşluq */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 sütunlu düzən */
+  gap: 20px;
+  /* Kartlar arasında boşluq */
   justify-content: space-between;
 }
 .four .spacer {
@@ -489,17 +492,20 @@ nav {
 }
 @media (min-width: 1200px) and (max-width: 1440px) {
   .four .observed-section {
-    grid-template-columns: repeat(4, auto); /* 75% genişliyində 4 sütun saxla */
+    grid-template-columns: repeat(4, auto);
+    /* 75% genişliyində 4 sütun saxla */
   }
 }
 @media (max-width: 900px) {
   .four .observed-section {
-    grid-template-columns: repeat(2, auto); /* Kiçik ekranlar üçün 2 sütun */
+    grid-template-columns: repeat(2, auto);
+    /* Kiçik ekranlar üçün 2 sütun */
   }
 }
 @media (max-width: 600px) {
   .four .observed-section {
-    grid-template-columns: 1fr; /* Mobil üçün tam genişlik */
+    grid-template-columns: 1fr;
+    /* Mobil üçün tam genişlik */
   }
 }
 
@@ -524,56 +530,33 @@ nav {
   background-clip: text;
   color: transparent;
 }
-.five .slider-container {
-  position: relative;
+.five swiper-container {
   width: 100%;
-  overflow: hidden;
-  z-index: 2;
+  height: 150px;
 }
-.five .slider-container .slider {
+.five swiper-container swiper-slide {
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
-  width: 200%;
-  gap: 30px;
-  margin: 30px auto;
-  /* 10 card üçün */
+  justify-content: center;
 }
-.five .slider-container .slider .card_img {
-  max-width: 260px;
+.five swiper-container swiper-slide swiper-slide img {
+  display: block;
   width: 100%;
-  height: 80px;
-  transition: 0.5s;
-  box-sizing: border-box;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-  opacity: 0.5;
+  height: 100%;
+  object-fit: cover;
 }
-.five .slider-container .slider .card_img:hover {
-  transform: scale(1.18);
+.five swiper-container swiper-slide .card_img {
+  transition: 0.7s;
+  opacity: 0.6;
+}
+.five swiper-container swiper-slide .card_img:hover {
   opacity: 1;
+  transform: scale(1.2);
 }
-.five .slider-container .slider .gcc {
-  height: 48px;
-}
-.five .dots {
-  text-align: center;
-  margin-top: 10px;
-}
-.five .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: white;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.five .dot.active {
-  background-color: rgb(133, 138, 244);
-  /* Aktiv nöqtə üçün sarı */
+.five swiper-container swiper-slide .gcc {
+  height: 38px;
 }
 
 .six {
@@ -1186,13 +1169,16 @@ footer .link .phone .one_text span {
 .category #cards {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 sütunlu düzən */
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* Kartlar arasında boşluq */
+  gap: 20px;
+  /* Kartlar arasında boşluq */
 }
 .category .card {
-  width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
+  width: 100%;
+  /* Kartlar sütun genişliyinə uyğun olacaq */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -2508,13 +2494,16 @@ footer .link .phone .one_text span {
 .fourCourses #categoryCourse {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 sütunlu düzən */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 sütunlu düzən */
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* Kartlar arasında boşluq */
+  gap: 20px;
+  /* Kartlar arasında boşluq */
 }
 .fourCourses #categoryCourse .card {
-  width: 100%; /* Kartlar sütun genişliyinə uyğun olacaq */
+  width: 100%;
+  /* Kartlar sütun genişliyinə uyğun olacaq */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -2663,8 +2652,10 @@ footer .link .phone .one_text span {
 .instructor #icardss {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 sütun düzəni */
-  gap: 20px; /* Kartlar arasında boşluq */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 sütun düzəni */
+  gap: 20px;
+  /* Kartlar arasında boşluq */
 }
 .instructor .icard {
   display: flex;
@@ -2676,7 +2667,8 @@ footer .link .phone .one_text span {
   border-radius: 10px;
   border: none;
   background: rgba(255, 255, 255, 0.1);
-  overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
+  overflow: hidden;
+  /* Şəkilin kənara çıxmaması üçün */
 }
 .instructor .icard .img {
   width: 100%;
@@ -2688,7 +2680,8 @@ footer .link .phone .one_text span {
 .instructor .icard .img img {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease; /* Hover zamanı transformasiya */
+  transition: transform 0.3s ease;
+  /* Hover zamanı transformasiya */
   object-fit: cover;
 }
 .instructor .icard h6 {
@@ -2704,7 +2697,8 @@ footer .link .phone .one_text span {
   color: rgb(201, 209, 252);
 }
 .instructor .icard:hover .img img {
-  transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
+  transform: scale(1.2);
+  /* Hover zamanı şəkilin böyüməsi */
 }
 .instructor #load {
   min-width: 150px;
@@ -2923,8 +2917,10 @@ footer .link .phone .one_text span {
 .meet .inscards #icardss {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 4 sütun düzəni */
-  gap: 20px; /* Kartlar arasında boşluq */
+  grid-template-columns: repeat(3, 1fr);
+  /* 4 sütun düzəni */
+  gap: 20px;
+  /* Kartlar arasında boşluq */
 }
 .meet .inscards .icard {
   display: flex;
@@ -2933,19 +2929,23 @@ footer .link .phone .one_text span {
   position: relative;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
-  overflow: hidden; /* Şəkilin kənara çıxmaması üçün */
+  overflow: hidden;
+  /* Şəkilin kənara çıxmaması üçün */
 }
 .meet .inscards .icard .img {
   width: 100%;
-  height: 250px; /* Şəkilin standart hündürlüyü */
+  height: 250px;
+  /* Şəkilin standart hündürlüyü */
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  overflow: hidden;
 }
 .meet .inscards .icard .img img {
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease; /* Hover zamanı keçid effekti */
+  transition: transform 0.3s ease;
+  /* Hover zamanı keçid effekti */
 }
 .meet .inscards .icard h6 {
   font-size: 19px;
@@ -2960,7 +2960,8 @@ footer .link .phone .one_text span {
   color: rgb(201, 209, 252);
 }
 .meet .inscards .icard:hover .img img {
-  transform: scale(1.2); /* Hover zamanı şəkilin böyüməsi */
+  transform: scale(1.2);
+  /* Hover zamanı şəkilin böyüməsi */
 }
 .meet .ellipse5 {
   max-width: 1182px;

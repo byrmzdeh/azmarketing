@@ -34,7 +34,7 @@
             </ul>
             <div class="navLogin">
                 <button class="basket"><a href="/pages/shop/index.html">
-                    <img src="/image/home/navBasket.png" alt="err"></a></button>
+                        <img src="/image/home/navBasket.png" alt="err"></a></button>
                 <button class="user"><a href="/components/login/index.html">
                         <img src="/image/home/user.png" alt="err"><span>Login</span></a></button>
             </div>
@@ -43,20 +43,19 @@
         <div class="view">
             <img width="140" class="logo" src="/image/home/logo.png" alt="err">
 
-          <div class="images">
-            <a href="/components/login/index.html"><img width="33" src="/image/home/resUser.png" alt=""></a>
+            <div class="images">
+                <a href="/components/login/index.html"><img width="33" src="/image/home/resUser.png" alt=""></a>
 
-            <a href="/pages/shop/index.html"><img width="33" src="/image/home/navBasket.png"
-                alt=""></a>
-            <img width="33" id="menuButton" src="/image/home/menu.png" alt="">
-          </div>
+                <a href="/pages/shop/index.html"><img width="33" src="/image/home/navBasket.png" alt=""></a>
+                <img width="33" id="menuButton" src="/image/home/menu.png" alt="">
+            </div>
         </div>
 
         <div id="menu">
             <img class="ellipse1" src="/image/home/ellipse1.png" alt="">
-           <div class="close">
-            <img id="close" width="32" src="/image/home/close.png" alt="">
-           </div>
+            <div class="close">
+                <img id="close" width="32" src="/image/home/close.png" alt="">
+            </div>
             <ul class="click">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="/pages/about/index.html">About us</a></li>
@@ -198,25 +197,38 @@
 
     <section class="five">
         <h4>Our trusted partners</h4>
-        <div class="slider-container">
+        <!-- <div class="slider-container">
             <div class="slider">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
-                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+              <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
 
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
-                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+              <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
+              <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
             </div>
-            <div class="dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-            </div>
-        </div>
+          </div> -->
+
+
+        <swiper-container class="mySwiper" autoplay="true" slides-per-view="5" space-between="20" grab-cursor="true">
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+
+        </swiper-container>
+
 
     </section>
 
@@ -292,12 +304,12 @@
     </section>
 
     <section class="meet">
-    <div class="inscards">
-        <div id="icardss">
-           
+        <div class="inscards">
+            <div id="icardss">
+
+            </div>
+            <img src="/image/home/line.png" alt="">
         </div>
-        <img src="/image/home/line.png" alt="">
-    </div>
 
         <div class="text">
             <h2>Meet our tutors!?</h2>
@@ -458,7 +470,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
