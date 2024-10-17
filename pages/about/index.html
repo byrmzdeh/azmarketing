@@ -13,6 +13,8 @@
     <script defer src="./style.js"></script>
     <script defer src="/style.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -93,15 +95,10 @@
             ut labore et dolore magna aliqua.</p>
         <div class="about_one">
             <div class="text">
+                <button class="start_btn">start learning now </button>
                 <h2>Find the best courses</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button class="start_btn"><a href="">start learning now</a> </button>
-
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
 
             <img src="/image/home/computer.png" alt="err">
@@ -134,25 +131,21 @@
 
     <section class="five">
         <h4>Our trusted partners</h4>
-        <div class="slider-container">
-            <div class="slider">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
-                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
+        <swiper-container class="mySwiper" autoplay="true" slides-per-view="5" grab-cursor="true">
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
 
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
-                <img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azmarketing.png" alt="err">
-                <img class="card_img" src="/image/home/partners/azfibernet.png" alt="err">
-            </div>
-            <div class="dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-            </div>
-        </div>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img gcc" src="/image/home/partners/gccgreen.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azmarketing.png" alt="err"></swiper-slide>
+            <swiper-slide><img class="card_img" src="/image/home/partners/azfibernet.png" alt="err"></swiper-slide>
+
+        </swiper-container>
+
 
     </section>
 
@@ -261,6 +254,7 @@
 
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

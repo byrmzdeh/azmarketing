@@ -259,4 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  window.onload = () => {
+    const allCategoriesButton = document.querySelector('.all');
+    allCategoriesButton.style.backgroundColor = 'rgba(91, 88, 235, 1)';
+    allCategoriesButton.style.color = 'white';
+  };
+  
+  
 });
